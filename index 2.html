@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>GO YE 28:19 - Lesson 1 Part 1 + Part 2</title>
+<style>
+*{box-sizing:border-box;font-family:Georgia,"Times New Roman",serif}
+body{margin:0;background:#0B0B0E;color:#F5F5F7;font-size:11pt;-webkit-text-size-adjust:100%}
+.topbar{display:flex;align-items:center;gap:10px;padding:14px 16px 0;max-width:580px;margin:0 auto}
+.topAvatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#FFBE0B,#FF006E);display:flex;align-items:center;justify-content:center;font-size:14pt;font-weight:900;color:#fff;flex-shrink:0}
+.topName{line-height:1.2;min-width:0}
+.topName b{font-size:11pt;white-space:nowrap}
+.topName span{font-size:10pt;color:#9A9AA3;display:block;white-space:nowrap}
+.hero{max-width:580px;margin:0 auto;padding:14px 16px 0}
+.hero h1{font-size:clamp(20pt,6vw,27pt);line-height:1.05;margin:0;font-weight:900;letter-spacing:-0.5px}
+.hero h1 span{color:#FFBE0B}
+.hero p{color:#B8B8C0;line-height:1.55;margin:8px 0 0;max-width:460px;font-size:10.5pt}
+.hero p b{color:#fff}
+.pillRow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.pill{font-size:10pt;padding:6px 10px;border-radius:20px;background:#1C1C22;border:1px solid #2A2A32;color:#D8D8DE;white-space:nowrap}
+.pill.gold{background:#FFBE0B;color:#111;border-color:#FFBE0B;font-weight:800}
+.wrap{max-width:580px;margin:0 auto;padding:12px 16px 30px}
+.player{margin-top:14px;background:#1C1C22;border:1px solid #2A2A32;border-radius:20px;padding:14px;display:flex;align-items:center;gap:12px}
+.playBtn{width:52px;height:52px;border-radius:50%;background:#FF006E;border:0;color:#fff;font-size:19px;cursor:pointer;flex-shrink:0}
+.playBtn:active{transform:scale(0.92)}
+.playerText b{font-size:10.5pt;display:block}
+.playerText span{color:#9A9AA3;font-size:10pt}
+.playerBar{height:4px;background:#33333B;border-radius:10px;margin-top:7px;overflow:hidden}
+.playerBar div{height:100%;width:0%;background:#FFBE0B;transition:width 0.3s}
+.time{font-size:10pt;color:#9A9AA3;display:flex;justify-content:space-between;margin-top:4px}
+.transcript{margin-top:14px}
+.line{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid #1E1E24}
+.line.active{background:#22222A;border-radius:14px;padding:12px}
+.face{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17pt;overflow:hidden;border:2px solid #2A2A32}
+.face.mitch{background:#FFE0E6}
+.face.christian{background:#D9F2FF}
+.face.anita{background:#FFE8CC}
+.face.david{background:#D6F5E0}
+.line.talking .face{border-color:#00C853;transform:scale(1.05)}
+.who{font-size:10pt;letter-spacing:1px;font-weight:800;text-transform:uppercase;margin:0}
+.who.mitch{color:#FF6B9A}.who.christian{color:#00C2FF}.who.anita{color:#FF8A00}.who.david{color:#00C853}
+.who small{color:#9A9AA3;letter-spacing:0;text-transform:none;font-weight:400;margin-left:5px}
+.text{font-size:10.5pt;line-height:1.6;margin:4px 0 0;color:#F5F5F7}
+.nextLine{margin-top:14px;text-align:center;color:#B8B8C0;font-size:10.5pt;line-height:1.5}
+.nextLine b{color:#FFBE0B}
+.verse{margin-top:14px;background:linear-gradient(135deg,#7B2FFF,#FF006E);border-radius:20px;padding:18px;text-align:center}
+.verse p{font-size:10.5pt;line-height:1.6;margin:0;font-weight:700}
+.verse small{color:#FFDE59;letter-spacing:1px;font-size:10pt}
+.factOne{margin-top:14px;background:#1C1C22;border:1px solid #FFBE0B;border-radius:20px;padding:16px}
+.factOne small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:10pt}
+.factOne h3{margin:6px 0 5px;font-size:13pt;line-height:1.3}
+.factOne p{margin:0;color:#D8D8DE;line-height:1.55;font-size:10.5pt}
+.factOne p b{color:#fff}
+.cta{margin-top:14px;background:#1C1C22;border:1px solid #FFBE0B;border-radius:20px;padding:18px;text-align:center}
+.cta h3{margin:0;font-size:13pt}
+.cta p{color:#B8B8C0;line-height:1.5;font-size:10.5pt}
+.reactions{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.react{flex:1;padding:11px 2px;border-radius:12px;border:1px solid #33333B;background:#26262E;color:#fff;font-size:10pt;cursor:pointer;font-family:Georgia,serif;white-space:nowrap}
+.react:active{transform:scale(0.95)}
+.react.selected{background:#FF006E;border-color:#FF006E;transform:scale(1.03)}
+.btn{display:block;width:100%;padding:13px;border:0;border-radius:12px;font-size:10.5pt;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}
+.btn:active{transform:scale(0.97)}
+.btn-yes{background:#fff;color:#111}
+.btn-yes.done{background:#00C853;color:#fff}
+.btn-follow{background:transparent;color:#fff;border:1px solid #444}
+#feedback{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px;line-height:1.4}
+#feedback2{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px;line-height:1.4}
+.footer{margin-top:22px;text-align:center}
+.footer p{margin:3px 0;font-size:10pt;color:#9A9AA3;line-height:1.5}
+.footer b{color:#fff}
+.divider{max-width:580px;margin:20px auto 0;padding:0 16px;text-align:center}
+.divider span{display:inline-block;background:#1C1C22;border:1px solid #FFBE0B;color:#FFBE0B;padding:8px 18px;border-radius:20px;font-size:10pt;font-weight:800;letter-spacing:1px}
+@media (max-width:480px){
+  body{font-size:10.5pt}
+  .hero h1{font-size:21pt}
+  .hero p{font-size:10.5pt}
+  .topbar{padding:12px 14px 0}
+  .wrap{padding:10px 14px 24px}
+  .player{padding:12px}
+  .playBtn{width:48px;height:48px;font-size:18px}
+  .line{padding:10px 0}
+  .face{width:38px;height:38px;font-size:16pt}
+  .cta{padding:16px 14px}
+  .verse{padding:16px 14px}
+  .factOne{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="topAvatar">M</div>
+<div class="topName"><b>Micheal Mawadri</b><span>GO YE • Bible Study</span></div>
+</div>
+
+<!-- ================= PART 2 FIRST - REAL VOICE ================= -->
+<div class="hero">
+<h1>Eternal Life <span>— Part 2</span></h1>
+<p><b>John 17:3</b> — Yesterday Mitch asked, "But what is that life?" Today David answers, like friends.</p>
+<div class="pillRow"><span class="pill gold">Lesson 1 • Part 2 of 6</span><span class="pill">1 min listen</span><span class="pill">John 17:3</span></div>
+</div>
+
+<div class="wrap">
+<div class="player">
+<button class="playBtn" id="playBtn2" onclick="playRealVoice2()">▶</button>
+<div style="flex:1;min-width:0">
+<div class="playerText"><b>Tap to listen — Real voice of Mitch</b><span>4 friends • Kampala • Real voice</span></div>
+<div class="playerBar"><div id="progressFill2"></div></div>
+<div class="time"><span id="timeNow2">0:00</span><span id="timeTotal2">0:00</span></div>
+</div>
+</div>
+<audio id="audio2" src="part2-voice.ogg.m4a" preload="metadata"></audio>
+
+<div class="transcript">
+<div class="line" id="line2-0"><div class="face mitch" id="img2-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome back to Lesson 1 - Eternal Life, Part 2. Yesterday I asked, "But what is that life?" David, you said you would answer that today. So, David, what is that life?</p></div></div>
+<div class="line" id="line2-1"><div class="face christian" id="img2-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Yes David, I need this. I always thought everlasting life just meant living forever in heaven one day. Is that all it is?</p></div></div>
+<div class="line" id="line2-2"><div class="face anita" id="img2-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">David, take your time. What does Jesus Himself say that life is?</p></div></div>
+<div class="line" id="line2-3"><div class="face david" id="img2-david">🧔🏾</div><div><p class="who david">David</p><p class="text">It is more than living forever. Jesus defines it in John 17:3. He says, "And this is eternal life, that they may know You, the only true God, and Jesus Christ whom You have sent." Eternal life is God's own life, in you, right now. 1 John 5:11 says this life is in His Son. If you have Jesus, you have the life already.</p></div></div>
+<div class="line" id="line2-4"><div class="face mitch" id="img2-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So Jesus did not just come to give us a ticket to heaven later. He came to give us His life now. But how do we receive that life? That is tomorrow.</p></div></div>
+</div>
+
+<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 3: "How do I receive it?"</b> — Anita answers.</div>
+
+<div class="verse"><p>"Now this is eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent."</p><small>JOHN 17:3 • NIV</small></div>
+
+<div class="factOne">
+<small>FACT OF TODAY • 2 OF 5</small>
+<h3>B. Eternal life is God's life in you now</h3>
+<p><b>John 17:3 + 1 John 5:11-12</b> — Eternal life is not just duration. It is knowing God. You don't wait for it. You receive it when you receive Jesus.</p>
+</div>
+
+<div class="cta">
+<h3>Your Turn</h3>
+<p>Did this speak to you? Tap how you feel. No need to copy-paste if you don't want to.</p>
+<div class="reactions">
+<button class="react" onclick="selectReact2(this,'I needed this')">❤️ I needed this</button>
+<button class="react" onclick="selectReact2(this,'Pray for me')">🙏 Pray for me</button>
+<button class="react" onclick="shareStory2()">➡️ Share it</button>
+</div>
+<div id="feedback2"></div>
+<button class="btn btn-yes" id="yesBtn2" onclick="openComments2()">💬 Say YES on TikTok →</button>
+<button class="btn btn-follow" onclick="openComments2()">Follow on TikTok @mitch5771</button>
+<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
+</div>
+
+<div class="footer">
+<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
+<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
+<p>Scripture Inspiration - Go Ye</p>
+</div>
+</div>
+
+<!-- ================= DIVIDER ================= -->
+<div class="divider"><span>↓ MISSED PART 1? SEE IT BELOW ↓</span></div>
+
+<!-- ================= PART 1 SECOND ================= -->
+<div class="hero">
+<h1>Eternal Life <span>— Part 1</span></h1>
+<p><b>John 3:16</b> — Everybody knows this verse. But most of us have missed what it really means. Mitch, Christian, Anita & David talk it out, like friends.</p>
+<div class="pillRow"><span class="pill gold">Lesson 1 • Part 1 of 6</span><span class="pill">1 min listen</span><span class="pill">John 3:16</span></div>
+</div>
+
+<div class="wrap">
+<div class="player">
+<button class="playBtn" id="playBtn" onclick="playConversation()">▶</button>
+<div style="flex:1;min-width:0">
+<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
+<div class="playerBar"><div id="progressFill"></div></div>
+<div class="time"><span id="timeNow">0:00</span><span>1:00</span></div>
+</div>
+</div>
+
+<div class="transcript">
+<div class="line" id="line-0"><div class="face mitch" id="img-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Lesson 1 - Eternal Life. One of the most familiar passages is John 3:16. It seems like everybody knows that verse from a young age, yet I believe it has really been misunderstood.</p></div></div>
+<div class="line" id="line-1"><div class="face christian" id="img-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I know that verse! "For God so loved the world that he gave his only begotten Son, that whosoever believeth in him should not perish but have everlasting life."</p></div></div>
+<div class="line" id="line-2"><div class="face anita" id="img-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Traditionally, this scripture has been used to teach that Jesus came and died for our sins so that we wouldn't perish. As true as this is, this verse is saying something more.</p></div></div>
+<div class="line" id="line-3"><div class="face david" id="img-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Yes. The real purpose of Jesus coming and dying for us was so that we could have everlasting life. It just so happened that our sins were a barrier that stood between us and this everlasting life.</p></div></div>
+<div class="line" id="line-4"><div class="face mitch" id="img-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So Jesus did die for our sins. If we believe, we will not perish. But there is much more to the Gospel than that. The real message is that God wants to give you everlasting life. But what is that life?</p></div></div>
+</div>
+
+<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 2: "But what is that life?"</b> — David answers.</div>
+
+<div class="verse"><p>"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</p><small>JOHN 3:16 • NIV</small></div>
+
+<div class="factOne">
+<small>FACT OF TODAY • 1 OF 5</small>
+<h3>A. The purpose of the Gospel is eternal life</h3>
+<p><b>John 3:16</b> — Jesus did not just come to stop us perishing. He came to give us life. Tomorrow we learn what that life is.</p>
+</div>
+
+<div class="cta">
+<h3>Your Turn</h3>
+<p>Did this speak to you? Tap how you feel. No need to copy-paste if you don't want to.</p>
+<div class="reactions">
+<button class="react" onclick="selectReact(this,'I needed this')">❤️ I needed this</button>
+<button class="react" onclick="selectReact(this,'Pray for me')">🙏 Pray for me</button>
+<button class="react" onclick="shareStory()">➡️ Share it</button>
+</div>
+<div id="feedback"></div>
+<button class="btn btn-yes" id="yesBtn" onclick="openComments()">💬 Say YES on TikTok →</button>
+<button class="btn btn-follow" onclick="openComments()">Follow on TikTok @mitch5771</button>
+<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
+</div>
+
+<div class="footer">
+<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
+<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
+<p>Scripture Inspiration - Go Ye</p>
+</div>
+</div>
+
+<script>
+var VIDEO_ID = "PASTE_PART1_VIDEO_ID_HERE";
+var chosen = "";
+function selectReact(el,label){ chosen=label; document.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
+function openComments(){ var textToCopy = "YES"; if(chosen) textToCopy = "YES - " + chosen; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID || VIDEO_ID.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
+async function shareStory(){ var shareText="Watch this - GO YE 28:19 Lesson 1 Part 1 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 1", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback').textContent="Link copied - send it to one friend who needs it ❤️"; }
+var VOICES = { mitch:{name:"Daniel",pitch:1.0,rate:0.85}, christian:{name:"Moira",pitch:1.35,rate:0.88}, anita:{name:"Samantha",pitch:1.05,rate:0.82}, david:{name:"Daniel",pitch:0.70,rate:0.75} };
+function findVoice(wantedName){ var voices=window.speechSynthesis.getVoices(); if(!voices.length) return null; var v=voices.find(function(x){return x.name && x.name.indexOf(wantedName)>-1;}); if(v) return v; var pref=["en-GB","en-ZA","en-KE","en-NG"]; for(var p=0;p<pref.length;p++){ v=voices.find(function(x){return (x.lang||'').indexOf(pref[p])>-1;}); if(v) return v; } return voices[0]; }
+function speak(charKey, imgId, text){ return new Promise(function(resolve){ try{ window.speechSynthesis.cancel(); setTimeout(function(){ var img=document.getElementById(imgId); if(img) img.classList.add('talking'); var cfg=VOICES[charKey]||VOICES.mitch; var u=new SpeechSynthesisUtterance(text); var v=findVoice(cfg.name); if(v){u.voice=v; u.lang=v.lang;} else {u.lang='en-GB';} u.volume=1; u.rate=cfg.rate; u.pitch=cfg.pitch; u.onend=function(){if(img) img.classList.remove('talking'); resolve();}; u.onerror=function(){if(img) img.classList.remove('talking'); resolve();}; window.speechSynthesis.speak(u); },200); }catch(e){resolve();} }); }
+var isPlaying=false;
+async function playConversation(){ if(isPlaying){ window.speechSynthesis.cancel(); isPlaying=false; document.getElementById('playBtn').textContent='▶'; return; } isPlaying=true; document.getElementById('playBtn').textContent='⏸'; var lines=[ ['mitch','img-mitch1','Welcome to Lesson 1 - Eternal Life. One of the most familiar passages is John 3:16. It seems like everybody knows that verse from a young age, yet I believe it has really been misunderstood.'], ['christian','img-christian','I know that verse! For God so loved the world that he gave his only begotten Son, that whosoever believeth in him should not perish but have everlasting life.'], ['anita','img-anita','Traditionally, this scripture has been used to teach that Jesus came and died for our sins so that we would not perish. As true as this is, this verse is saying something more.'], ['david','img-david','Yes. The real purpose of Jesus coming and dying for us was so that we could have everlasting life. It just so happened that our sins were a barrier that stood between us and this everlasting life.'], ['mitch','img-mitch2','So Jesus did die for our sins. If we believe, we will not perish. But there is much more to the Gospel than that. The real message is that God wants to give you everlasting life. But what is that life?'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line-'+Math.min(i,4)); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying=false; document.getElementById('playBtn').textContent='▶'; document.getElementById('progressFill').style.width='100%'; }
+if(window.speechSynthesis){ window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged=function(){ window.speechSynthesis.getVoices(); }; }
+</script>
+
+<script>
+var VIDEO_ID_2 = "PASTE_PART2_VIDEO_ID_HERE";
+var chosen2 = "";
+function selectReact2(el,label){ chosen2=label; var scope=el.closest('.cta'); scope.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback2').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn2'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
+function openComments2(){ var textToCopy = "YES"; if(chosen2) textToCopy = "YES - " + chosen2; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn2'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback2').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID_2 || VIDEO_ID_2.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID_2; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID_2; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
+async function shareStory2(){ var shareText="Watch this - GO YE 28:19 Lesson 1 Part 2 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID_2; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 2", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback2').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback2').textContent="Link copied - send it to one friend who needs it ❤️"; }
+// REAL VOICE FOR PART 2
+function fmtTime(s){ if(!isFinite(s)) return "0:00"; s=Math.floor(s); return Math.floor(s/60)+":"+("0"+(s%60)).slice(-2); }
+function playRealVoice2(){
+  var a=document.getElementById('audio2');
+  var btn=document.getElementById('playBtn2');
+  if(!a) return;
+  if(a.paused){ a.play(); btn.textContent='⏸'; document.getElementById('line2-0').classList.add('active'); }
+  else { a.pause(); btn.textContent='▶'; }
+  a.ontimeupdate=function(){ var p=a.duration ? (a.currentTime/a.duration*100) : 0; document.getElementById('progressFill2').style.width=p+'%'; document.getElementById('timeNow2').textContent=fmtTime(a.currentTime); document.getElementById('timeTotal2').textContent=fmtTime(a.duration); };
+  a.onended=function(){ btn.textContent='▶'; document.getElementById('progressFill2').style.width='100%'; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); };
+  a.onloadedmetadata=function(){ document.getElementById('timeTotal2').textContent=fmtTime(a.duration); };
+}
+</script>
+</body>
+</html>
