@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>GO YE 28:19 - Lesson 1 Part 5</title>
+<title>GO YE 28:19 - Lesson 1 Eternal Life</title>
 <style>
 *{box-sizing:border-box;font-family:Georgia,"Times New Roman",serif}
 body{margin:0;background:#0B0B0E;color:#F5F5F7;font-size:11pt;-webkit-text-size-adjust:100%}
@@ -23,7 +23,6 @@ body{margin:0;background:#0B0B0E;color:#F5F5F7;font-size:11pt;-webkit-text-size-
 .wrap{max-width:580px;margin:0 auto;padding:12px 16px 30px}
 .player{margin-top:14px;background:#1C1C22;border:1px solid #2A2A32;border-radius:20px;padding:14px;display:flex;align-items:center;gap:12px}
 .playBtn{width:52px;height:52px;border-radius:50%;background:#FF006E;border:0;color:#fff;font-size:19px;cursor:pointer;flex-shrink:0}
-.playBtn:active{transform:scale(0.92)}
 .playerText b{font-size:10.5pt;display:block}
 .playerText span{color:#9A9AA3;font-size:10pt}
 .playerBar{height:4px;background:#33333B;border-radius:10px;margin-top:7px;overflow:hidden}
@@ -33,17 +32,11 @@ body{margin:0;background:#0B0B0E;color:#F5F5F7;font-size:11pt;-webkit-text-size-
 .line{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid #1E1E24}
 .line.active{background:#22222A;border-radius:14px;padding:12px}
 .face{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17pt;overflow:hidden;border:2px solid #2A2A32}
-.face.mitch{background:#FFE0E6}
-.face.christian{background:#D9F2FF}
-.face.anita{background:#FFE8CC}
-.face.david{background:#D6F5E0}
-.line.talking .face{border-color:#00C853;transform:scale(1.05)}
+.face.mitch{background:#FFE0E6}.face.christian{background:#D9F2FF}.face.anita{background:#FFE8CC}.face.david{background:#D6F5E0}
 .who{font-size:10pt;letter-spacing:1px;font-weight:800;text-transform:uppercase;margin:0}
 .who.mitch{color:#FF6B9A}.who.christian{color:#00C2FF}.who.anita{color:#FF8A00}.who.david{color:#00C853}
 .who small{color:#9A9AA3;letter-spacing:0;text-transform:none;font-weight:400;margin-left:5px}
 .text{font-size:10.5pt;line-height:1.6;margin:4px 0 0;color:#F5F5F7}
-.nextLine{margin-top:14px;text-align:center;color:#B8B8C0;font-size:10.5pt;line-height:1.5}
-.nextLine b{color:#FFBE0B}
 .verse{margin-top:14px;background:linear-gradient(135deg,#7B2FFF,#FF006E);border-radius:20px;padding:18px;text-align:center}
 .verse p{font-size:10.5pt;line-height:1.6;margin:0;font-weight:700}
 .verse small{color:#FFDE59;letter-spacing:1px;font-size:10pt}
@@ -60,396 +53,179 @@ body{margin:0;background:#0B0B0E;color:#F5F5F7;font-size:11pt;-webkit-text-size-
 .react:active{transform:scale(0.95)}
 .react.selected{background:#FF006E;border-color:#FF006E;transform:scale(1.03)}
 .btn{display:block;width:100%;padding:13px;border:0;border-radius:12px;font-size:10.5pt;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}
-.btn:active{transform:scale(0.97)}
 .btn-yes{background:#fff;color:#111}
-.btn-yes.done{background:#00C853;color:#fff}
 .btn-follow{background:transparent;color:#fff;border:1px solid #444}
 .prayerBox{margin-top:14px;background:#1C1C22;border:1px solid #00C853;border-radius:20px;padding:18px;text-align:center}
 .prayerBox h3{margin:0;font-size:13pt;color:#00C853}
 .prayerBox p{color:#D8D8DE;line-height:1.7;font-size:10.5pt;font-style:italic}
-#feedback,#feedback2,#feedback3,#feedback4,#feedback5{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px;line-height:1.4}
-.footer{margin-top:22px;text-align:center}
-.footer p{margin:3px 0;font-size:10pt;color:#9A9AA3;line-height:1.5}
+.feedback{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px;line-height:1.4}
+.lessonWrap{max-width:580px;margin:14px auto 0;padding:0 16px}
+.lessonHead{background:linear-gradient(135deg,#1C1C22,#2A2A32);border:1px solid #FFBE0B;border-radius:18px;padding:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.lessonHead.active{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lessonHead b{font-size:13pt}
+.lessonHead small{display:block;color:#FFBE0B;font-size:9pt;letter-spacing:1px;margin-top:2px}
+.lessonHead span{font-size:16pt;color:#FFBE0B}
+.lessonBody{display:none}
+.lessonBody.open{display:block}
+.partHead{background:#1C1C22;border:1px solid #2A2A32;border-top:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.partHead:last-of-type{border-radius:0 0 18px 18px}
+.partHead b{font-size:11pt}
+.partHead small{display:block;color:#9A9AA3;font-size:9.5pt;margin-top:2px}
+.partHead span{color:#FFBE0B;font-size:13pt}
+.partBody{display:none;padding:0 0 10px}
+.partBody.open{display:block}
+.partBody .wrap{padding-top:0}
+.bibleWrap{max-width:580px;margin:0 auto;padding:0 16px 30px}
+.bibleCard{background:#1C1C22;border:1px solid #FFBE0B;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.bibleHead{background:linear-gradient(135deg,#7B2FFF,#FF006E);padding:18px;text-align:center}
+.bibleHead h2{margin:0;font-size:19pt;letter-spacing:2px}
+.dailyVerse{margin:14px;background:#0B0B0E;border:1px solid #2A2A32;border-radius:16px;padding:16px;text-align:center}
+.dailyVerse small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:9pt}
+.dailyVerse p{font-size:11.5pt;line-height:1.65;margin:8px 0 4px;font-style:italic}
+.dailyVerse b{color:#FFBE0B;font-size:10pt}
+.openBtn{margin:0 14px 14px;width:calc(100% - 28px);padding:13px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia,serif;font-size:11pt;cursor:pointer}
+.bibleBody{display:none;padding:0 0 6px}
+.bibleBody.open{display:block}
+.bibleControls{padding:0 14px 10px;display:flex;gap:8px;flex-wrap:wrap}
+.bibleControls select{flex:1;min-width:90px;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia,serif;font-size:10.5pt;font-weight:700}
+.bibleControls button{padding:12px 16px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia,serif;cursor:pointer}
+.bibleSearch{display:flex;gap:8px;padding:0 14px 12px}
+.bibleSearch input{flex:1;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia,serif;font-size:10.5pt}
+.bibleSearch button{padding:12px 14px;border-radius:12px;border:0;background:#00C853;color:#fff;font-weight:800;font-family:Georgia,serif;cursor:pointer}
+.bibleRef{padding:6px 16px 2px;font-weight:900;color:#FFBE0B;font-size:14pt;text-align:center}
+.singleVerse{margin:10px 14px;background:#0B0B0E;border:1px solid #2A2A32;border-radius:16px;padding:20px 16px;text-align:center;min-height:130px;display:flex;align-items:center;justify-content:center}
+.singleVerse p{font-size:13pt;line-height:1.75;margin:0}
+.bibleNav{display:flex;gap:8px;padding:0 14px 10px}
+.bibleNav button{flex:1;padding:13px;border-radius:12px;border:0;font-weight:800;font-family:Georgia,serif;cursor:pointer;font-size:11pt}
+.bibleNav .prevB{background:#26262E;color:#fff}
+.bibleNav .nextB{background:#FFBE0B;color:#111}
+.bibleNav2{display:flex;gap:8px;padding:0 14px 14px}
+.bibleNav2 button{flex:1;padding:11px;border-radius:12px;border:1px solid #333;background:transparent;color:#D8D8DE;font-family:Georgia,serif;font-weight:700;cursor:pointer}
+.bibleNote{text-align:center;padding:0 14px 14px;font-size:9.5pt;color:#9A9AA3;line-height:1.5}
+.footer{max-width:580px;margin:0 auto;padding:0 16px 30px;text-align:center}
+.footer p{margin:4px 0;font-size:10pt;color:#9A9AA3;line-height:1.6}
 .footer b{color:#fff}
-.divider{max-width:580px;margin:20px auto 0;padding:0 16px;text-align:center}
-.divider span{display:inline-block;background:#1C1C22;border:1px solid #FFBE0B;color:#FFBE0B;padding:8px 18px;border-radius:20px;font-size:10pt;font-weight:800;letter-spacing:1px}
-@media (max-width:480px){
-  body{font-size:10.5pt}
-  .hero h1{font-size:21pt}
-  .hero p{font-size:10.5pt}
-  .topbar{padding:12px 14px 0}
-  .wrap{padding:10px 14px 24px}
-  .player{padding:12px}
-  .playBtn{width:48px;height:48px;font-size:18px}
-  .line{padding:10px 0}
-  .face{width:38px;height:38px;font-size:16pt}
-  .cta{padding:16px 14px}
-  .verse{padding:16px 14px}
-  .factOne{padding:14px}
-}
+.footer a{color:#FFBE0B;text-decoration:none;font-weight:800}
+@media (max-width:480px){ body{font-size:10.5pt} .hero h1{font-size:21pt} .hero p{font-size:10.5pt} .topbar{padding:12px 14px 0} .wrap{padding:10px 14px 24px} .player{padding:12px} .playBtn{width:48px;height:48px;font-size:18px} .line{padding:10px 0} .face{width:38px;height:38px;font-size:16pt} .cta{padding:16px 14px} .verse{padding:16px 14px} .factOne{padding:14px} }
 </style>
 </head>
 <body>
+<div class="topbar"><div class="topAvatar">M</div><div class="topName"><b>Micheal Mawadri</b><span>GO YE • Bible Study</span></div></div>
 
-<div class="topbar">
-<div class="topAvatar">M</div>
-<div class="topName"><b>Micheal Mawadri</b><span>GO YE • Bible Study</span></div>
-</div>
+<div class="lessonWrap">
+<div class="lessonHead active" onclick="toggleLesson('lesson1',this)"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
+<div class="lessonBody open" id="lesson1">
 
-<!-- ================= PART 5 FIRST - NEW ================= -->
-<div class="hero">
-<h1>Eternal Life <span>— Part 5</span></h1>
-<p><b>1 John 5:12 + John 10:10</b> — Yesterday we prayed and received Him. Today the question is: Now what? What actually changed?</p>
-<div class="pillRow"><span class="pill gold">Lesson 1 • Part 5 of 6</span><span class="pill">1 min listen</span><span class="pill">1 John 5:12</span></div>
-</div>
-
-<div class="wrap">
-<div class="player">
-<button class="playBtn" id="playBtn5" onclick="playConversation5()">▶</button>
-<div style="flex:1;min-width:0">
-<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
-<div class="playerBar"><div id="progressFill5"></div></div>
-<div class="time"><span id="timeNow5">0:00</span><span>1:00</span></div>
-</div>
-</div>
-
+<!-- PART 6 - NOW MINIMIZED LIKE OTHERS -->
+<div class="partHead" onclick="togglePart('p6',this)"><div><b>Part 6: Let's Check What We Learned</b><small>Review • A - E • Finale</small></div><span>▸</span></div>
+<div class="partBody" id="p6"><div class="wrap">
+<div class="hero" style="padding:14px 0 0"><h1>Eternal Life <span>— Part 6</span></h1><p><b>Let's Check What We Learned</b> — We finish Lesson 1 together.</p><div class="pillRow"><span class="pill gold">Lesson 1 • Part 6 of 6 • FINALE</span><span class="pill">1 min listen</span><span class="pill">Review</span></div></div>
+<div class="player"><button type="button" class="playBtn" id="playBtn6" onclick="playConversation6()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div><div class="playerBar"><div id="progressFill6"></div></div><div class="time"><span id="timeNow6">0:00</span><span>1:00</span></div></div></div>
 <div class="transcript">
-<div class="line" id="line5-0"><div class="face mitch" id="img5-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome back to Lesson 1 - Eternal Life, Part 5. Yesterday we prayed together and received Him. Christian, be honest — this morning, did you feel different? What changed?</p></div></div>
-<div class="line" id="line5-1"><div class="face christian" id="img5-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Honestly Mitch, I didn't feel a big lightning. I felt... quiet. Peaceful. But did anything really change? Or did I just say some words?</p></div></div>
-<div class="line" id="line5-2"><div class="face anita" id="img5-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Christian, feelings come and go. Truth stays. 1 John 5:12 says, "He that hath the Son hath life." You have the Son. So you have life. Even when you don't feel it, you have it.</p></div></div>
-<div class="line" id="line5-3"><div class="face david" id="img5-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Yes. And John 10:10 says Jesus came that we might have life, and have it more abundantly. The thief came to steal, kill and destroy. Jesus came to give. So now what? Now you walk with Him every day. You talk to Him. You read His Word. You don't go back to trying to earn it.</p></div></div>
-<div class="line" id="line5-4"><div class="face mitch" id="img5-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So what changed? Everything. You are not trying to get to God anymore. You have God living in you. You have eternal life — not just forever later, but abundant life now. Tomorrow, in Part 6, we will check what we learned and finish Lesson 1 together.</p></div></div>
+<div class="line" id="line6-0"><div class="face mitch" id="img6-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Part 6 — the finale of Lesson 1. Christian, let's check: In one sentence, what is eternal life?</p></div></div>
+<div class="line" id="line6-1"><div class="face christian" id="img6-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Eternal life is God's life in me now — because I have Jesus. I don't earn it, I received Him. I have life now, and forever.</p></div></div>
+<div class="line" id="line6-2"><div class="face anita" id="img6-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Wait, Christian — before we finish, let's check. Can you tell me what you learned? I'll help you.<br><br>• <b>A</b> — What did Jesus come to give? <i>Life.</i><br>• <b>B</b> — When? <i>Now, not later.</i><br>• <b>C</b> — How do we get it? <i>We receive it.</i><br>• <b>D</b> — What do we do? <i>We confess it.</i><br>• <b>E</b> — How is it? <i>Abundant.</i><br><br>You see? You already know it. You lived it this week.</p></div></div>
+<div class="line" id="line6-3"><div class="face david" id="img6-david">🧔🏾</div><div><p class="who david">David</p><p class="text">And now?<br>• You have life<br>• Go tell ONE person<br>• Matthew 28:19 — Go Ye<br>That is Lesson 2.</p></div></div>
+<div class="line" id="line6-4"><div class="face mitch" id="img6-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">You finished Lesson 1. You have life. Now go and give life. See you in Lesson 2.</p></div></div>
+</div>
+<div class="prayerBox"><h3>🙏 Say This Today</h3><p>"Jesus, thank You for Lesson 1. I have life. Help me share it with one person this week. Amen."</p></div>
+<div class="verse"><p>"Go ye therefore, and teach all nations..."</p><small>MATTHEW 28:19 • KJV</small></div>
+<div class="factOne"><small>LESSON 1 REVIEW • A - E</small><h3>You finished Eternal Life</h3><p><b>A.</b> Purpose is eternal life — John 3:16<br><b>B.</b> God's life in you now — John 17:3<br><b>C.</b> Receive by believing — John 1:12<br><b>D.</b> Confess + believe — Romans 10:9<br><b>E.</b> Abundant now — John 10:10</p></div>
+<div class="cta"><h3>🎓 You Finished Lesson 1!</h3><p>Tap to celebrate. Lesson 2 starts soon.</p><div class="reactions"><button type="button" class="react" onclick="doReact(this,6,'I finished Lesson 1')">🎓 I finished!</button><button type="button" class="react" onclick="doReact(this,6,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(6)">➡️ Share it</button></div><div class="feedback" id="feedback6"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(6)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div>
+</div></div>
+
+<!-- PART 5 -->
+<div class="partHead" onclick="togglePart('p5',this)"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
+<div class="partBody" id="p5"><div class="wrap"><div class="player"><button type="button" class="playBtn" id="playBtn5" onclick="playConversation5()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen</b><span>4 friends • 1 min</span></div><div class="playerBar"><div id="progressFill5"></div></div><div class="time"><span id="timeNow5">0:00</span><span>1:00</span></div></div></div><div class="transcript"><div class="line" id="line5-0"><div class="face mitch" id="img5-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Yesterday we prayed and received Him. What changed?</p></div></div><div class="line" id="line5-1"><div class="face christian" id="img5-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I felt quiet. Peaceful. Did anything really change?</p></div></div><div class="line" id="line5-2"><div class="face anita" id="img5-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">1 John 5:12 — He that hath the Son hath life. You have life even when you don't feel it.</p></div></div><div class="line" id="line5-3"><div class="face david" id="img5-david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 10:10 — abundant life now. Walk with Him every day.</p></div></div><div class="line" id="line5-4"><div class="face mitch" id="img5-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">You have God living in you. Eternal life now.</p></div></div></div><div class="verse"><p>"Whoever has the Son has life..."</p><small>1 JOHN 5:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,5,'I have life now')">❤️ I have life now</button><button type="button" class="react" onclick="doReact(this,5,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(5)">➡️ Share it</button></div><div class="feedback" id="feedback5"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(5)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div></div></div>
+
+<!-- PART 4 -->
+<div class="partHead" onclick="togglePart('p4',this)"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
+<div class="partBody" id="p4"><div class="wrap"><div class="player"><button type="button" class="playBtn" id="playBtn4" onclick="playConversation4()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen</b><span>4 friends • 1 min</span></div><div class="playerBar"><div id="progressFill4"></div></div><div class="time"><span id="timeNow4">0:00</span><span>1:00</span></div></div></div><div class="transcript"><div class="line" id="line4-0"><div class="face mitch" id="img4-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Today we don't just talk. We receive Him.</p></div></div><div class="line" id="line4-1"><div class="face christian" id="img4-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">How do I pray?</p></div></div><div class="line" id="line4-2"><div class="face anita" id="img4-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Romans 10:9 — confess with your mouth, believe in your heart.</p></div></div><div class="line" id="line4-3"><div class="face david" id="img4-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Revelation 3:20 — Jesus is knocking. Open the door.</p></div></div><div class="line" id="line4-4"><div class="face mitch" id="img4-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Pray: Jesus, come and live in me. I receive You.</p></div></div></div><div class="prayerBox"><h3>🙏 Pray This</h3><p>"Jesus, I believe You died for me. I open my heart. Come and live in me. I receive eternal life. Amen."</p></div><div class="verse"><p>"If you declare... you will be saved."</p><small>ROMANS 10:9</small></div><div class="cta"><h3>Your Turn — Did You Pray?</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,4,'I received Him')">❤️ I received Him</button><button type="button" class="react" onclick="doReact(this,4,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(4)">➡️ Share it</button></div><div class="feedback" id="feedback4"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(4)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div></div></div>
+
+<!-- PART 3 -->
+<div class="partHead" onclick="togglePart('p3',this)"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
+<div class="partBody" id="p3"><div class="wrap"><div class="player"><button type="button" class="playBtn" id="playBtn3" onclick="playConversation3()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen</b><span>4 friends • 1 min</span></div><div class="playerBar"><div id="progressFill3"></div></div><div class="time"><span id="timeNow3">0:00</span><span>1:00</span></div></div></div><div class="transcript"><div class="line" id="line3-0"><div class="face mitch" id="img3-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">How do I receive it? Do I have to earn it?</p></div></div><div class="line" id="line3-1"><div class="face christian" id="img3-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I try to be good. Is that how?</p></div></div><div class="line" id="line3-2"><div class="face david" id="img3-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Is it by works?</p></div></div><div class="line" id="line3-3"><div class="face anita" id="img3-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 — as many as received Him.</p></div></div><div class="line" id="line3-4"><div class="face mitch" id="img3-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Tomorrow we pray together.</p></div></div></div><div class="verse"><p>"Yet to all who did receive him..."</p><small>JOHN 1:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,3,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,3,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(3)">➡️ Share it</button></div><div class="feedback" id="feedback3"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(3)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div></div></div>
+
+<!-- PART 2 -->
+<div class="partHead" onclick="togglePart('p2',this)"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
+<div class="partBody" id="p2"><div class="wrap"><div class="player"><button type="button" class="playBtn" id="playBtn2" onclick="playConversation2()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen</b><span>4 friends • 1 min</span></div><div class="playerBar"><div id="progressFill2"></div></div><div class="time"><span id="timeNow2">0:00</span><span>1:00</span></div></div></div><div class="transcript"><div class="line" id="line2-0"><div class="face mitch" id="img2-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">What is that life?</p></div></div><div class="line" id="line2-1"><div class="face christian" id="img2-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Just living forever in heaven?</p></div></div><div class="line" id="line2-2"><div class="face anita" id="img2-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">What does Jesus say?</p></div></div><div class="line" id="line2-3"><div class="face david" id="img2-david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 17:3 — eternal life is knowing God. God's life in you now.</p></div></div><div class="line" id="line2-4"><div class="face mitch" id="img2-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">He came to give us His life now.</p></div></div></div><div class="verse"><p>"Now this is eternal life: that they know you..."</p><small>JOHN 17:3</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,2,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,2,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(2)">➡️ Share it</button></div><div class="feedback" id="feedback2"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(2)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div></div></div>
+
+<!-- PART 1 -->
+<div class="partHead" onclick="togglePart('p1',this)"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
+<div class="partBody" id="p1"><div class="wrap"><div class="player"><button type="button" class="playBtn" id="playBtn" onclick="playConversation()">▶</button><div style="flex:1;min-width:0"><div class="playerText"><b>Tap to listen</b><span>4 friends • 1 min</span></div><div class="playerBar"><div id="progressFill"></div></div><div class="time"><span id="timeNow">0:00</span><span>1:00</span></div></div></div><div class="transcript"><div class="line" id="line-0"><div class="face mitch" id="img-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">John 3:16 has been misunderstood.</p></div></div><div class="line" id="line-1"><div class="face christian" id="img-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">For God so loved the world...</p></div></div><div class="line" id="line-2"><div class="face anita" id="img-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">This verse is saying something more.</p></div></div><div class="line" id="line-3"><div class="face david" id="img-david">🧔🏾</div><div><p class="who david">David</p><p class="text">The real purpose was everlasting life.</p></div></div><div class="line" id="line-4"><div class="face mitch" id="img-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">God wants to give you everlasting life.</p></div></div></div><div class="verse"><p>"For God so loved the world..."</p><small>JOHN 3:16</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,1,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,1,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(1)">➡️ Share it</button></div><div class="feedback" id="feedback"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(1)">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">Follow on TikTok @mitch5771</a></div></div></div>
+
+</div>
 </div>
 
-<div class="prayerBox">
-<h3>🙏 Say This Today</h3>
-<p>"Jesus, thank You. I have You, so I have life. Help me walk with You today — not trying to earn it, just receiving it. Amen."</p>
+<div class="lessonWrap">
+<div class="lessonHead" onclick="toggleLesson('lesson2',this)"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div>
+<div class="lessonBody" id="lesson2"><div class="wrap" style="padding-top:16px"><div class="prayerBox"><h3>Coming Soon</h3><p>You have life. Now go and give life. Lesson 2 teaches you how to share Jesus with one person, simply.</p></div></div></div>
 </div>
 
-<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 6: "Let's Check What We Learned"</b> — We finish Lesson 1.</div>
-
-<div class="verse"><p>"Whoever has the Son has life; whoever does not have the Son of God does not have life."</p><small>1 JOHN 5:12 • NIV</small></div>
-
-<div class="factOne">
-<small>FACT OF TODAY • 5 OF 5</small>
-<h3>E. Eternal life is now — and it is abundant</h3>
-<p><b>1 John 5:12 + John 10:10 + Rev 3:20</b> — You don't wait for heaven to start living. You have Him now. God wants a personal relationship with you today, and a quality of life that is greater than anything else.</p>
+<div class="bibleWrap" style="margin-top:16px">
+<div class="bibleCard">
+<div class="bibleHead"><h2>✦ HOLY BIBLE</h2></div>
+<div class="dailyVerse"><small>✦ DAILY VERSE • <span id="dailyDate"></span></small><p id="dailyVerseText">Loading today's verse...</p><b id="dailyVerseRef"></b></div>
+<button type="button" class="openBtn" id="openBibleBtn" onclick="toggleBible()">📖 Open Bible — Book, Chapter &amp; Verse ↓</button>
+<div class="bibleBody" id="bibleBody">
+<div class="bibleControls"><select id="bibleBook"></select><select id="bibleChapter"></select><select id="bibleVerse"><option value="1">Verse 1</option></select></div>
+<div class="bibleControls"><button type="button" style="flex:1" onclick="loadBible()">READ →</button><button type="button" style="flex:1;background:#fff" onclick="readDailyVerse()">Read Daily Verse →</button></div>
+<div class="bibleSearch"><input id="bibleSearchInput" placeholder="Search e.g. John 3:16"><button type="button" onclick="searchBible()">Search</button></div>
+<div class="bibleRef" id="bibleRef">John 1:1</div>
+<div class="singleVerse"><p id="bibleText">Tap READ to open your Bible.</p></div>
+<div class="bibleNav"><button type="button" class="prevB" onclick="moveVerse(-1)">← Previous Verse</button><button type="button" class="nextB" onclick="moveVerse(1)">Next Verse →</button></div>
+<div class="bibleNav2"><button type="button" onclick="moveBible(-1)">← Previous Chapter</button><button type="button" onclick="moveBible(1)">Next Chapter →</button></div>
+<div class="bibleNote">One verse at a time • Next arrow goes to next verse, then next chapter automatically<br>World English Bible • Free &amp; Legal • Same meaning as NIV</div>
+</div>
+</div>
 </div>
 
-<div class="cta">
-<h3>Your Turn — What Changed For You?</h3>
-<p>Tap how you feel today. This is your check-in after receiving Him.</p>
-<div class="reactions">
-<button class="react" onclick="selectReact5(this,'I have life now')">❤️ I have life now</button>
-<button class="react" onclick="selectReact5(this,'Pray for me')">🙏 Pray for me</button>
-<button class="react" onclick="shareStory5()">➡️ Share it</button>
-</div>
-<div id="feedback5"></div>
-<button class="btn btn-yes" id="yesBtn5" onclick="openComments5()">💬 Say YES on TikTok →</button>
-<button class="btn btn-follow" onclick="openComments5()">Follow on TikTok @mitch5771</button>
-<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
-</div>
-
+<!-- ONE FOOTER ONLY - AFTER BIBLE -->
 <div class="footer">
 <p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
-<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
+<p>Kampala, Uganda</p>
+<p>TikTok: <a href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener">@mitch5771</a> • Email: <a href="mailto:michealmawadri01@gmail.com">michealmawadri01@gmail.com</a></p>
 <p>Scripture Inspiration - Go Ye</p>
-</div>
-</div>
-
-<!-- ================= DIVIDER ================= -->
-<div class="divider"><span>↓ MISSED PART 4? SEE IT BELOW ↓</span></div>
-
-<!-- ================= PART 4 ================= -->
-<div class="hero">
-<h1>Eternal Life <span>— Part 4</span></h1>
-<p><b>Romans 10:9</b> — We talked about it for 3 days. Today we stop talking about it. We do it. We pray together and receive Him.</p>
-<div class="pillRow"><span class="pill gold">Lesson 1 • Part 4 of 6</span><span class="pill">1 min listen</span><span class="pill">Romans 10:9</span></div>
-</div>
-
-<div class="wrap">
-<div class="player">
-<button class="playBtn" id="playBtn4" onclick="playConversation4()">▶</button>
-<div style="flex:1;min-width:0">
-<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
-<div class="playerBar"><div id="progressFill4"></div></div>
-<div class="time"><span id="timeNow4">0:00</span><span>1:00</span></div>
-</div>
-</div>
-
-<div class="transcript">
-<div class="line" id="line4-0"><div class="face mitch" id="img4-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome back to Lesson 1 - Eternal Life, Part 4. For three days we have talked about eternal life. Today, we are not just going to talk about it. We are going to receive it. Together. Right now.</p></div></div>
-<div class="line" id="line4-1"><div class="face christian" id="img4-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I'm ready, Mitch. Anita said I don't have to earn it, I just receive it. But... how do I actually pray? What do I say?</p></div></div>
-<div class="line" id="line4-2"><div class="face anita" id="img4-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">It's simple, Christian. Romans 10:9 says, if you confess with your mouth that Jesus is Lord, and believe in your heart that God raised Him from the dead, you will be saved. You just talk to Him like a friend. Say it with your mouth. Believe it in your heart.</p></div></div>
-<div class="line" id="line4-3"><div class="face david" id="img4-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Yes. Revelation 3:20 says Jesus is standing at the door knocking. He is knocking on your heart right now. You just have to open the door. Say, "Jesus, come in."</p></div></div>
-<div class="line" id="line4-4"><div class="face mitch" id="img4-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So let's do it together. If you are listening, wherever you are — in Kampala, in the taxi, at home — close your eyes and pray this with me, out loud: "Jesus, I believe You died for me. I believe You rose again. I open my heart. Come and live in me. I receive You today. I receive eternal life. Amen." If you prayed that, you have received Him. Welcome to the family.</p></div></div>
-</div>
-
-<div class="prayerBox">
-<h3>🙏 Pray This With Us</h3>
-<p>"Jesus, I believe You died for me. I believe You rose again. I open my heart. Come and live in me. I receive You today. I receive eternal life. Amen."</p>
-</div>
-
-<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 5: "Now What? What Changed?"</b> — What happens after you receive Him.</div>
-
-<div class="verse"><p>"If you declare with your mouth, 'Jesus is Lord,' and believe in your heart that God raised him from the dead, you will be saved."</p><small>ROMANS 10:9 • NIV</small></div>
-
-<div class="factOne">
-<small>FACT OF TODAY • 4 OF 5</small>
-<h3>D. You receive Him now by confessing and believing</h3>
-<p><b>Romans 10:9 + Revelation 3:20</b> — You don't wait for a feeling. You open the door. You say it. You believe it. He comes in. That is how eternal life starts.</p>
-</div>
-
-<div class="cta">
-<h3>Your Turn — Did You Pray?</h3>
-<p>Did you pray that prayer with us? Tap below. This is your YES moment.</p>
-<div class="reactions">
-<button class="react" onclick="selectReact4(this,'I received Him')">❤️ I received Him</button>
-<button class="react" onclick="selectReact4(this,'Pray for me')">🙏 Pray for me</button>
-<button class="react" onclick="shareStory4()">➡️ Share it</button>
-</div>
-<div id="feedback4"></div>
-<button class="btn btn-yes" id="yesBtn4" onclick="openComments4()">💬 Say YES on TikTok →</button>
-<button class="btn btn-follow" onclick="openComments4()">Follow on TikTok @mitch5771</button>
-<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
-</div>
-
-<div class="footer">
-<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
-<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
-<p>Scripture Inspiration - Go Ye</p>
-</div>
-</div>
-
-<!-- ================= DIVIDER ================= -->
-<div class="divider"><span>↓ MISSED PART 3? SEE IT BELOW ↓</span></div>
-
-<!-- ================= PART 3 ================= -->
-<div class="hero">
-<h1>Eternal Life <span>— Part 3</span></h1>
-<p><b>John 1:12</b> — Yesterday David said we have the life already. Today Anita answers, "How do I actually receive it?"</p>
-<div class="pillRow"><span class="pill gold">Lesson 1 • Part 3 of 6</span><span class="pill">1 min listen</span><span class="pill">John 1:12</span></div>
-</div>
-
-<div class="wrap">
-<div class="player">
-<button class="playBtn" id="playBtn3" onclick="playConversation3()">▶</button>
-<div style="flex:1;min-width:0">
-<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
-<div class="playerBar"><div id="progressFill3"></div></div>
-<div class="time"><span id="timeNow3">0:00</span><span>1:00</span></div>
-</div>
-</div>
-
-<div class="transcript">
-<div class="line" id="line3-0"><div class="face mitch" id="img3-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome back to Lesson 1 - Eternal Life, Part 3. Yesterday David said eternal life is God's life in us now. So today, Anita, the big question: How do I receive it? Do I have to earn it?</p></div></div>
-<div class="line" id="line3-1"><div class="face christian" id="img3-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Yes, I need this too. I go to church, I try to be good. Is that how I get it?</p></div></div>
-<div class="line" id="line3-2"><div class="face david" id="img3-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Good question, Christian. Anita, what does the Bible say? Is it by works, or by something else?</p></div></div>
-<div class="line" id="line3-3"><div class="face anita" id="img3-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 says, "But as many as received Him, to them He gave the right to become children of God, to those who believe in His name." Romans 10:9 says if you confess with your mouth and believe in your heart, you will be saved. It is simple: Believe in Jesus, receive Him. Say yes to Him, and He comes to live in you.</p></div></div>
-<div class="line" id="line3-4"><div class="face mitch" id="img3-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So it is not about trying harder. It is about receiving. Tomorrow, we will actually pray together to receive Him. Don't miss Part 4.</p></div></div>
-</div>
-
-<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 4: "Let's Receive Him Together"</b> — We pray together.</div>
-
-<div class="verse"><p>"Yet to all who did receive him, to those who believed in his name, he gave the right to become children of God."</p><small>JOHN 1:12 • NIV</small></div>
-
-<div class="factOne">
-<small>FACT OF TODAY • 3 OF 5</small>
-<h3>C. You receive eternal life by believing and receiving Jesus</h3>
-<p><b>John 1:12 + Romans 10:9</b> — You don't work for it. You believe in your heart and confess with your mouth. You receive Jesus, and you receive life.</p>
-</div>
-
-<div class="cta">
-<h3>Your Turn</h3>
-<p>Did this speak to you? Tap how you feel. No need to copy-paste if you don't want to.</p>
-<div class="reactions">
-<button class="react" onclick="selectReact3(this,'I needed this')">❤️ I needed this</button>
-<button class="react" onclick="selectReact3(this,'Pray for me')">🙏 Pray for me</button>
-<button class="react" onclick="shareStory3()">➡️ Share it</button>
-</div>
-<div id="feedback3"></div>
-<button class="btn btn-yes" id="yesBtn3" onclick="openComments3()">💬 Say YES on TikTok →</button>
-<button class="btn btn-follow" onclick="openComments3()">Follow on TikTok @mitch5771</button>
-<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
-</div>
-
-<div class="footer">
-<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
-<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
-<p>Scripture Inspiration - Go Ye</p>
-</div>
-</div>
-
-<!-- ================= DIVIDER ================= -->
-<div class="divider"><span>↓ MISSED PART 2? SEE IT BELOW ↓</span></div>
-
-<!-- ================= PART 2 ================= -->
-<div class="hero">
-<h1>Eternal Life <span>— Part 2</span></h1>
-<p><b>John 17:3</b> — Yesterday Mitch asked, "But what is that life?" Today David answers, like friends.</p>
-<div class="pillRow"><span class="pill gold">Lesson 1 • Part 2 of 6</span><span class="pill">1 min listen</span><span class="pill">John 17:3</span></div>
-</div>
-
-<div class="wrap">
-<div class="player">
-<button class="playBtn" id="playBtn2" onclick="playConversation2()">▶</button>
-<div style="flex:1;min-width:0">
-<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
-<div class="playerBar"><div id="progressFill2"></div></div>
-<div class="time"><span id="timeNow2">0:00</span><span>1:00</span></div>
-</div>
-</div>
-
-<div class="transcript">
-<div class="line" id="line2-0"><div class="face mitch" id="img2-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome back to Lesson 1 - Eternal Life, Part 2. Yesterday I asked, "But what is that life?" David, you said you would answer that today. So, David, what is that life?</p></div></div>
-<div class="line" id="line2-1"><div class="face christian" id="img2-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Yes David, I need this. I always thought everlasting life just meant living forever in heaven one day. Is that all it is?</p></div></div>
-<div class="line" id="line2-2"><div class="face anita" id="img2-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">David, take your time. What does Jesus Himself say that life is?</p></div></div>
-<div class="line" id="line2-3"><div class="face david" id="img2-david">🧔🏾</div><div><p class="who david">David</p><p class="text">It is more than living forever. Jesus defines it in John 17:3. He says, "And this is eternal life, that they may know You, the only true God, and Jesus Christ whom You have sent." Eternal life is God's own life, in you, right now. 1 John 5:11 says this life is in His Son. If you have Jesus, you have the life already.</p></div></div>
-<div class="line" id="line2-4"><div class="face mitch" id="img2-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So Jesus did not just come to give us a ticket to heaven later. He came to give us His life now. But how do we receive that life? That is tomorrow.</p></div></div>
-</div>
-
-<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 3: "How do I receive it?"</b> — Anita answers.</div>
-
-<div class="verse"><p>"Now this is eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent."</p><small>JOHN 17:3 • NIV</small></div>
-
-<div class="factOne">
-<small>FACT OF TODAY • 2 OF 5</small>
-<h3>B. Eternal life is God's life in you now</h3>
-<p><b>John 17:3 + 1 John 5:11-12</b> — Eternal life is not just duration. It is knowing God. You don't wait for it. You receive it when you receive Jesus.</p>
-</div>
-
-<div class="cta">
-<h3>Your Turn</h3>
-<p>Did this speak to you? Tap how you feel. No need to copy-paste if you don't want to.</p>
-<div class="reactions">
-<button class="react" onclick="selectReact2(this,'I needed this')">❤️ I needed this</button>
-<button class="react" onclick="selectReact2(this,'Pray for me')">🙏 Pray for me</button>
-<button class="react" onclick="shareStory2()">➡️ Share it</button>
-</div>
-<div id="feedback2"></div>
-<button class="btn btn-yes" id="yesBtn2" onclick="openComments2()">💬 Say YES on TikTok →</button>
-<button class="btn btn-follow" onclick="openComments2()">Follow on TikTok @mitch5771</button>
-<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
-</div>
-
-<div class="footer">
-<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
-<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
-<p>Scripture Inspiration - Go Ye</p>
-</div>
-</div>
-
-<!-- ================= DIVIDER ================= -->
-<div class="divider"><span>↓ MISSED PART 1? SEE IT BELOW ↓</span></div>
-
-<!-- ================= PART 1 ================= -->
-<div class="hero">
-<h1>Eternal Life <span>— Part 1</span></h1>
-<p><b>John 3:16</b> — Everybody knows this verse. But most of us have missed what it really means. Mitch, Christian, Anita & David talk it out, like friends.</p>
-<div class="pillRow"><span class="pill gold">Lesson 1 • Part 1 of 6</span><span class="pill">1 min listen</span><span class="pill">John 3:16</span></div>
-</div>
-
-<div class="wrap">
-<div class="player">
-<button class="playBtn" id="playBtn" onclick="playConversation()">▶</button>
-<div style="flex:1;min-width:0">
-<div class="playerText"><b>Tap to listen — like a voice note</b><span>4 friends • Kampala • 1 min</span></div>
-<div class="playerBar"><div id="progressFill"></div></div>
-<div class="time"><span id="timeNow">0:00</span><span>1:00</span></div>
-</div>
-</div>
-
-<div class="transcript">
-<div class="line" id="line-0"><div class="face mitch" id="img-mitch1">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Lesson 1 - Eternal Life. One of the most familiar passages is John 3:16. It seems like everybody knows that verse from a young age, yet I believe it has really been misunderstood.</p></div></div>
-<div class="line" id="line-1"><div class="face christian" id="img-christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I know that verse! "For God so loved the world that he gave his only begotten Son, that whosoever believeth in him should not perish but have everlasting life."</p></div></div>
-<div class="line" id="line-2"><div class="face anita" id="img-anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Traditionally, this scripture has been used to teach that Jesus came and died for our sins so that we wouldn't perish. As true as this is, this verse is saying something more.</p></div></div>
-<div class="line" id="line-3"><div class="face david" id="img-david">🧔🏾</div><div><p class="who david">David</p><p class="text">Yes. The real purpose of Jesus coming and dying for us was so that we could have everlasting life. It just so happened that our sins were a barrier that stood between us and this everlasting life.</p></div></div>
-<div class="line" id="line-4"><div class="face mitch" id="img-mitch2">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">So Jesus did die for our sins. If we believe, we will not perish. But there is much more to the Gospel than that. The real message is that God wants to give you everlasting life. But what is that life?</p></div></div>
-</div>
-
-<div class="nextLine">Next — Tomorrow 6:00 AM • <b>Part 2: "But what is that life?"</b> — David answers.</div>
-
-<div class="verse"><p>"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</p><small>JOHN 3:16 • NIV</small></div>
-
-<div class="factOne">
-<small>FACT OF TODAY • 1 OF 5</small>
-<h3>A. The purpose of the Gospel is eternal life</h3>
-<p><b>John 3:16</b> — Jesus did not just come to stop us perishing. He came to give us life. Tomorrow we learn what that life is.</p>
-</div>
-
-<div class="cta">
-<h3>Your Turn</h3>
-<p>Did this speak to you? Tap how you feel. No need to copy-paste if you don't want to.</p>
-<div class="reactions">
-<button class="react" onclick="selectReact(this,'I needed this')">❤️ I needed this</button>
-<button class="react" onclick="selectReact(this,'Pray for me')">🙏 Pray for me</button>
-<button class="react" onclick="shareStory()">➡️ Share it</button>
-</div>
-<div id="feedback"></div>
-<button class="btn btn-yes" id="yesBtn" onclick="openComments()">💬 Say YES on TikTok →</button>
-<button class="btn btn-follow" onclick="openComments()">Follow on TikTok @mitch5771</button>
-<p style="font-size:10pt;color:#9A9AA3;margin-bottom:0">Your tap already counts here. TikTok comment is a bonus.</p>
-</div>
-
-<div class="footer">
-<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
-<p>Kampala, Uganda • 6:00 AM Daily • TikTok: @mitch5771</p>
-<p>Scripture Inspiration - Go Ye</p>
-</div>
 </div>
 
 <script>
-var VIDEO_ID = "PASTE_PART1_VIDEO_ID_HERE";
-var chosen = "";
-function selectReact(el,label){ chosen=label; document.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
-function openComments(){ var textToCopy = "YES"; if(chosen) textToCopy = "YES - " + chosen; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID || VIDEO_ID.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
-async function shareStory(){ var shareText="Watch this - GO YE 28:19 Lesson 1 Part 1 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 1", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback').textContent="Link copied - send it to one friend who needs it ❤️"; }
-var VOICES = { mitch:{name:"Daniel",pitch:1.0,rate:0.85}, christian:{name:"Moira",pitch:1.35,rate:0.88}, anita:{name:"Samantha",pitch:1.05,rate:0.82}, david:{name:"Daniel",pitch:0.70,rate:0.75} };
-function findVoice(wantedName){ var voices=window.speechSynthesis.getVoices(); if(!voices.length) return null; var v=voices.find(function(x){return x.name && x.name.indexOf(wantedName)>-1;}); if(v) return v; var pref=["en-GB","en-ZA","en-KE","en-NG"]; for(var p=0;p<pref.length;p++){ v=voices.find(function(x){return (x.lang||'').indexOf(pref[p])>-1;}); if(v) return v; } return voices[0]; }
-function speak(charKey, imgId, text){ return new Promise(function(resolve){ try{ window.speechSynthesis.cancel(); setTimeout(function(){ var img=document.getElementById(imgId); if(img) img.classList.add('talking'); var cfg=VOICES[charKey]||VOICES.mitch; var u=new SpeechSynthesisUtterance(text); var v=findVoice(cfg.name); if(v){u.voice=v; u.lang=v.lang;} else {u.lang='en-GB';} u.volume=1; u.rate=cfg.rate; u.pitch=cfg.pitch; u.onend=function(){if(img) img.classList.remove('talking'); resolve();}; u.onerror=function(){if(img) img.classList.remove('talking'); resolve();}; window.speechSynthesis.speak(u); },200); }catch(e){resolve();} }); }
-var isPlaying=false;
-async function playConversation(){ if(isPlaying){ window.speechSynthesis.cancel(); isPlaying=false; document.getElementById('playBtn').textContent='▶'; return; } isPlaying=true; document.getElementById('playBtn').textContent='⏸'; var lines=[ ['mitch','img-mitch1','Welcome to Lesson 1 - Eternal Life. One of the most familiar passages is John 3:16. It seems like everybody knows that verse from a young age, yet I believe it has really been misunderstood.'], ['christian','img-christian','I know that verse! For God so loved the world that he gave his only begotten Son, that whosoever believeth in him should not perish but have everlasting life.'], ['anita','img-anita','Traditionally, this scripture has been used to teach that Jesus came and died for our sins so that we would not perish. As true as this is, this verse is saying something more.'], ['david','img-david','Yes. The real purpose of Jesus coming and dying for us was so that we could have everlasting life. It just so happened that our sins were a barrier that stood between us and this everlasting life.'], ['mitch','img-mitch2','So Jesus did die for our sins. If we believe, we will not perish. But there is much more to the Gospel than that. The real message is that God wants to give you everlasting life. But what is that life?'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line-'+Math.min(i,4)); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying=false; document.getElementById('playBtn').textContent='▶'; document.getElementById('progressFill').style.width='100%'; }
-if(window.speechSynthesis){ window.speechSynthesis.getVoices(); window.speechSynthesis.onvoiceschanged=function(){ window.speechSynthesis.getVoices(); }; }
+function copyYes(part){ var txt="YES - I finished Lesson 1 Part "+part+" ❤️ GO YE - @mitch5771"; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).catch(function(){}); } }
+function doReact(btn, part, label){ var cta=btn.closest('.cta'); if(cta){ cta.querySelectorAll('.react').forEach(function(b){ b.classList.remove('selected'); }); } btn.classList.add('selected'); var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); if(fb) fb.textContent="Thanks — you tapped: "+label+" ❤️ Your tap counts!"; try{ localStorage.setItem('goye_part'+part, label); }catch(e){} }
+async function doShare(part){ var text="Watch GO YE - Lesson 1 Part "+part+" - Eternal Life ❤️ https://www.tiktok.com/@mitch5771"; var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); try{ if(navigator.share){ await navigator.share({title:"GO YE - Eternal Life", text:text, url:"https://www.tiktok.com/@mitch5771"}); if(fb) fb.textContent="Shared ❤️ Thank you!"; return; } if(navigator.clipboard && navigator.clipboard.writeText){ await navigator.clipboard.writeText(text); if(fb) fb.textContent="Link copied ❤️ Now paste it to a friend!"; return; } }catch(e){} window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank"); if(fb) fb.textContent="Opening WhatsApp to share ❤️"; }
+function toggleLesson(id,head){ var b=document.getElementById(id); var a=document.getElementById('arrow-'+id); if(b.classList.contains('open')){ b.classList.remove('open'); head.classList.remove('active'); if(a) a.textContent='▸'; } else { b.classList.add('open'); head.classList.add('active'); if(a) a.textContent='▾'; } }
+function togglePart(id,head){ var b=document.getElementById(id); var arrow=head.querySelector('span'); if(b.classList.contains('open')){ b.classList.remove('open'); if(arrow) arrow.textContent='▸'; } else { document.querySelectorAll('.partBody').forEach(function(x){x.classList.remove('open')}); document.querySelectorAll('.partHead span').forEach(function(s){s.textContent='▸'}); b.classList.add('open'); if(arrow) arrow.textContent='▾'; b.scrollIntoView({behavior:'smooth',block:'start'}); } }
+var VOICES={mitch:{name:"Daniel",pitch:1,rate:.85},christian:{name:"Moira",pitch:1.35,rate:.88},anita:{name:"Samantha",pitch:1.05,rate:.82},david:{name:"Daniel",pitch:.7,rate:.75}};
+function findVoice(n){ var vs=window.speechSynthesis.getVoices(); if(!vs.length) return null; var v=vs.find(function(x){return x.name&&x.name.indexOf(n)>-1}); if(v) return v; return vs[0]; }
+function speak(k,imgId,txt){ return new Promise(function(res){ try{ window.speechSynthesis.cancel(); setTimeout(function(){ var c=VOICES[k]||VOICES.mitch; var u=new SpeechSynthesisUtterance(txt); var v=findVoice(c.name); if(v){u.voice=v;u.lang=v.lang} else u.lang='en-GB'; u.rate=c.rate; u.pitch=c.pitch; u.onend=function(){res()}; u.onerror=function(){res()}; window.speechSynthesis.speak(u); },200); }catch(e){res()} }); }
+var isPlaying=false; async function playConversation(){ if(isPlaying){ window.speechSynthesis.cancel(); isPlaying=false; document.getElementById('playBtn').textContent='▶'; return; } isPlaying=true; document.getElementById('playBtn').textContent='⏸'; var lines=[['mitch','img-mitch1','John 3:16 has been misunderstood.'],['christian','img-christian','For God so loved the world.'],['anita','img-anita','This verse is saying something more.'],['david','img-david','The real purpose was everlasting life.'],['mitch','img-mitch2','God wants to give you everlasting life.']]; for(var i=0;i<lines.length;i++){ await speak(lines[i][0],lines[i][1],lines[i][2]); } isPlaying=false; document.getElementById('playBtn').textContent='▶'; }
+var isPlaying2=false; async function playConversation2(){ if(isPlaying2){ window.speechSynthesis.cancel(); isPlaying2=false; document.getElementById('playBtn2').textContent='▶'; return; } isPlaying2=true; document.getElementById('playBtn2').textContent='⏸'; var lines=[['mitch','img2-mitch1','What is that life?'],['christian','img2-christian','Just heaven?'],['anita','img2-anita','What does Jesus say?'],['david','img2-david','John 17:3 knowing God.'],['mitch','img2-mitch2','His life now.']]; for(var i=0;i<lines.length;i++){ await speak(lines[i][0],lines[i][1],lines[i][2]); } isPlaying2=false; document.getElementById('playBtn2').textContent='▶'; }
+var isPlaying3=false; async function playConversation3(){ if(isPlaying3){ window.speechSynthesis.cancel(); isPlaying3=false; document.getElementById('playBtn3').textContent='▶'; return; } isPlaying3=true; document.getElementById('playBtn3').textContent='⏸'; var lines=[['mitch','img3-mitch1','How do I receive it?'],['christian','img3-christian','Do I earn it?'],['david','img3-david','By works?'],['anita','img3-anita','You receive it. John 1:12.'],['mitch','img3-mitch2','Tomorrow we pray.']]; for(var i=0;i<lines.length;i++){ await speak(lines[i][0],lines[i][1],lines[i][2]); } isPlaying3=false; document.getElementById('playBtn3').textContent='▶'; }
+var isPlaying4=false; async function playConversation4(){ if(isPlaying4){ window.speechSynthesis.cancel(); isPlaying4=false; document.getElementById('playBtn4').textContent='▶'; return; } isPlaying4=true; document.getElementById('playBtn4').textContent='⏸'; var lines=[['mitch','img4-mitch1','Today we receive Him.'],['christian','img4-christian','How do I pray?'],['anita','img4-anita','Romans 10:9 confess and believe.'],['david','img4-david','Jesus is knocking.'],['mitch','img4-mitch2','Jesus come and live in me.']]; for(var i=0;i<lines.length;i++){ await speak(lines[i][0],lines[i][1],lines[i][2]); } isPlaying4=false; document.getElementById('playBtn4').textContent='▶'; }
+var isPlaying5=false; async function playConversation5(){ if(isPlaying5){ window.speechSynthesis.cancel(); isPlaying5=false; document.getElementById('playBtn5').textContent='▶'; return; } isPlaying5=true; document.getElementById('playBtn5').textContent='⏸'; var lines=[['mitch','img5-mitch1','What changed?'],['christian','img5-christian','I felt quiet.'],['anita','img5-anita','1 John 5:12 hath life.'],['david','img5-david','John 10:10 abundant life.'],['mitch','img5-mitch2','God living in you.']]; for(var i=0;i<lines.length;i++){ await speak(lines[i][0],lines[i][1],lines[i][2]); } isPlaying5=false; document.getElementById('playBtn5').textContent='▶'; }
+var isPlaying6=false; async function playConversation6(){ if(isPlaying6){ window.speechSynthesis.cancel(); isPlaying6=false; document.getElementById('playBtn6').textContent='▶'; return; } isPlaying6=true; document.getElementById('playBtn6').textContent='⏸'; var lines=[['mitch','img6-mitch1','Part 6 finale. What is eternal life?'],['christian','img6-christian','Gods life in me now. I received Him.'],['anita','img6-anita','Wait Christian, lets check. A, what did Jesus come to give? Life. B, when? Now, not later. C, how do we get it? We receive it. D, what do we do? We confess it. E, how is it? Abundant. You see? You already know it.'],['david','img6-david','And now? You have life. Go tell one person. Matthew 28:19 Go Ye. That is Lesson 2.'],['mitch','img6-mitch2','You finished Lesson 1. See you in Lesson 2.']]; for(var i=0;i<lines.length;i++){ if(!isPlaying6) break; await speak(lines[i][0],lines[i][1],lines[i][2]); document.getElementById('progressFill6').style.width=((i+1)/lines.length*100)+'%'; } isPlaying6=false; document.getElementById('playBtn6').textContent='▶'; }
 </script>
-
 <script>
-var VIDEO_ID_2 = "PASTE_PART2_VIDEO_ID_HERE";
-var chosen2 = "";
-function selectReact2(el,label){ chosen2=label; var scope=el.closest('.cta'); scope.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback2').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn2'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
-function openComments2(){ var textToCopy = "YES"; if(chosen2) textToCopy = "YES - " + chosen2; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn2'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback2').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID_2 || VIDEO_ID_2.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID_2; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID_2; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
-async function shareStory2(){ var shareText="Watch this - GO YE 28:19 Lesson 1 Part 2 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID_2; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 2", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback2').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback2').textContent="Link copied - send it to one friend who needs it ❤️"; }
-var isPlaying2=false;
-async function playConversation2(){ if(isPlaying2){ window.speechSynthesis.cancel(); isPlaying2=false; document.getElementById('playBtn2').textContent='▶'; return; } isPlaying2=true; document.getElementById('playBtn2').textContent='⏸'; var lines=[ ['mitch','img2-mitch1','Welcome back to Lesson 1 - Eternal Life, Part 2. Yesterday I asked, But what is that life? David, you said you would answer that today. So, David, what is that life?'], ['christian','img2-christian','Yes David, I need this. I always thought everlasting life just meant living forever in heaven one day. Is that all it is?'], ['anita','img2-anita','David, take your time. What does Jesus Himself say that life is?'], ['david','img2-david','It is more than living forever. Jesus defines it in John 17:3. He says, And this is eternal life, that they may know You, the only true God, and Jesus Christ whom You have sent. Eternal life is God\'s own life, in you, right now. 1 John 5:11 says this life is in His Son. If you have Jesus, you have the life already.'], ['mitch','img2-mitch2','So Jesus did not just come to give us a ticket to heaven later. He came to give us His life now. But how do we receive that life? That is tomorrow.'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying2) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line2-'+i); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill2').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow2').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying2=false; document.getElementById('playBtn2').textContent='▶'; document.getElementById('progressFill2').style.width='100%'; }
-</script>
-
-<script>
-var VIDEO_ID_3 = "PASTE_PART3_VIDEO_ID_HERE";
-var chosen3 = "";
-function selectReact3(el,label){ chosen3=label; var scope=el.closest('.cta'); scope.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback3').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn3'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
-function openComments3(){ var textToCopy = "YES"; if(chosen3) textToCopy = "YES - " + chosen3; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn3'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback3').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID_3 || VIDEO_ID_3.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID_3; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID_3; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
-async function shareStory3(){ var shareText="Watch this - GO YE 28:19 Lesson 1 Part 3 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID_3; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 3", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback3').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback3').textContent="Link copied - send it to one friend who needs it ❤️"; }
-var isPlaying3=false;
-async function playConversation3(){ if(isPlaying3){ window.speechSynthesis.cancel(); isPlaying3=false; document.getElementById('playBtn3').textContent='▶'; return; } isPlaying3=true; document.getElementById('playBtn3').textContent='⏸'; var lines=[ ['mitch','img3-mitch1','Welcome back to Lesson 1 - Eternal Life, Part 3. Yesterday David said eternal life is God\'s life in us now. So today, Anita, the big question: How do I receive it? Do I have to earn it?'], ['christian','img3-christian','Yes, I need this too. I go to church, I try to be good. Is that how I get it?'], ['david','img3-david','Good question, Christian. Anita, what does the Bible say? Is it by works, or by something else?'], ['anita','img3-anita','You don\'t earn it, you receive it. John 1:12 says, But as many as received Him, to them He gave the right to become children of God, to those who believe in His name. Romans 10:9 says if you confess with your mouth and believe in your heart, you will be saved. It is simple: Believe in Jesus, receive Him. Say yes to Him, and He comes to live in you.'], ['mitch','img3-mitch2','So it is not about trying harder. It is about receiving. Tomorrow, we will actually pray together to receive Him. Don\'t miss Part 4.'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying3) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line3-'+i); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill3').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow3').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying3=false; document.getElementById('playBtn3').textContent='▶'; document.getElementById('progressFill3').style.width='100%'; }
-</script>
-
-<script>
-var VIDEO_ID_4 = "PASTE_PART4_VIDEO_ID_HERE";
-var chosen4 = "";
-function selectReact4(el,label){ chosen4=label; var scope=el.closest('.cta'); scope.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback4').textContent="Thanks — you tapped: "+label+" ❤️ That counts. Heaven rejoices. You can also say YES on TikTok below."; var y=document.getElementById('yesBtn4'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
-function openComments4(){ var textToCopy = "YES"; if(chosen4) textToCopy = "YES - " + chosen4; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn4'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback4').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID_4 || VIDEO_ID_4.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID_4; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID_4; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
-async function shareStory4(){ var shareText="I just received Him - GO YE 28:19 Lesson 1 Part 4 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID_4; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 4", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback4').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback4').textContent="Link copied - send it to one friend who needs it ❤️"; }
-var isPlaying4=false;
-async function playConversation4(){ if(isPlaying4){ window.speechSynthesis.cancel(); isPlaying4=false; document.getElementById('playBtn4').textContent='▶'; return; } isPlaying4=true; document.getElementById('playBtn4').textContent='⏸'; var lines=[ ['mitch','img4-mitch1','Welcome back to Lesson 1 - Eternal Life, Part 4. For three days we have talked about eternal life. Today, we are not just going to talk about it. We are going to receive it. Together. Right now.'], ['christian','img4-christian','I am ready, Mitch. Anita said I do not have to earn it, I just receive it. But how do I actually pray? What do I say?'], ['anita','img4-anita','It is simple, Christian. Romans 10:9 says, if you confess with your mouth that Jesus is Lord, and believe in your heart that God raised Him from the dead, you will be saved. You just talk to Him like a friend. Say it with your mouth. Believe it in your heart.'], ['david','img4-david','Yes. Revelation 3:20 says Jesus is standing at the door knocking. He is knocking on your heart right now. You just have to open the door. Say, Jesus, come in.'], ['mitch','img4-mitch2','So let us do it together. If you are listening, wherever you are, close your eyes and pray this with me, out loud: Jesus, I believe You died for me. I believe You rose again. I open my heart. Come and live in me. I receive You today. I receive eternal life. Amen. If you prayed that, you have received Him. Welcome to the family.'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying4) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line4-'+i); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill4').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow4').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying4=false; document.getElementById('playBtn4').textContent='▶'; document.getElementById('progressFill4').style.width='100%'; }
-</script>
-
-<script>
-var VIDEO_ID_5 = "PASTE_PART5_VIDEO_ID_HERE";
-var chosen5 = "";
-function selectReact5(el,label){ chosen5=label; var scope=el.closest('.cta'); scope.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected');}); el.classList.add('selected'); if(navigator.vibrate) navigator.vibrate(20); document.getElementById('feedback5').textContent="Thanks — you tapped: "+label+" ❤️ That counts. You have life now."; var y=document.getElementById('yesBtn5'); if(label==='Pray for me') y.textContent="💬 Say YES - Pray for me on TikTok →"; else y.textContent="💬 Say YES - "+label+" on TikTok →"; }
-function openComments5(){ var textToCopy = "YES"; if(chosen5) textToCopy = "YES - " + chosen5; try{ if(navigator.clipboard) navigator.clipboard.writeText(textToCopy); }catch(err){} var btn=document.getElementById('yesBtn5'); if(btn){ btn.textContent="✅ YES Copied - Opening TikTok..."; btn.classList.add('done'); } document.getElementById('feedback5').textContent="✅ Copied: '"+textToCopy+"' - TikTok opening, tap 💬 and paste if you want."; if(navigator.vibrate) navigator.vibrate([30,50,30]); if(!VIDEO_ID_5 || VIDEO_ID_5.indexOf("PASTE_")>-1){ window.open("https://www.tiktok.com/@mitch5771", "_blank"); return; } var appUrl = "tiktok://video/" + VIDEO_ID_5; var webUrl = "https://www.tiktok.com/@mitch5771/video/" + VIDEO_ID_5; var now = Date.now(); window.location.href = appUrl; setTimeout(function(){ if(Date.now() - now < 1200){ window.open(webUrl, "_blank"); } }, 800); }
-async function shareStory5(){ var shareText="Now what? I have life now - GO YE 28:19 Lesson 1 Part 5 - Eternal Life - https://www.tiktok.com/@mitch5771/video/"+VIDEO_ID_5; if(navigator.share){ try{ await navigator.share({title:"GO YE 28:19 - Lesson 1 Part 5", text:shareText, url:"https://www.tiktok.com/@mitch5771"}); document.getElementById('feedback5').textContent="Thanks for sharing ❤️"; return; }catch(e){} } try{ if(navigator.clipboard) await navigator.clipboard.writeText(shareText); }catch(e){} document.getElementById('feedback5').textContent="Link copied - send it to one friend who needs it ❤️"; }
-var isPlaying5=false;
-async function playConversation5(){ if(isPlaying5){ window.speechSynthesis.cancel(); isPlaying5=false; document.getElementById('playBtn5').textContent='▶'; return; } isPlaying5=true; document.getElementById('playBtn5').textContent='⏸'; var lines=[ ['mitch','img5-mitch1','Welcome back to Lesson 1 - Eternal Life, Part 5. Yesterday we prayed together and received Him. Christian, be honest, this morning, did you feel different? What changed?'], ['christian','img5-christian','Honestly Mitch, I did not feel a big lightning. I felt quiet. Peaceful. But did anything really change? Or did I just say some words?'], ['anita','img5-anita','Christian, feelings come and go. Truth stays. 1 John 5:12 says, He that hath the Son hath life. You have the Son. So you have life. Even when you do not feel it, you have it.'], ['david','img5-david','Yes. And John 10:10 says Jesus came that we might have life, and have it more abundantly. The thief came to steal, kill and destroy. Jesus came to give. So now what? Now you walk with Him every day. You talk to Him. You read His Word. You do not go back to trying to earn it.'], ['mitch','img5-mitch2','So what changed? Everything. You are not trying to get to God anymore. You have God living in you. You have eternal life, not just forever later, but abundant life now. Tomorrow, in Part 6, we will check what we learned and finish Lesson 1 together.'] ]; for(var i=0;i<lines.length;i++){ if(!isPlaying5) break; document.querySelectorAll('.line').forEach(function(el){el.classList.remove('active');}); var lineEl=document.getElementById('line5-'+i); if(lineEl) lineEl.classList.add('active'); document.getElementById('progressFill5').style.width=((i+1)/lines.length*100)+'%'; document.getElementById('timeNow5').textContent='0:'+(i*12+5); await speak(lines[i][0], lines[i][1], lines[i][2]); } isPlaying5=false; document.getElementById('playBtn5').textContent='▶'; document.getElementById('progressFill5').style.width='100%'; }
+var BIBLE_BOOKS={"Genesis":50,"Exodus":40,"Leviticus":27,"Numbers":36,"Deuteronomy":34,"Joshua":24,"Judges":21,"Ruth":4,"1 Samuel":31,"2 Samuel":24,"1 Kings":22,"2 Kings":25,"1 Chronicles":29,"2 Chronicles":36,"Ezra":10,"Nehemiah":13,"Esther":10,"Job":42,"Psalms":150,"Proverbs":31,"Ecclesiastes":12,"Song of Solomon":8,"Isaiah":66,"Jeremiah":52,"Lamentations":5,"Ezekiel":48,"Daniel":12,"Hosea":14,"Joel":3,"Amos":9,"Obadiah":1,"Jonah":4,"Micah":7,"Nahum":3,"Habakkuk":3,"Zephaniah":3,"Haggai":2,"Zechariah":14,"Malachi":4,"Matthew":28,"Mark":16,"Luke":24,"John":21,"Acts":28,"Romans":16,"1 Corinthians":16,"2 Corinthians":13,"Galatians":6,"Ephesians":6,"Philippians":4,"Colossians":4,"1 Thessalonians":5,"2 Thessalonians":3,"1 Timothy":6,"2 Timothy":4,"Titus":3,"Philemon":1,"Hebrews":13,"James":5,"1 Peter":5,"2 Peter":3,"1 John":5,"2 John":1,"3 John":1,"Jude":1,"Revelation":22};
+var DAILY_LIST=["John 3:16","Jeremiah 29:11","Psalm 23:1","Philippians 4:13","Romans 10:9","John 1:12","John 10:10","1 John 5:12","John 17:3","Isaiah 41:10","Joshua 1:9","Proverbs 3:5","Matthew 11:28","Romans 8:28","Psalm 46:1","Isaiah 40:31","2 Corinthians 5:17","Galatians 2:20","Ephesians 2:8","Hebrews 11:1","James 1:5","1 Peter 5:7","Revelation 3:20","Matthew 28:19","Mark 16:15","Psalm 119:105","John 14:6","Romans 12:2","Philippians 4:6","1 John 1:9"];
+var curBook="John", curChap=1, curVerse=1, dailyRef="John 3:16", curMaxVerse=51;
+var bookSel=document.getElementById('bibleBook'), chapSel=document.getElementById('bibleChapter'), verseSel=document.getElementById('bibleVerse');
+Object.keys(BIBLE_BOOKS).forEach(function(b){ var o=document.createElement('option'); o.value=b; o.text=b; if(b==="John") o.selected=true; bookSel.appendChild(o); });
+function fillChapters(){ chapSel.innerHTML=""; for(var i=1;i<=BIBLE_BOOKS[curBook];i++){ var o=document.createElement('option'); o.value=i; o.text="Chapter "+i; if(i===curChap) o.selected=true; chapSel.appendChild(o); } }
+function fillVerses(max){ verseSel.innerHTML=""; max=max||curMaxVerse; for(var i=1;i<=max;i++){ var o=document.createElement('option'); o.value=i; o.text="Verse "+i; if(i===curVerse) o.selected=true; verseSel.appendChild(o); } }
+function syncSelects(){ bookSel.value=curBook; fillChapters(); chapSel.value=curChap; fillVerses(curMaxVerse); verseSel.value=curVerse; }
+bookSel.onchange=function(){ curBook=this.value; curChap=1; curVerse=1; fillChapters(); };
+chapSel.onchange=function(){ curChap=parseInt(this.value); curVerse=1; };
+verseSel.onchange=function(){ curVerse=parseInt(this.value); loadBible(); };
+fillChapters(); fillVerses(51);
+function toggleBible(){ var b=document.getElementById('bibleBody'); var btn=document.getElementById('openBibleBtn'); if(b.classList.contains('open')){ b.classList.remove('open'); btn.textContent="📖 Open Bible — Book, Chapter & Verse ↓"; } else { b.classList.add('open'); btn.textContent="✕ Close Bible ↑"; if(!b.dataset.loaded){ loadBible(); b.dataset.loaded="1"; } } }
+async function getMaxVerse(book,chap){ try{ var r=await fetch("https://bible-api.com/"+encodeURIComponent(book+" "+chap)+"?translation=web"); var d=await r.json(); return d.verses.length; }catch(e){ return 30; } }
+async function loadBible(){ curBook=bookSel.value; curChap=parseInt(chapSel.value)||1; curVerse=parseInt(verseSel.value)||1; document.getElementById('bibleRef').textContent=curBook+" "+curChap+":"+curVerse; document.getElementById('bibleText').innerHTML="Loading..."; try{ var r=await fetch("https://bible-api.com/"+encodeURIComponent(curBook+" "+curChap+":"+curVerse)+"?translation=web"); var d=await r.json(); document.getElementById('bibleText').innerHTML="<span>"+d.text.trim()+"</span>"; curMaxVerse=await getMaxVerse(curBook,curChap); fillVerses(curMaxVerse); verseSel.value=curVerse; }catch(e){ document.getElementById('bibleText').textContent="No internet right now."; } }
+async function moveVerse(n){ if(n===1 && curVerse>=curMaxVerse){ moveBible(1); return; } if(n===-1 && curVerse<=1){ var books=Object.keys(BIBLE_BOOKS); var idx=books.indexOf(curBook); if(idx===0 && curChap===1) return; if(curChap>1){ curChap--; } else { curBook=books[idx-1]; curChap=BIBLE_BOOKS[curBook]; } curMaxVerse=await getMaxVerse(curBook,curChap); curVerse=curMaxVerse; syncSelects(); loadBible(); return; } curVerse+=n; syncSelects(); loadBible(); }
+function moveBible(n){ var books=Object.keys(BIBLE_BOOKS); var idx=books.indexOf(curBook); curChap+=n; if(curChap<1){ if(idx>0){ curBook=books[idx-1]; curChap=BIBLE_BOOKS[curBook]; } else curChap=1; } if(curChap>BIBLE_BOOKS[curBook]){ if(idx<books.length-1){ curBook=books[idx+1]; curChap=1; } else curChap=BIBLE_BOOKS[curBook]; } curVerse=1; syncSelects(); loadBible(); }
+async function searchBible(){ var q=document.getElementById('bibleSearchInput').value.trim(); if(!q) return; var m=q.match(/(.+)\s(\d+):(\d+)/); if(m){ curBook=m[1]; curChap=parseInt(m[2]); curVerse=parseInt(m[3]); syncSelects(); } document.getElementById('bibleBody').classList.add('open'); loadBible(); }
+async function loadDailyVerse(){ var now=new Date(); document.getElementById('dailyDate').textContent=now.toDateString().slice(4); var start=new Date(now.getFullYear(),0,0); var day=Math.floor((now-start)/86400000); dailyRef=DAILY_LIST[day % DAILY_LIST.length]; document.getElementById('dailyVerseRef').textContent=dailyRef; try{ var r=await fetch("https://bible-api.com/"+encodeURIComponent(dailyRef)+"?translation=web"); var d=await r.json(); document.getElementById('dailyVerseText').textContent='"'+d.text.trim()+'"'; }catch(e){ document.getElementById('dailyVerseText').textContent='"For God so loved the world..."'; } }
+function readDailyVerse(){ var parts=dailyRef.match(/(.+)\s(\d+):(\d+)/); if(!parts) return; curBook=parts[1]; curChap=parseInt(parts[2]); curVerse=parseInt(parts[3]); syncSelects(); document.getElementById('bibleBody').classList.add('open'); document.getElementById('openBibleBtn').textContent="✕ Close Bible ↑"; loadBible(); }
+loadDailyVerse();
 </script>
 </body>
 </html>
