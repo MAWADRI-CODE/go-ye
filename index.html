@@ -3,332 +3,440 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>GO YE 28:19 - Lesson 1 Eternal Life - Micheal weds Anita</title>
+<title>GO YE 28:19 - Lesson 1 Eternal Life</title>
 <style>
 *{box-sizing:border-box;font-family:Georgia,"Times New Roman",serif}
 body{margin:0;color:#F5F5F7;font-size:11pt;-webkit-text-size-adjust:100%;background-image:url('eden.jpg');background-size:cover;background-position:center center;background-attachment:fixed;background-repeat:no-repeat;background-color:#0B0B0E}
 body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, rgba(0,0,0,.68) 35%, rgba(11,11,14,.88) 100%);z-index:-1}
-.newHeader{max-width:100%;margin:0 auto;overflow:hidden;position:relative;color:#fff;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center}
+.newHeader{max-width:100%;margin:0 auto;border-radius:0;overflow:hidden;position:relative;color:#fff;background-color:transparent;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center}
 .newHeaderBg{position:absolute;inset:0;background-image:url('eden.jpg');background-size:cover;background-position:center center;animation:breathe 18s ease-in-out infinite alternate}
-.newHeader::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 60%, rgba(11,11,14,.95) 100%)}
+.newHeader::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 60%, rgba(11,11,14,.95) 100%);animation:glowBreathe 4s ease-in-out infinite alternate}
 .particle{position:absolute;bottom:-10px;border-radius:50%;background:#FFE9A8;opacity:0.85;animation:rise linear infinite;z-index:1}
-.bird{position:absolute;z-index:1;opacity:.7}.bird.ltr{animation:flyLTR linear infinite}.bird.rtl{animation:flyRTL linear infinite}.bird .flip{display:inline-block;transform:scaleX(-1)}.bird .flap{display:inline-block;animation:flap .9s ease-in-out infinite alternate}
-@keyframes flyLTR{0%{left:-10%}100%{left:110%}}@keyframes flyRTL{0%{left:110%}100%{left:-10%}}@keyframes flap{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
-.butterfly{position:absolute;z-index:1;opacity:0}.butterfly.ltr{animation:flyButterflyLTR ease-in-out infinite}.butterfly.rtl{animation:flyButterflyRTL ease-in-out infinite}.butterfly span{display:inline-block;animation:butterflyFlap 1s ease-in-out infinite alternate}
-@keyframes flyButterflyLTR{0%{left:-5%;opacity:0}5%{opacity:.4}100%{left:105%;opacity:0}}@keyframes flyButterflyRTL{0%{left:105%;opacity:0}5%{opacity:.4}100%{left:-5%;opacity:0}}@keyframes butterflyFlap{from{transform:scaleX(1) rotate(-8deg)}to{transform:scaleX(.45) rotate(8deg)}}
-@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-100vh);opacity:0}}@keyframes floatUp{from{transform:translateY(0)}to{transform:translateY(-5px)}}
+.bird{position:absolute;z-index:1;opacity:.7;filter:blur(.4px)}
+.bird.ltr{animation:flyLTR linear infinite}
+.bird.rtl{animation:flyRTL linear infinite}
+.bird .flip{display:inline-block;transform:scaleX(-1)}
+.bird .flap{display:inline-block;animation:flap .9s ease-in-out infinite alternate;transform-origin:center bottom}
+.bird.black .flap{filter:brightness(0) contrast(1.2)}
+.bird.white .flap{filter:brightness(1.2) drop-shadow(0 0 3px rgba(255,240,180,.9))}
+@keyframes flyLTR{0%{left:-10%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:110%;transform:translateY(-4px)}}
+@keyframes flyRTL{0%{left:110%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:-10%;transform:translateY(-5px)}}
+@keyframes flap{from{transform:rotate(-12deg) scaleY(1)}to{transform:rotate(12deg) scaleY(.75)}}
+.butterfly{position:absolute;z-index:1;opacity:0;filter:blur(.4px)}
+.butterfly.ltr{animation:flyButterflyLTR ease-in-out infinite}
+.butterfly.rtl{animation:flyButterflyRTL ease-in-out infinite}
+.butterfly span{display:inline-block;animation:butterflyFlap 1s ease-in-out infinite alternate;transform-origin:center}
+.butterfly.orange span{filter:hue-rotate(0deg) saturate(1.3) brightness(1.05) opacity(.4)}
+.butterfly.pink span{filter:hue-rotate(300deg) saturate(1.3) brightness(1.1) opacity(.4)}
+.butterfly.purple span{filter:hue-rotate(260deg) saturate(1.2) brightness(1.05) opacity(.38)}
+.butterfly.yellow span{filter:hue-rotate(45deg) saturate(1.5) brightness(1.1) opacity(.4)}
+.butterfly.blue span{filter:hue-rotate(190deg) saturate(1.2) brightness(1.05) opacity(.38)}
+.butterfly.green span{filter:hue-rotate(90deg) saturate(1.3) brightness(1) opacity(.38)}
+@keyframes flyButterflyLTR{0%{left:-5%;opacity:0;transform:translateY(0)}5%{opacity:.4}15%{transform:translateY(-8px)}30%{transform:translateY(5px)}45%{transform:translateY(-7px)}60%{transform:translateY(5px)}75%{transform:translateY(-6px)}90%{opacity:.4}100%{left:105%;opacity:0;transform:translateY(-4px)}}
+@keyframes flyButterflyRTL{0%{left:105%;opacity:0;transform:translateY(0)}5%{opacity:.4}15%{transform:translateY(-7px)}30%{transform:translateY(4px)}45%{transform:translateY(-6px)}60%{transform:translateY(4px)}75%{transform:translateY(-5px)}90%{opacity:.4}100%{left:-5%;opacity:0;transform:translateY(-3px)}}
+@keyframes butterflyFlap{from{transform:scaleX(1) rotate(-8deg)}to{transform:scaleX(.45) rotate(8deg)}}
+@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes glowBreathe{from{opacity:.85}to{opacity:1}}
+@keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-100vh) translateX(20px);opacity:0}}
+@keyframes floatUp{from{transform:translateY(0)}to{transform:translateY(-5px)}}
 .newHeaderInner{position:relative;z-index:2;padding:34px 16px 60px;text-align:center;animation:floatUp 5s ease-in-out infinite alternate;max-width:580px;width:100%}
-.newHeader h1{margin:10px 0 0;font-size:32pt;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-.newHeader .goYe{margin:8px 0 0;font-size:22pt;font-weight:900;letter-spacing:6px;color:#FFBE0B}
-.newHeader .verseLine{margin:8px 0 0;font-size:11.5pt}.newHeader .tagline{margin:12px 0 0;display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:20px;font-size:11pt}
+.newHeader h1{margin:10px 0 0;font-size:32pt;line-height:1;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.newHeader .goYe{margin:8px 0 0;font-size:22pt;font-weight:900;letter-spacing:6px;color:#FFBE0B;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.newHeader .verseLine{margin:8px 0 0;font-size:11.5pt;color:#fff;opacity:.95}
+.newHeader .tagline{margin:12px 0 0;display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:20px;font-size:11pt}
 .followBtn{display:inline-block;margin-top:16px;background:#FFBE0B;color:#111;text-decoration:none;font-weight:900;padding:13px 24px;border-radius:20px;font-size:11pt}
 .followBtn2{display:inline-block;margin:8px 0 0 6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:20px;font-size:11pt}
-.scrollHint{margin-top:38px;opacity:.9;font-size:10.5pt;letter-spacing:1px;animation:floatUp 2s ease-in-out infinite alternate}
-.hero{max-width:580px;margin:0 auto;padding:18px 16px 0;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);border-radius:20px 20px 0 0}
-.hero h1{font-size:clamp(20pt,6vw,27pt);line-height:1.05;margin:0;font-weight:900}.hero h1 span{color:#FFBE0B}.hero p{color:#E8E8EC;line-height:1.55;margin:8px 0 0;font-size:10.5pt}.hero p b{color:#fff}
-.pillRow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.pill{font-size:10pt;padding:6px 10px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);white-space:nowrap}.pill.gold{background:#FFBE0B;color:#111;font-weight:800}
-.wrap{max-width:580px;margin:0 auto;padding:12px 16px 30px;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);border-radius:0 0 20px 20px}
-.transcript{margin-top:14px}.line{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.face{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17pt;border:2px solid rgba(255,255,255,.25)}
+.scrollHint{margin-top:38px;color:#fff;opacity:.9;font-size:10.5pt;letter-spacing:1px;animation:floatUp 2s ease-in-out infinite alternate}
+.hero{max-width:580px;margin:0 auto;padding:14px 16px 0;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:20px 20px 0 0;padding-top:18px}
+.hero h1{font-size:clamp(20pt,6vw,27pt);line-height:1.05;margin:0;font-weight:900;letter-spacing:-0.5px}
+.hero h1 span{color:#FFBE0B}
+.hero p{color:#E8E8EC;line-height:1.55;margin:8px 0 0;max-width:460px;font-size:10.5pt}
+.hero p b{color:#fff}
+.pillRow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.pill{font-size:10pt;padding:6px 10px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;white-space:nowrap}
+.pill.gold{background:#FFBE0B;color:#111;border-color:#FFBE0B;font-weight:800}
+.wrap{max-width:580px;margin:0 auto;padding:12px 16px 30px;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:0 0 20px 20px}
+.transcript{margin-top:14px}
+.line{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.face{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17pt;overflow:hidden;border:2px solid rgba(255,255,255,.25)}
 .face.mitch{background:#FFE0E6}.face.christian{background:#D9F2FF}.face.anita{background:#FFE8CC}.face.david{background:#D6F5E0}
-.who{font-size:10pt;letter-spacing:1px;font-weight:800;text-transform:uppercase;margin:0}.who.mitch{color:#FF8FB0}.who.christian{color:#4DD6FF}.who.anita{color:#FFB35C}.who.david{color:#4DDB8A}.who small{color:#D8D8DE;text-transform:none;font-weight:400;margin-left:5px}
-.text{font-size:10.5pt;line-height:1.6;margin:4px 0 0}
-.verse{margin-top:14px;background:linear-gradient(135deg,#7B2FFF,#FF006E);border-radius:20px;padding:18px;text-align:center}.verse p{font-size:10.5pt;line-height:1.6;margin:0;font-weight:700}.verse small{color:#FFDE59;letter-spacing:1px;font-size:10pt}
-.factOne{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:16px}.factOne small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:10pt}.factOne h3{margin:6px 0 5px;font-size:13pt}.factOne p{margin:0;color:#E8E8EC;line-height:1.55;font-size:10.5pt}
-.cta{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:18px;text-align:center}.cta h3{margin:0;font-size:13pt}.cta p{color:#D8D8DE;line-height:1.5;font-size:10.5pt}
-.reactions{display:flex;gap:6px;justify-content:center;margin-top:12px}.react{flex:1;padding:11px 2px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;font-size:10pt;cursor:pointer;font-family:Georgia,serif}.react.selected{background:#FF006E;border-color:#FF006E}
-.btn{display:block;width:100%;padding:13px;border:0;border-radius:12px;font-size:10.5pt;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}.btn-yes{background:#fff;color:#111}.btn-follow{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
-.prayerBox{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #00C853;border-radius:20px;padding:18px;text-align:center}.prayerBox h3{margin:0;font-size:13pt;color:#00C853}.prayerBox p{color:#E8E8EC;line-height:1.7;font-size:10.5pt;font-style:italic}
-.feedback{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px}
+.who{font-size:10pt;letter-spacing:1px;font-weight:800;text-transform:uppercase;margin:0}
+.who.mitch{color:#FF8FB0}.who.christian{color:#4DD6FF}.who.anita{color:#FFB35C}.who.david{color:#4DDB8A}
+.who small{color:#D8D8DE;letter-spacing:0;text-transform:none;font-weight:400;margin-left:5px}
+.text{font-size:10.5pt;line-height:1.6;margin:4px 0 0;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.verse{margin-top:14px;background:linear-gradient(135deg,#7B2FFF,#FF006E);border-radius:20px;padding:18px;text-align:center}
+.verse p{font-size:10.5pt;line-height:1.6;margin:0;font-weight:700}
+.verse small{color:#FFDE59;letter-spacing:1px;font-size:10pt}
+.factOne{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:16px}
+.factOne small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:10pt}
+.factOne h3{margin:6px 0 5px;font-size:13pt;line-height:1.3}
+.factOne p{margin:0;color:#E8E8EC;line-height:1.55;font-size:10.5pt}
+.factOne p b{color:#fff}
+.cta{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:18px;text-align:center}
+.cta h3{margin:0;font-size:13pt}
+.cta p{color:#D8D8DE;line-height:1.5;font-size:10.5pt}
+.reactions{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.react{flex:1;padding:11px 2px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;font-size:10pt;cursor:pointer;font-family:Georgia,serif;white-space:nowrap}
+.react:active{transform:scale(0.95)}
+.react.selected{background:#FF006E;border-color:#FF006E;transform:scale(1.03)}
+.btn{display:block;width:100%;padding:13px;border:0;border-radius:12px;font-size:10.5pt;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}
+.btn-yes{background:#fff;color:#111}
+.btn-follow{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.prayerBox{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #00C853;border-radius:20px;padding:18px;text-align:center}
+.prayerBox h3{margin:0;font-size:13pt;color:#00C853}
+.prayerBox p{color:#E8E8EC;line-height:1.7;font-size:10.5pt;font-style:italic}
+.feedback{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px;line-height:1.4}
 .lessonWrap{max-width:580px;margin:14px auto 0;padding:0 16px}
-.lessonHead{background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:18px;padding:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.lessonHead.active{border-bottom-left-radius:0;border-bottom-right-radius:0}.lessonHead b{font-size:13pt}.lessonHead small{display:block;color:#FFBE0B;font-size:9pt;letter-spacing:1px;margin-top:2px}.lessonHead span{font-size:16pt;color:#FFBE0B}
-.lessonBody{display:none}.lessonBody.open{display:block}
-.partHead{background:rgba(28,28,34,.92);border:1px solid rgba(255,255,255,.15);border-top:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.partHead b{font-size:11pt}.partHead small{display:block;color:#C8C8CE;font-size:9.5pt;margin-top:2px}.partHead span{color:#FFBE0B;font-size:13pt}
-.partBody{display:none;padding:0 0 10px}.partBody.open{display:block}.partBody .wrap{padding-top:0;background:rgba(11,11,14,.78)}
-.bibleWrap{max-width:580px;margin:0 auto;padding:0 16px 30px}.bibleCard{background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:22px;overflow:hidden}
-.bibleHead{background:linear-gradient(135deg,#7B2FFF,#FF006E);padding:18px;text-align:center}.bibleHead h2{margin:0;font-size:19pt;letter-spacing:2px}
-.dailyVerse{margin:14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px;text-align:center}.dailyVerse small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:9pt}.dailyVerse p{font-size:11.5pt;line-height:1.65;margin:8px 0 4px;font-style:italic}.dailyVerse b{color:#FFBE0B;font-size:10pt}
-.openBtn{margin:0 14px 14px;width:calc(100% - 28px);padding:13px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia;font-size:11pt;cursor:pointer}
-.bibleBody{display:none;padding:0 0 6px}.bibleBody.open{display:block}
-.bibleControls{padding:0 14px 10px;display:flex;gap:8px;flex-wrap:wrap}.bibleControls select{flex:1;min-width:90px;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;font-size:10.5pt;font-weight:700}.bibleControls button{padding:12px 16px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia;cursor:pointer}
-.bibleSearch{display:flex;gap:8px;padding:0 14px 12px}.bibleSearch input{flex:1;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;font-size:10.5pt}.bibleSearch button{padding:12px 14px;border-radius:12px;border:0;background:#00C853;color:#fff;font-weight:800;font-family:Georgia;cursor:pointer}
-.bibleRef{padding:6px 16px 2px;font-weight:900;color:#FFBE0B;font-size:14pt;text-align:center}.singleVerse{margin:10px 14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px 16px;text-align:center;min-height:130px;display:flex;align-items:center;justify-content:center}.singleVerse p{font-size:13pt;line-height:1.75;margin:0}
-.bibleNav{display:flex;gap:8px;padding:0 14px 10px}.bibleNav button{flex:1;padding:13px;border-radius:12px;border:0;font-weight:800;font-family:Georgia;cursor:pointer;font-size:11pt}.bibleNav .prevB{background:#26262E;color:#fff}.bibleNav .nextB{background:#FFBE0B;color:#111}
-.bibleNav2{display:flex;gap:8px;padding:0 14px 14px}.bibleNav2 button{flex:1;padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#E8E8EC;font-family:Georgia;font-weight:700;cursor:pointer}
+.lessonHead{background:rgba(28,28,34,.92);backdrop-filter:blur(10px);border:1px solid #FFBE0B;border-radius:18px;padding:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.lessonHead.active{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lessonHead b{font-size:13pt}
+.lessonHead small{display:block;color:#FFBE0B;font-size:9pt;letter-spacing:1px;margin-top:2px}
+.lessonHead span{font-size:16pt;color:#FFBE0B}
+.lessonBody{display:none}
+.lessonBody.open{display:block}
+.partHead{background:rgba(28,28,34,.92);border:1px solid rgba(255,255,255,.15);border-top:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.partHead:last-of-type{border-radius:0 0 18px 18px}
+.partHead b{font-size:11pt}
+.partHead small{display:block;color:#C8C8CE;font-size:9.5pt;margin-top:2px}
+.partHead span{color:#FFBE0B;font-size:13pt}
+.partBody{display:none;padding:0 0 10px}
+.partBody.open{display:block}
+.partBody .wrap{padding-top:0;background:rgba(11,11,14,.78)}
+.bibleWrap{max-width:580px;margin:0 auto;padding:0 16px 30px}
+.bibleCard{background:rgba(28,28,34,.92);backdrop-filter:blur(12px);border:1px solid #FFBE0B;border-radius:22px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.bibleHead{background:linear-gradient(135deg,#7B2FFF,#FF006E);padding:18px;text-align:center}
+.bibleHead h2{margin:0;font-size:19pt;letter-spacing:2px}
+.dailyVerse{margin:14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px;text-align:center}
+.dailyVerse small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:9pt}
+.dailyVerse p{font-size:11.5pt;line-height:1.65;margin:8px 0 4px;font-style:italic}
+.dailyVerse b{color:#FFBE0B;font-size:10pt}
+.openBtn{margin:0 14px 14px;width:calc(100% - 28px);padding:13px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia,serif;font-size:11pt;cursor:pointer}
+.bibleBody{display:none;padding:0 0 6px}
+.bibleBody.open{display:block}
+.bibleControls{padding:0 14px 10px;display:flex;gap:8px;flex-wrap:wrap}
+.bibleControls select{flex:1;min-width:90px;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia,serif;font-size:10.5pt;font-weight:700}
+.bibleControls button{padding:12px 16px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia,serif;cursor:pointer}
+.bibleSearch{display:flex;gap:8px;padding:0 14px 12px}
+.bibleSearch input{flex:1;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia,serif;font-size:10.5pt}
+.bibleSearch button{padding:12px 14px;border-radius:12px;border:0;background:#00C853;color:#fff;font-weight:800;font-family:Georgia,serif;cursor:pointer}
+.bibleRef{padding:6px 16px 2px;font-weight:900;color:#FFBE0B;font-size:14pt;text-align:center}
+.singleVerse{margin:10px 14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px 16px;text-align:center;min-height:130px;display:flex;align-items:center;justify-content:center}
+.singleVerse p{font-size:13pt;line-height:1.75;margin:0}
+.bibleNav{display:flex;gap:8px;padding:0 14px 10px}
+.bibleNav button{flex:1;padding:13px;border-radius:12px;border:0;font-weight:800;font-family:Georgia,serif;cursor:pointer;font-size:11pt}
+.bibleNav .prevB{background:#26262E;color:#fff}
+.bibleNav .nextB{background:#FFBE0B;color:#111}
+.bibleNav2{display:flex;gap:8px;padding:0 14px 14px}
+.bibleNav2 button{flex:1;padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#E8E8EC;font-family:Georgia,serif;font-weight:700;cursor:pointer}
 .bibleNote{text-align:center;padding:0 14px 14px;font-size:9.5pt;color:#C8C8CE;line-height:1.5}
-.footer{max-width:580px;margin:0 auto;padding:0 16px 30px;text-align:center;background:rgba(11,11,14,.72);border-radius:20px}.footer p{margin:4px 0;font-size:10pt;color:#D8D8DE;line-height:1.6}.footer b{color:#fff}.footer a{color:#FFBE0B;text-decoration:none;font-weight:800}
-.adminPanel{display:none;max-width:580px;margin:16px auto;padding:18px;background:#0F0F14;border:2px solid #FFBE0B;border-radius:20px}
-.adminPanel h2{margin:0 0 8px;color:#FFBE0B;font-size:16pt}.adminPanel .stat{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;margin-top:10px}.adminPanel .stat b{font-size:18pt;color:#FFBE0B}.adminPanel .stat span{color:#C8C8CE;font-size:10pt}
-.adminPanel table{width:100%;border-collapse:collapse;margin-top:10px;font-size:10pt}.adminPanel td{padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.1)}.adminPanel td:last-child{text-align:right;font-weight:800;color:#FFBE0B}
-.adminPanel button{padding:10px 14px;border-radius:10px;border:0;background:#FFBE0B;font-weight:900;font-family:Georgia;cursor:pointer;margin-top:10px}
-.visitorCard{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px;font-size:10pt;line-height:1.5}.visitorCard b{color:#FFBE0B}
-.rankRow{display:flex;justify-content:space-between;align-items:center;background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px}.rankRow b{color:#FFBE0B}.bar{height:8px;background:#26262E;border-radius:10px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:#FFBE0B}
-.wedPanel{display:none;max-width:580px;margin:16px auto;padding:18px;background:#0F0F14;border:2px solid #FF006E;border-radius:20px}
-.wedPanel h2{color:#FF006E;margin:0}.wedPanel input,.wedPanel select{width:100%;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;margin-top:6px}
-.wedTask{display:flex;gap:8px;align-items:center;background:#26262E;border-radius:12px;padding:10px;margin-top:8px}.wedTask b{flex:1}.done{opacity:.5;text-decoration:line-through}
+.footer{max-width:580px;margin:0 auto;padding:0 16px 30px;text-align:center;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);border-radius:20px}
+.footer p{margin:4px 0;font-size:10pt;color:#D8D8DE;line-height:1.6}
+.footer b{color:#fff}
+.footer a{color:#FFBE0B;text-decoration:none;font-weight:800}
+.adminPanel{display:none;max-width:580px;margin:16px auto;padding:18px;background:#0F0F14;border:2px solid #FFBE0B;border-radius:20px;color:#fff}
+.adminPanel h2{margin:0 0 8px;color:#FFBE0B;font-size:16pt}
+.adminPanel .stat{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;margin-top:10px}
+.adminPanel .stat b{font-size:18pt;color:#FFBE0B}
+.adminPanel .stat span{color:#C8C8CE;font-size:10pt}
+.adminPanel table{width:100%;border-collapse:collapse;margin-top:10px;font-size:10pt}
+.adminPanel td{padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.1)}
+.adminPanel td:last-child{text-align:right;font-weight:800;color:#FFBE0B}
+.adminPanel button{padding:10px 14px;border-radius:10px;border:0;background:#FFBE0B;font-weight:900;font-family:Georgia,serif;cursor:pointer;margin-top:10px}
+.visitorCard{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px;font-size:10pt;line-height:1.5}
+.visitorCard b{color:#FFBE0B}
+.rankRow{display:flex;justify-content:space-between;align-items:center;background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px}
+.rankRow b{color:#FFBE0B}
+.bar{height:8px;background:#26262E;border-radius:10px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:#FFBE0B}
 </style>
 </head>
 <body>
-<div class="newHeader"><div class="newHeaderBg"></div><div class="particle" style="left:12%;width:6px;height:6px;animation-duration:22s"></div><div class="particle" style="left:55%;width:7px;height:7px;animation-duration:20s"></div><div class="particle" style="left:78%;width:5px;height:5px;animation-duration:23s"></div><div class="bird white ltr" style="top:26%;animation-duration:48s;opacity:.5"><span class="flip"><span class="flap">🕊️</span></span></div><div class="butterfly orange ltr" style="bottom:8%;animation-duration:48s"><span>🦋</span></div><div class="newHeaderInner"><h1>Micheal Mawadri</h1><div class="goYe">GO YE</div><p class="verseLine">Matthew 28:19 • Bible Study • Kampala, Uganda</p><div><span class="tagline">Go. Tell. Teach. — One Soul At A Time.</span></div><div><a class="followBtn" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">+ Follow @mitch5771</a><a class="followBtn2" href="mailto:michealmawadri01@gmail.com" onclick="trackClick('email_click')">✉️ Email</a></div><div class="scrollHint">↓ Scroll down for Lesson 1 ↓</div></div></div>
 
-<!-- GO YE ADMIN -->
+<div class="newHeader">
+  <div class="newHeaderBg"></div>
+  <div class="particle" style="left:12%;width:6px;height:6px;animation-duration:22s"></div>
+  <div class="particle" style="left:35%;width:4px;height:4px;animation-duration:24s;animation-delay:3s"></div>
+  <div class="particle" style="left:55%;width:7px;height:7px;animation-duration:20s;animation-delay:1s"></div>
+  <div class="particle" style="left:78%;width:5px;height:5px;animation-duration:23s;animation-delay:5s"></div>
+  <div class="particle" style="left:88%;width:4px;height:4px;animation-duration:21s;animation-delay:2s"></div>
+  <div class="bird white ltr" style="top:26%;animation-duration:48s;animation-delay:0s;opacity:.5"><span class="flip"><span class="flap" style="font-size:9px">🕊️</span></span></div>
+  <div class="bird black rtl" style="top:30%;animation-duration:55s;animation-delay:8s;opacity:.4"><span class="flap" style="font-size:7px">🕊️</span></div>
+  <div class="bird white rtl" style="top:33%;animation-duration:52s;animation-delay:18s;opacity:.45"><span class="flap" style="font-size:8px">🕊️</span></div>
+  <div class="bird black ltr" style="top:28%;animation-duration:58s;animation-delay:4s;opacity:.38"><span class="flip"><span class="flap" style="font-size:6px">🕊️</span></span></div>
+  <div class="bird white ltr" style="top:36%;animation-duration:45s;animation-delay:28s;opacity:.5"><span class="flip"><span class="flap" style="font-size:8px">🕊️</span></span></div>
+  <div class="bird black rtl" style="top:38%;animation-duration:50s;animation-delay:14s;opacity:.35"><span class="flap" style="font-size:7px">🕊️</span></div>
+  <div class="butterfly orange ltr" style="bottom:8%;animation-duration:48s;animation-delay:0s"><span style="font-size:6px">🦋</span></div>
+  <div class="butterfly pink rtl" style="bottom:12%;animation-duration:52s;animation-delay:8s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly purple ltr" style="bottom:6%;animation-duration:50s;animation-delay:16s"><span style="font-size:6px">🦋</span></div>
+  <div class="butterfly yellow rtl" style="bottom:10%;animation-duration:55s;animation-delay:4s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly blue ltr" style="bottom:14%;animation-duration:46s;animation-delay:22s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly green rtl" style="bottom:7%;animation-duration:54s;animation-delay:12s"><span style="font-size:6px">🦋</span></div>
+  <div class="newHeaderInner">
+    <h1>Micheal Mawadri</h1>
+    <div class="goYe">GO YE</div>
+    <p class="verseLine">Matthew 28:19 • Bible Study • Kampala, Uganda</p>
+    <div><span class="tagline">Go. Tell. Teach. — One Soul At A Time.</span></div>
+    <div>
+      <a class="followBtn" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">+ Follow @mitch5771</a>
+      <a class="followBtn2" href="mailto:michealmawadri01@gmail.com?subject=GO YE - Lesson 1&body=Hi Mitch,%0D%0A%0D%0AI finished Lesson 1.%0D%0A%0D%0APlease pray for me.%0D%0A%0D%0AMy name is: " onclick="trackClick('email_click')">✉️ Email</a>
+    </div>
+    <div class="scrollHint">↓ Scroll down for Lesson 1 ↓</div>
+  </div>
+</div>
+
 <div id="adminPanel" class="adminPanel">
-<h2>🔐 GO YE — PRIVATE ADMIN ONLY</h2><p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br><b>Viewed</b> = SAW + stayed 3 sec • <b>Tapped</b> = CLICKED • <b>Time</b> = how long stayed</p>
-<div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — Global</span></div>
-<div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY (Your Phone)</span></div>
-<div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact</span><div id="adminTimeDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
-<div class="stat"><b id="adminImpact">—</b><br><span>OVERALL IMPACT SCORE</span><div id="adminImpactDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
-<h3 style="color:#FFBE0B">🏆 MOST VIEWED — Ranking</h3><div id="rankList"></div>
-<h3 style="color:#FFBE0B">⏱️ TIME PER LESSON / PART</h3><div id="timeList"></div>
-<h3 style="color:#FFBE0B">📊 VIEWS + TAPS — Global</h3>
-<table><tr><td>📖 Lesson 1 Viewed</td><td id="c_lesson1">0</td></tr><tr><td>📖 Lesson 2 Viewed</td><td id="c_lesson2">0</td></tr><tr><td>📖 Part 1 Viewed</td><td id="c_part1">0</td></tr><tr><td>📖 Part 2 Viewed</td><td id="c_part2">0</td></tr><tr><td>📖 Part 3 Viewed</td><td id="c_part3">0</td></tr><tr><td>📖 Part 4 Viewed</td><td id="c_part4">0</td></tr><tr><td>📖 Part 5 Viewed</td><td id="c_part5">0</td></tr><tr><td>📖 Part 6 Viewed</td><td id="c_part6">0</td></tr><tr><td>📖 Bible Viewed</td><td id="c_bible">0</td></tr><tr><td>📖 Bible Verse Read (Tapped)</td><td id="c_verse">0</td></tr><tr><td>❤️ React Tapped</td><td id="c_react">0</td></tr><tr><td>🙏 Pray Tapped</td><td id="c_pray">0</td></tr><tr><td>➡️ Share Tapped</td><td id="c_share">0</td></tr><tr><td>💬 Say YES Tapped</td><td id="c_yes">0</td></tr><tr><td>➕ Follow TikTok</td><td id="c_follow">0</td></tr><tr><td>✉️ Email Tapped</td><td id="c_email">0</td></tr></table>
-<h3 style="color:#FFBE0B">👥 VISITOR PROFILES — With Time</h3><div id="visitorList"></div>
-<div style="background:#1C1C24;border-radius:12px;padding:12px;margin-top:12px"><b style="color:#FFBE0B">Last 20 Actions:</b><div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px"></div></div>
-<button onclick="exportStats()">📋 Copy Stats For Advertiser</button><p id="exportMsg" style="color:#00C853;font-weight:800"></p>
+  <h2>🔐 GO YE — PRIVATE ADMIN ONLY</h2>
+  <p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br><b style="color:#fff">How to read this:</b><br>• <b style="color:#FFBE0B">Viewed</b> = they SAW it + stayed 3 sec (even without tapping)<br>• <b style="color:#FFBE0B">Tapped</b> = they CLICKED it<br>• <b style="color:#FFBE0B">Time</b> = how long they stayed on it</p>
+  <div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — All devices (Global)</span></div>
+  <div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY (Your Phone)</span></div>
+  <div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact Measure</span><div style="font-size:10pt;color:#E8E8EC;margin-top:4px" id="adminTimeDetail">No time data yet.</div></div>
+  <div class="stat"><b id="adminImpact">—</b><br><span>OVERALL IMPACT SCORE</span><div id="adminImpactDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">🏆 MOST VIEWED — Ranking</h3>
+  <p style="color:#888;font-size:10pt;margin:0">Sorted by Views. If Part 4 is #1, make more prayer content.</p>
+  <div id="rankList"></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">⏱️ TIME PER LESSON / PART</h3>
+  <div id="timeList"></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">📊 VIEWS + TAPS — All Visitors (Global)</h3>
+  <table>
+    <tr><td>📖 Lesson 1 Viewed</td><td id="c_lesson1">0</td></tr>
+    <tr><td>📖 Lesson 2 Viewed</td><td id="c_lesson2">0</td></tr>
+    <tr><td>📖 Part 1 Viewed</td><td id="c_part1">0</td></tr>
+    <tr><td>📖 Part 2 Viewed</td><td id="c_part2">0</td></tr>
+    <tr><td>📖 Part 3 Viewed</td><td id="c_part3">0</td></tr>
+    <tr><td>📖 Part 4 Viewed</td><td id="c_part4">0</td></tr>
+    <tr><td>📖 Part 5 Viewed</td><td id="c_part5">0</td></tr>
+    <tr><td>📖 Part 6 Viewed</td><td id="c_part6">0</td></tr>
+    <tr><td>📖 Bible Viewed</td><td id="c_bible">0</td></tr>
+    <tr><td>📖 Bible Verse Read (Tapped READ)</td><td id="c_verse">0</td></tr>
+    <tr><td>❤️ I Finished / I Needed This (Tapped)</td><td id="c_react">0</td></tr>
+    <tr><td>🙏 Pray For Me (Tapped)</td><td id="c_pray">0</td></tr>
+    <tr><td>➡️ Share (Tapped)</td><td id="c_share">0</td></tr>
+    <tr><td>💬 Say YES (Tapped)</td><td id="c_yes">0</td></tr>
+    <tr><td>➕ Follow TikTok (Tapped)</td><td id="c_follow">0</td></tr>
+    <tr><td>✉️ Email (Tapped)</td><td id="c_email">0</td></tr>
+  </table>
+  <p style="color:#888;font-size:9pt;line-height:1.5">Example: If Lesson 1 Viewed = 5, Part 4 Viewed = 4, Pray Tapped = 2 — it means 5 people saw Lesson 1, 4 saw Part 4, 2 actually tapped Pray. That is real impact.</p>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">👥 VISITOR PROFILES — With Time &amp; Impact</h3>
+  <div id="visitorList"><p style="color:#888;font-size:10pt">No visitors yet on this phone.</p></div>
+  <div style="background:#1C1C24;border-radius:12px;padding:12px;margin-top:12px">
+    <b style="color:#FFBE0B">Last 20 Actions (This Phone):</b>
+    <div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px">No actions yet.</div>
+  </div>
+  <button type="button" onclick="exportStats()">📋 Copy Stats For Advertiser</button>
+  <p id="exportMsg" style="font-size:10pt;color:#00C853;font-weight:800"></p>
 </div>
 
-<!-- PRIVATE WEDDING - ONLY MICHEAL + ANITA -->
-<div id="weddingPanel" class="wedPanel">
-<h2>💍 PRIVATE — Micheal weds Anita</h2><p style="color:#C8C8CE;font-size:10pt">Only you + Anita. Link: ?wedding=micheal-anita-2027<br>Do NOT share publicly. Export PDF/Excel to committee.</p>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" style="flex:1;background:#FFBE0B" onclick="showTab('events')">📅 Events</button><button class="btn" style="flex:1;background:#fff;color:#111" onclick="showTab('tasks')">✅ Tasks</button><button class="btn" style="flex:1;background:#00C853;color:#fff" onclick="showTab('budget')">💰 Budget</button><button class="btn" style="flex:1;background:#7B2FFF;color:#fff" onclick="showTab('guests')">👥 Guests</button></div>
-<div id="tab-events"><div class="card" style="background:#1C1C24;border:1px solid #FF006E;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FF006E;margin:0">📅 Events</h3><table><tr><td><b>Kukyala</b><br>Fri 19 Nov 2027 • Kampala<br><span style="color:#FFBE0B" id="count1"></span></td><td>20 + 20 guests</td></tr><tr><td><b>Kwanjula</b><br>Sat 20 Nov 2027 • Kampala</td><td>20 + 20 guests</td></tr><tr><td><b>Wedding — Zanzibar</b><br>Fri 26 Nov 2027 • Zuri Zanzibar, Kendwa<br><span style="color:#FFBE0B" id="count2"></span></td><td>20 guests<br>10 Micheal + 10 Anita</td></tr></table><p style="font-size:10pt;line-height:1.6">Venue: Still Searching — Top Pick: <b>Zuri Zanzibar (Kendwa)</b><br>Backup: Baraza Resort (Bwejuu) • RIU Palace (Nungwi)<br>✈️ EBB → ZNZ Direct Uganda Airlines / Air Tanzania ~1h 56m • ~$370-$450 return • 20 guests = $7,400-$9,000</p></div></div>
-<div id="tab-tasks" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">✅ Committee To-Do</h3><p style="font-size:10pt;color:#C8C8CE">Sandra Dotti, Wilson Sekatte, Anita, Micheal</p><input id="taskText" placeholder="New task e.g. Book Zuri venue"><select id="taskWho"><option>Micheal Mawadri</option><option>Anita Juliet Asherura</option><option>Sandra Dotti</option><option>Wilson Sekatte</option></select><select id="taskEvent"><option>Kukyala</option><option>Kwanjula</option><option>Wedding Zanzibar</option><option>General</option></select><input id="taskDue" type="date"><button class="btn" onclick="addTask()">+ Add Task</button><div id="taskList"></div></div></div>
-<div id="tab-budget" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">💰 Budget — Kukyala + Kwanjula + Zanzibar</h3><div class="stat"><b id="budgetTotal">$0</b><br><span>Total Spent / Budget</span></div><input id="bCat" placeholder="Category e.g. Venue Zuri"><input id="bEst" type="number" placeholder="Estimated USD"><input id="bPaid" type="number" placeholder="Paid USD"><button class="btn" onclick="addBudget()">+ Add Budget Item</button><div id="budgetList"></div></div></div>
-<div id="tab-guests" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">👥 Guests</h3><p style="font-size:10pt;color:#C8C8CE">Zanzibar: 10+10=20 • Kukyala/Kwanjula: 20+20=40</p><input id="gName" placeholder="Guest name"><select id="gSide"><option>Micheal Side - Zanzibar</option><option>Anita Side - Zanzibar</option><option>Micheal Side - Kukyala</option><option>Anita Side - Kukyala</option></select><select id="gRSVP"><option>Pending</option><option>Confirmed Yes</option><option>No</option><option>Paid Flight</option></select><button class="btn" onclick="addGuest()">+ Add Guest</button><div id="guestList"></div></div></div>
-<div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">📥 Daily Downloads — Share to Committee</h3><button class="btn" onclick="downloadCSV('tasks')">⬇ Download Tasks Excel (CSV)</button><button class="btn" style="background:#fff;color:#111" onclick="downloadCSV('budget')">⬇ Download Budget Excel (CSV)</button><button class="btn" style="background:#00C853;color:#fff" onclick="downloadCSV('guests')">⬇ Download Guests Excel (CSV)</button><button class="btn" style="background:#7B2FFF;color:#fff" onclick="window.print()">🖨️ Print / Save Daily Update as PDF</button><p id="dailySummary" style="font-size:10pt;line-height:1.6"></p></div>
-</div>
-
-<!-- LESSON 1 -->
-<div class="lessonWrap"><div class="lessonHead active" id="lesson1Head" onclick="toggleLesson('lesson1',this);trackClick('lesson1')"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
+<div class="lessonWrap">
+<div class="lessonHead active" id="lesson1Head" onclick="toggleLesson('lesson1',this);trackClick('lesson1')"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
 <div class="lessonBody open" id="lesson1">
 <div class="partHead" id="head-p6" onclick="togglePart('p6',this);trackClick('part6')"><div><b>Part 6: Let's Check What We Learned</b><small>Review • A - E • Finale</small></div><span>▸</span></div>
-<div class="partBody" id="p6"><div class="wrap"><div class="hero" style="padding:14px 0 0"><h1>Eternal Life <span>— Part 6</span></h1><p><b>Let's Check What We Learned</b> — We finish Lesson 1 together.</p><div class="pillRow"><span class="pill gold">Lesson 1 • Part 6 of 6 • FINALE</span><span class="pill">Review</span></div></div><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Part 6 — finale. Christian, in one sentence, what is eternal life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Eternal life is God's life in me now — because I have Jesus. I don't earn it, I received Him. I have life now, and forever.</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Check: A — Life. B — Now. C — Receive. D — Confess. E — Abundant.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">You have life. Go tell ONE person. Matthew 28:19 — Go Ye. That is Lesson 2.</p></div></div></div><div class="prayerBox"><h3>🙏 Say This Today</h3><p>"Jesus, thank You for Lesson 1. I have life. Help me share it with one person this week. Amen."</p></div><div class="verse"><p>"Go ye therefore, and teach all nations..."</p><small>MATTHEW 28:19 • KJV</small></div><div class="factOne"><small>LESSON 1 REVIEW • A - E</small><h3>You finished Eternal Life</h3><p><b>A.</b> Purpose is eternal life — John 3:16<br><b>B.</b> God's life in you now — John 17:3<br><b>C.</b> Receive by believing — John 1:12<br><b>D.</b> Confess + believe — Romans 10:9<br><b>E.</b> Abundant now — John 10:10</p></div><div class="cta"><h3>🎓 You Finished Lesson 1!</h3><div class="reactions"><button class="react" onclick="doReact(this,6,'I finished Lesson 1')">🎓 I finished!</button><button class="react" onclick="doReact(this,6,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(6)">➡️ Share it</button></div><div class="feedback" id="feedback6"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(6);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">Follow @mitch5771</a></div></div></div>
-<div class="partHead" id="head-p5" onclick="togglePart('p5',this);trackClick('part5')"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
-<div class="partBody" id="p5"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Yesterday we prayed and received Him. What changed?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I felt quiet. Peaceful. Did anything really change?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">1 John 5:12 — He that hath the Son hath life. You have life even when you don't feel it.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 10:10 — abundant life now. Walk with Him every day.</p></div></div></div><div class="verse"><p>"Whoever has the Son has life..."</p><small>1 JOHN 5:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,5,'I have life now')">❤️ I have life now</button><button class="react" onclick="doReact(this,5,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(5)">➡️ Share it</button></div><div class="feedback" id="feedback5"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(5);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p4" onclick="togglePart('p4',this);trackClick('part4')"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
-<div class="partBody" id="p4"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Today we don't just talk. We receive Him.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">How do I pray?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Romans 10:9 — confess with your mouth, believe in your heart.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Revelation 3:20 — Jesus is knocking. Open the door.</p></div></div></div><div class="prayerBox"><h3>🙏 Pray This</h3><p>"Jesus, I believe You died for me. I open my heart. Come and live in me. I receive eternal life. Amen."</p></div><div class="verse"><p>"If you declare... you will be saved."</p><small>ROMANS 10:9</small></div><div class="cta"><h3>Did You Pray?</h3><div class="reactions"><button class="react" onclick="doReact(this,4,'I received Him')">❤️ I received Him</button><button class="react" onclick="doReact(this,4,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(4)">➡️ Share it</button></div><div class="feedback" id="feedback4"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(4);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p3" onclick="togglePart('p3',this);trackClick('part3')"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
-<div class="partBody" id="p3"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">How do I receive it? Do I have to earn it?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I try to be good. Is that how?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 — as many as received Him.</p></div></div></div><div class="verse"><p>"Yet to all who did receive him..."</p><small>JOHN 1:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,3,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,3,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(3)">➡️ Share it</button></div><div class="feedback" id="feedback3"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(3);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p2" onclick="togglePart('p2',this);trackClick('part2')"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
-<div class="partBody" id="p2"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">What is that life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Just living forever in heaven?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 17:3 — eternal life is knowing God. God's life in you now.</p></div></div></div><div class="verse"><p>"Now this is eternal life: that they know you..."</p><small>JOHN 17:3</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,2,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,2,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(2)">➡️ Share it</button></div><div class="feedback" id="feedback2"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(2);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p1" onclick="togglePart('p1',this);trackClick('part1')"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
-<div class="partBody" id="p1"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">John 3:16 has been misunderstood.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">For God so loved the world...</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">This verse is saying something more.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">The real purpose was everlasting life.</p></div></div></div><div class="verse"><p>"For God so loved the world..."</p><small>JOHN 3:16</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,1,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,1,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(1)">➡️ Share it</button></div><div class="feedback" id="feedback"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(1);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
+<div class="partBody" id="p6"><div class="wrap">
+<div class="hero" style="padding:14px 0 0"><h1>Eternal Life <span>— Part 6</span></h1><p><b>Let's Check What We Learned</b> — We finish Lesson 1 together.</p><div class="pillRow"><span class="pill gold">Lesson 1 • Part 6 of 6 • FINALE</span><span class="pill">Review</span></div></div>
+<div class="transcript">
+<div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Part 6 — the finale of Lesson 1. Christian, let's check: In one sentence, what is eternal life?</p></div></div>
+<div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Eternal life is God's life in me now — because I have Jesus. I don't earn it, I received Him. I have life now, and forever.</p></div></div>
+<div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Wait, Christian — before we finish, let's check. • <b>A</b> — What did Jesus come to give? <i>Life.</i><br>• <b>B</b> — When? <i>Now, not later.</i><br>• <b>C</b> — How do we get it? <i>We receive it.</i><br>• <b>D</b> — What do we do? <i>We confess it.</i><br>• <b>E</b> — How is it? <i>Abundant.</i></p></div></div>
+<div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">And now? • You have life • Go tell ONE person • Matthew 28:19 — Go Ye. That is Lesson 2.</p></div></div>
+<div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">You finished Lesson 1. You have life. Now go and give life. See you in Lesson 2.</p></div></div>
+</div>
+<div class="prayerBox"><h3>🙏 Say This Today</h3><p>"Jesus, thank You for Lesson 1. I have life. Help me share it with one person this week. Amen."</p></div>
+<div class="verse"><p>"Go ye therefore, and teach all nations..."</p><small>MATTHEW 28:19 • KJV</small></div>
+<div class="factOne"><small>LESSON 1 REVIEW • A - E</small><h3>You finished Eternal Life</h3><p><b>A.</b> Purpose is eternal life — John 3:16<br><b>B.</b> God's life in you now — John 17:3<br><b>C.</b> Receive by believing — John 1:12<br><b>D.</b> Confess + believe — Romans 10:9<br><b>E.</b> Abundant now — John 10:10</p></div>
+<div class="cta"><h3>🎓 You Finished Lesson 1!</h3><p>Tap to celebrate. Lesson 2 starts soon.</p><div class="reactions"><button type="button" class="react" onclick="doReact(this,6,'I finished Lesson 1')">🎓 I finished!</button><button type="button" class="react" onclick="doReact(this,6,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(6)">➡️ Share it</button></div><div class="feedback" id="feedback6"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(6);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div>
 </div></div>
-
-<div class="lessonWrap"><div class="lessonHead" id="lesson2Head" onclick="toggleLesson('lesson2',this);trackClick('lesson2')"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div><div class="lessonBody" id="lesson2"><div class="wrap" style="padding-top:16px"><div class="prayerBox"><h3>Coming Soon</h3><p>You have life. Now go and give life. Lesson 2 teaches you how to share Jesus with one person, simply.</p></div></div></div></div>
-
-<div class="bibleWrap" style="margin-top:16px" id="bibleSection"><div class="bibleCard"><div class="bibleHead"><h2>✦ HOLY BIBLE</h2></div><div class="dailyVerse"><small>✦ DAILY VERSE • <span id="dailyDate"></span></small><p id="dailyVerseText">Loading today's verse...</p><b id="dailyVerseRef"></b></div><button class="openBtn" id="openBibleBtn" onclick="toggleBible();trackClick('bible')">📖 Open Bible — Book, Chapter &amp; Verse ↓</button><div class="bibleBody" id="bibleBody"><div class="bibleControls"><select id="bibleBook"></select><select id="bibleChapter"></select><select id="bibleVerse"><option value="1">Verse 1</option></select></div><div class="bibleControls"><button style="flex:1" onclick="loadBible();trackClick('verse_read')">READ →</button><button style="flex:1;background:#fff" onclick="readDailyVerse();trackClick('verse_read')">Read Daily Verse →</button></div><div class="bibleSearch"><input id="bibleSearchInput" placeholder="Search e.g. John 3:16"><button onclick="searchBible();trackClick('verse_read')">Search</button></div><div class="bibleRef" id="bibleRef">John 1:1</div><div class="singleVerse"><p id="bibleText">Tap READ to open your Bible.</p></div><div class="bibleNav"><button class="prevB" onclick="moveVerse(-1);trackClick('verse_read')">← Previous Verse</button><button class="nextB" onclick="moveVerse(1);trackClick('verse_read')">Next Verse →</button></div><div class="bibleNav2"><button onclick="moveBible(-1);trackClick('verse_read')">← Previous Chapter</button><button onclick="moveBible(1);trackClick('verse_read')">Next Chapter →</button></div><div class="bibleNote">One verse at a time • World English Bible • Free &amp; Legal</div></div></div></div>
-
-<div class="footer"><p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p><p>Kampala, Uganda</p><p>TikTok: <a href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">@mitch5771</a> • Email: <a href="mailto:michealmawadri01@gmail.com" onclick="trackClick('email_click')">michealmawadri01@gmail.com</a></p><p>Scripture Inspiration - Go Ye</p></div>
-
-<script>
-// GO YE ADMIN + TIME + IMPACT + WEDDING
-var ADMIN_KEY="go-ye-2026"; var COUNTER_NS="goye-mawadri-2026"; var pageStart=Date.now(); var currentSection=null, sectionStart=0; var maxScroll=0; var viewedSet={};
-function goyeGet(k,def){try{var v=localStorage.getItem('goye_'+k);return v===null?def:JSON.parse(v)}catch(e){return def}}
-function goyeSet(k,v){try{localStorage.setItem('goye_'+k,JSON.stringify(v))}catch(e){}}
-function getDevice(){var ua=navigator.userAgent||"";var d="Computer";if(/iPhone/i.test(ua))d="iPhone";else if(/Android/i.test(ua))d="Android Phone";else if(/iPad/i.test(ua))d="iPad";var b="Safari";if(/Chrome/i.test(ua))b="Chrome";else if(/Firefox/i.test(ua))b="Firefox";return d+" • "+b+" • "+screen.width+"x"+screen.height}
-function fmtTime(s){s=Math.round(s);if(s<60)return s+"s";return Math.floor(s/60)+"m "+(s%60)+"s"}
-function getImpact(t,c,s){if(t<10&&c<=1)return{label:"👀 Glanced — Low Impact",color:"#FF8FB0"};if(t<60)return{label:"📖 Reading — Medium Impact",color:"#FFB35C"};if(t<180||c>=3)return{label:"🔥 Engaged — High Impact",color:"#4DDB8A"};return{label:"❤️ Deeply Moved — Very High Impact",color:"#00C853"}}
-var myProfile={country:"Uganda",city:""};
-async function loadLocation(){try{var r=await fetch("https://ipapi.co/json/");var d=await r.json();if(d&&d.country_name){myProfile.country=d.country_name;myProfile.city=d.city||""}}catch(e){}}
-function startSection(n){if(currentSection)endSection();currentSection=n;sectionStart=Date.now()}
-function endSection(){if(!currentSection)return;var dur=(Date.now()-sectionStart)/1000;if(dur<1){currentSection=null;return}var st=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});st.timeData[st.timeData||{}];st.timeData=currentSection?st.timeData:{You are right to ask — and no, I was wrong there. Sorry.
-
-That last one with 140 lines was **NOT the full file**. I made it short to show you the wedding idea quickly, but it cut out:
-- Your full Lesson 1 Parts 1-6
-- Your full Bible
-- Your full GO YE Admin with Views + Time + Impact
-
-If you pasted that 140-line one, you would have LOST your lessons. Don't use that one.
-
-**Here is the REAL full file — GO YE + Admin + Wedding together.** It should be **800+ lines**, not 140.
-
-I combined everything into ONE file:
-
-- ✅ Full Eden header with birds + butterflies
-- ✅ Full Lesson 1 — Part 1, 2, 3, 4, 5, 6
-- ✅ Full Lesson 2
-- ✅ Full Bible with Daily Verse
-- ✅ Full GO YE Admin — `?admin=go-ye-2026` — Views + Taps + Time + Ranking + Impact
-- ✅ Full Private Wedding — `?wedding=micheal-anita-2027` — Events + Tasks + Budget + Guests + Excel/PDF downloads
-
-**Paste this one — it replaces the 140-line one:**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>GO YE 28:19 - Lesson 1 Eternal Life - Micheal weds Anita</title>
-<style>
-*{box-sizing:border-box;font-family:Georgia,"Times New Roman",serif}
-body{margin:0;color:#F5F5F7;font-size:11pt;-webkit-text-size-adjust:100%;background-image:url('eden.jpg');background-size:cover;background-position:center center;background-attachment:fixed;background-repeat:no-repeat;background-color:#0B0B0E}
-body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.25) 0%, rgba(0,0,0,.68) 35%, rgba(11,11,14,.88) 100%);z-index:-1}
-.newHeader{max-width:100%;margin:0 auto;overflow:hidden;position:relative;color:#fff;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center}
-.newHeaderBg{position:absolute;inset:0;background-image:url('eden.jpg');background-size:cover;background-position:center center;animation:breathe 18s ease-in-out infinite alternate}
-.newHeader::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 60%, rgba(11,11,14,.95) 100%)}
-.particle{position:absolute;bottom:-10px;border-radius:50%;background:#FFE9A8;opacity:0.85;animation:rise linear infinite;z-index:1}
-.bird{position:absolute;z-index:1;opacity:.7}.bird.ltr{animation:flyLTR linear infinite}.bird.rtl{animation:flyRTL linear infinite}.bird .flip{display:inline-block;transform:scaleX(-1)}.bird .flap{display:inline-block;animation:flap .9s ease-in-out infinite alternate}
-@keyframes flyLTR{0%{left:-10%}100%{left:110%}}@keyframes flyRTL{0%{left:110%}100%{left:-10%}}@keyframes flap{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
-.butterfly{position:absolute;z-index:1;opacity:0}.butterfly.ltr{animation:flyButterflyLTR ease-in-out infinite}.butterfly.rtl{animation:flyButterflyRTL ease-in-out infinite}.butterfly span{display:inline-block;animation:butterflyFlap 1s ease-in-out infinite alternate}
-@keyframes flyButterflyLTR{0%{left:-5%;opacity:0}5%{opacity:.4}100%{left:105%;opacity:0}}@keyframes flyButterflyRTL{0%{left:105%;opacity:0}5%{opacity:.4}100%{left:-5%;opacity:0}}@keyframes butterflyFlap{from{transform:scaleX(1) rotate(-8deg)}to{transform:scaleX(.45) rotate(8deg)}}
-@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-100vh);opacity:0}}@keyframes floatUp{from{transform:translateY(0)}to{transform:translateY(-5px)}}
-.newHeaderInner{position:relative;z-index:2;padding:34px 16px 60px;text-align:center;animation:floatUp 5s ease-in-out infinite alternate;max-width:580px;width:100%}
-.newHeader h1{margin:10px 0 0;font-size:32pt;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-.newHeader .goYe{margin:8px 0 0;font-size:22pt;font-weight:900;letter-spacing:6px;color:#FFBE0B}
-.newHeader .verseLine{margin:8px 0 0;font-size:11.5pt}.newHeader .tagline{margin:12px 0 0;display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:20px;font-size:11pt}
-.followBtn{display:inline-block;margin-top:16px;background:#FFBE0B;color:#111;text-decoration:none;font-weight:900;padding:13px 24px;border-radius:20px;font-size:11pt}
-.followBtn2{display:inline-block;margin:8px 0 0 6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:20px;font-size:11pt}
-.scrollHint{margin-top:38px;opacity:.9;font-size:10.5pt;letter-spacing:1px;animation:floatUp 2s ease-in-out infinite alternate}
-.hero{max-width:580px;margin:0 auto;padding:18px 16px 0;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);border-radius:20px 20px 0 0}
-.hero h1{font-size:clamp(20pt,6vw,27pt);line-height:1.05;margin:0;font-weight:900}.hero h1 span{color:#FFBE0B}.hero p{color:#E8E8EC;line-height:1.55;margin:8px 0 0;font-size:10.5pt}.hero p b{color:#fff}
-.pillRow{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.pill{font-size:10pt;padding:6px 10px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);white-space:nowrap}.pill.gold{background:#FFBE0B;color:#111;font-weight:800}
-.wrap{max-width:580px;margin:0 auto;padding:12px 16px 30px;background:rgba(11,11,14,.72);backdrop-filter:blur(10px);border-radius:0 0 20px 20px}
-.transcript{margin-top:14px}.line{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.face{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:17pt;border:2px solid rgba(255,255,255,.25)}
-.face.mitch{background:#FFE0E6}.face.christian{background:#D9F2FF}.face.anita{background:#FFE8CC}.face.david{background:#D6F5E0}
-.who{font-size:10pt;letter-spacing:1px;font-weight:800;text-transform:uppercase;margin:0}.who.mitch{color:#FF8FB0}.who.christian{color:#4DD6FF}.who.anita{color:#FFB35C}.who.david{color:#4DDB8A}.who small{color:#D8D8DE;text-transform:none;font-weight:400;margin-left:5px}
-.text{font-size:10.5pt;line-height:1.6;margin:4px 0 0}
-.verse{margin-top:14px;background:linear-gradient(135deg,#7B2FFF,#FF006E);border-radius:20px;padding:18px;text-align:center}.verse p{font-size:10.5pt;line-height:1.6;margin:0;font-weight:700}.verse small{color:#FFDE59;letter-spacing:1px;font-size:10pt}
-.factOne{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:16px}.factOne small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:10pt}.factOne h3{margin:6px 0 5px;font-size:13pt}.factOne p{margin:0;color:#E8E8EC;line-height:1.55;font-size:10.5pt}
-.cta{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:20px;padding:18px;text-align:center}.cta h3{margin:0;font-size:13pt}.cta p{color:#D8D8DE;line-height:1.5;font-size:10.5pt}
-.reactions{display:flex;gap:6px;justify-content:center;margin-top:12px}.react{flex:1;padding:11px 2px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;font-size:10pt;cursor:pointer;font-family:Georgia,serif}.react.selected{background:#FF006E;border-color:#FF006E}
-.btn{display:block;width:100%;padding:13px;border:0;border-radius:12px;font-size:10.5pt;font-weight:800;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}.btn-yes{background:#fff;color:#111}.btn-follow{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
-.prayerBox{margin-top:14px;background:rgba(28,28,34,.92);border:1px solid #00C853;border-radius:20px;padding:18px;text-align:center}.prayerBox h3{margin:0;font-size:13pt;color:#00C853}.prayerBox p{color:#E8E8EC;line-height:1.7;font-size:10.5pt;font-style:italic}
-.feedback{font-size:10.5pt;font-weight:800;color:#00C853;margin-top:8px;min-height:16px}
-.lessonWrap{max-width:580px;margin:14px auto 0;padding:0 16px}
-.lessonHead{background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:18px;padding:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.lessonHead.active{border-bottom-left-radius:0;border-bottom-right-radius:0}.lessonHead b{font-size:13pt}.lessonHead small{display:block;color:#FFBE0B;font-size:9pt;letter-spacing:1px;margin-top:2px}.lessonHead span{font-size:16pt;color:#FFBE0B}
-.lessonBody{display:none}.lessonBody.open{display:block}
-.partHead{background:rgba(28,28,34,.92);border:1px solid rgba(255,255,255,.15);border-top:0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}.partHead b{font-size:11pt}.partHead small{display:block;color:#C8C8CE;font-size:9.5pt;margin-top:2px}.partHead span{color:#FFBE0B;font-size:13pt}
-.partBody{display:none;padding:0 0 10px}.partBody.open{display:block}.partBody .wrap{padding-top:0;background:rgba(11,11,14,.78)}
-.bibleWrap{max-width:580px;margin:0 auto;padding:0 16px 30px}.bibleCard{background:rgba(28,28,34,.92);border:1px solid #FFBE0B;border-radius:22px;overflow:hidden}
-.bibleHead{background:linear-gradient(135deg,#7B2FFF,#FF006E);padding:18px;text-align:center}.bibleHead h2{margin:0;font-size:19pt;letter-spacing:2px}
-.dailyVerse{margin:14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px;text-align:center}.dailyVerse small{color:#FFBE0B;letter-spacing:1px;font-weight:800;font-size:9pt}.dailyVerse p{font-size:11.5pt;line-height:1.65;margin:8px 0 4px;font-style:italic}.dailyVerse b{color:#FFBE0B;font-size:10pt}
-.openBtn{margin:0 14px 14px;width:calc(100% - 28px);padding:13px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia;font-size:11pt;cursor:pointer}
-.bibleBody{display:none;padding:0 0 6px}.bibleBody.open{display:block}
-.bibleControls{padding:0 14px 10px;display:flex;gap:8px;flex-wrap:wrap}.bibleControls select{flex:1;min-width:90px;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;font-size:10.5pt;font-weight:700}.bibleControls button{padding:12px 16px;border:0;border-radius:12px;background:#FFBE0B;color:#111;font-weight:900;font-family:Georgia;cursor:pointer}
-.bibleSearch{display:flex;gap:8px;padding:0 14px 12px}.bibleSearch input{flex:1;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;font-size:10.5pt}.bibleSearch button{padding:12px 14px;border-radius:12px;border:0;background:#00C853;color:#fff;font-weight:800;font-family:Georgia;cursor:pointer}
-.bibleRef{padding:6px 16px 2px;font-weight:900;color:#FFBE0B;font-size:14pt;text-align:center}.singleVerse{margin:10px 14px;background:rgba(11,11,14,.75);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px 16px;text-align:center;min-height:130px;display:flex;align-items:center;justify-content:center}.singleVerse p{font-size:13pt;line-height:1.75;margin:0}
-.bibleNav{display:flex;gap:8px;padding:0 14px 10px}.bibleNav button{flex:1;padding:13px;border-radius:12px;border:0;font-weight:800;font-family:Georgia;cursor:pointer;font-size:11pt}.bibleNav .prevB{background:#26262E;color:#fff}.bibleNav .nextB{background:#FFBE0B;color:#111}
-.bibleNav2{display:flex;gap:8px;padding:0 14px 14px}.bibleNav2 button{flex:1;padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#E8E8EC;font-family:Georgia;font-weight:700;cursor:pointer}
-.bibleNote{text-align:center;padding:0 14px 14px;font-size:9.5pt;color:#C8C8CE;line-height:1.5}
-.footer{max-width:580px;margin:0 auto;padding:0 16px 30px;text-align:center;background:rgba(11,11,14,.72);border-radius:20px}.footer p{margin:4px 0;font-size:10pt;color:#D8D8DE;line-height:1.6}.footer b{color:#fff}.footer a{color:#FFBE0B;text-decoration:none;font-weight:800}
-.adminPanel{display:none;max-width:580px;margin:16px auto;padding:18px;background:#0F0F14;border:2px solid #FFBE0B;border-radius:20px}
-.adminPanel h2{margin:0 0 8px;color:#FFBE0B;font-size:16pt}.adminPanel .stat{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;margin-top:10px}.adminPanel .stat b{font-size:18pt;color:#FFBE0B}.adminPanel .stat span{color:#C8C8CE;font-size:10pt}
-.adminPanel table{width:100%;border-collapse:collapse;margin-top:10px;font-size:10pt}.adminPanel td{padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.1)}.adminPanel td:last-child{text-align:right;font-weight:800;color:#FFBE0B}
-.adminPanel button{padding:10px 14px;border-radius:10px;border:0;background:#FFBE0B;font-weight:900;font-family:Georgia;cursor:pointer;margin-top:10px}
-.visitorCard{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px;font-size:10pt;line-height:1.5}.visitorCard b{color:#FFBE0B}
-.rankRow{display:flex;justify-content:space-between;align-items:center;background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px}.rankRow b{color:#FFBE0B}.bar{height:8px;background:#26262E;border-radius:10px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:#FFBE0B}
-.wedPanel{display:none;max-width:580px;margin:16px auto;padding:18px;background:#0F0F14;border:2px solid #FF006E;border-radius:20px}
-.wedPanel h2{color:#FF006E;margin:0}.wedPanel input,.wedPanel select{width:100%;padding:12px;border-radius:12px;border:1px solid #333;background:#26262E;color:#fff;font-family:Georgia;margin-top:6px}
-.wedTask{display:flex;gap:8px;align-items:center;background:#26262E;border-radius:12px;padding:10px;margin-top:8px}.wedTask b{flex:1}.done{opacity:.5;text-decoration:line-through}
-</style>
-</head>
-<body>
-<div class="newHeader"><div class="newHeaderBg"></div><div class="particle" style="left:12%;width:6px;height:6px;animation-duration:22s"></div><div class="particle" style="left:55%;width:7px;height:7px;animation-duration:20s"></div><div class="particle" style="left:78%;width:5px;height:5px;animation-duration:23s"></div><div class="bird white ltr" style="top:26%;animation-duration:48s;opacity:.5"><span class="flip"><span class="flap">🕊️</span></span></div><div class="butterfly orange ltr" style="bottom:8%;animation-duration:48s"><span>🦋</span></div><div class="newHeaderInner"><h1>Micheal Mawadri</h1><div class="goYe">GO YE</div><p class="verseLine">Matthew 28:19 • Bible Study • Kampala, Uganda</p><div><span class="tagline">Go. Tell. Teach. — One Soul At A Time.</span></div><div><a class="followBtn" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">+ Follow @mitch5771</a><a class="followBtn2" href="mailto:michealmawadri01@gmail.com" onclick="trackClick('email_click')">✉️ Email</a></div><div class="scrollHint">↓ Scroll down for Lesson 1 ↓</div></div></div>
-
-<!-- GO YE ADMIN -->
-<div id="adminPanel" class="adminPanel">
-<h2>🔐 GO YE — PRIVATE ADMIN ONLY</h2><p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br><b>Viewed</b> = SAW + stayed 3 sec • <b>Tapped</b> = CLICKED • <b>Time</b> = how long stayed</p>
-<div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — Global</span></div>
-<div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY (Your Phone)</span></div>
-<div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact</span><div id="adminTimeDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
-<div class="stat"><b id="adminImpact">—</b><br><span>OVERALL IMPACT SCORE</span><div id="adminImpactDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
-<h3 style="color:#FFBE0B">🏆 MOST VIEWED — Ranking</h3><div id="rankList"></div>
-<h3 style="color:#FFBE0B">⏱️ TIME PER LESSON / PART</h3><div id="timeList"></div>
-<h3 style="color:#FFBE0B">📊 VIEWS + TAPS — Global</h3>
-<table><tr><td>📖 Lesson 1 Viewed</td><td id="c_lesson1">0</td></tr><tr><td>📖 Lesson 2 Viewed</td><td id="c_lesson2">0</td></tr><tr><td>📖 Part 1 Viewed</td><td id="c_part1">0</td></tr><tr><td>📖 Part 2 Viewed</td><td id="c_part2">0</td></tr><tr><td>📖 Part 3 Viewed</td><td id="c_part3">0</td></tr><tr><td>📖 Part 4 Viewed</td><td id="c_part4">0</td></tr><tr><td>📖 Part 5 Viewed</td><td id="c_part5">0</td></tr><tr><td>📖 Part 6 Viewed</td><td id="c_part6">0</td></tr><tr><td>📖 Bible Viewed</td><td id="c_bible">0</td></tr><tr><td>📖 Bible Verse Read (Tapped)</td><td id="c_verse">0</td></tr><tr><td>❤️ React Tapped</td><td id="c_react">0</td></tr><tr><td>🙏 Pray Tapped</td><td id="c_pray">0</td></tr><tr><td>➡️ Share Tapped</td><td id="c_share">0</td></tr><tr><td>💬 Say YES Tapped</td><td id="c_yes">0</td></tr><tr><td>➕ Follow TikTok</td><td id="c_follow">0</td></tr><tr><td>✉️ Email Tapped</td><td id="c_email">0</td></tr></table>
-<h3 style="color:#FFBE0B">👥 VISITOR PROFILES — With Time</h3><div id="visitorList"></div>
-<div style="background:#1C1C24;border-radius:12px;padding:12px;margin-top:12px"><b style="color:#FFBE0B">Last 20 Actions:</b><div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px"></div></div>
-<button onclick="exportStats()">📋 Copy Stats For Advertiser</button><p id="exportMsg" style="color:#00C853;font-weight:800"></p>
+<div class="partHead" id="head-p5" onclick="togglePart('p5',this);trackClick('part5')"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
+<div class="partBody" id="p5"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Yesterday we prayed and received Him. What changed?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I felt quiet. Peaceful. Did anything really change?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">1 John 5:12 — He that hath the Son hath life. You have life even when you don't feel it.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 10:10 — abundant life now. Walk with Him every day.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">You have God living in you. Eternal life now.</p></div></div></div><div class="verse"><p>"Whoever has the Son has life..."</p><small>1 JOHN 5:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,5,'I have life now')">❤️ I have life now</button><button type="button" class="react" onclick="doReact(this,5,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(5)">➡️ Share it</button></div><div class="feedback" id="feedback5"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(5);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
+<div class="partHead" id="head-p4" onclick="togglePart('p4',this);trackClick('part4')"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
+<div class="partBody" id="p4"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Today we don't just talk. We receive Him.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">How do I pray?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Romans 10:9 — confess with your mouth, believe in your heart.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Revelation 3:20 — Jesus is knocking. Open the door.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Pray: Jesus, come and live in me. I receive You.</p></div></div></div><div class="prayerBox"><h3>🙏 Pray This</h3><p>"Jesus, I believe You died for me. I open my heart. Come and live in me. I receive eternal life. Amen."</p></div><div class="verse"><p>"If you declare... you will be saved."</p><small>ROMANS 10:9</small></div><div class="cta"><h3>Your Turn — Did You Pray?</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,4,'I received Him')">❤️ I received Him</button><button type="button" class="react" onclick="doReact(this,4,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(4)">➡️ Share it</button></div><div class="feedback" id="feedback4"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(4);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
+<div class="partHead" id="head-p3" onclick="togglePart('p3',this);trackClick('part3')"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
+<div class="partBody" id="p3"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">How do I receive it? Do I have to earn it?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I try to be good. Is that how?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Is it by works?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 — as many as received Him.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Tomorrow we pray together.</p></div></div></div><div class="verse"><p>"Yet to all who did receive him..."</p><small>JOHN 1:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,3,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,3,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(3)">➡️ Share it</button></div><div class="feedback" id="feedback3"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(3);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
+<div class="partHead" id="head-p2" onclick="togglePart('p2',this);trackClick('part2')"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
+<div class="partBody" id="p2"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">What is that life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Just living forever in heaven?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">What does Jesus say?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 17:3 — eternal life is knowing God. God's life in you now.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">He came to give us His life now.</p></div></div></div><div class="verse"><p>"Now this is eternal life: that they know you..."</p><small>JOHN 17:3</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,2,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,2,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(2)">➡️ Share it</button></div><div class="feedback" id="feedback2"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(2);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
+<div class="partHead" id="head-p1" onclick="togglePart('p1',this);trackClick('part1')"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
+<div class="partBody" id="p1"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">John 3:16 has been misunderstood.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">For God so loved the world...</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">This verse is saying something more.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">The real purpose was everlasting life.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">God wants to give you everlasting life.</p></div></div></div><div class="verse"><p>"For God so loved the world..."</p><small>JOHN 3:16</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,1,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,1,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(1)">➡️ Share it</button></div><div class="feedback" id="feedback"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(1);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
+</div>
 </div>
 
-<!-- PRIVATE WEDDING - ONLY MICHEAL + ANITA -->
-<div id="weddingPanel" class="wedPanel">
-<h2>💍 PRIVATE — Micheal weds Anita</h2><p style="color:#C8C8CE;font-size:10pt">Only you + Anita. Link: ?wedding=micheal-anita-2027<br>Do NOT share publicly. Export PDF/Excel to committee.</p>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" style="flex:1;background:#FFBE0B" onclick="showTab('events')">📅 Events</button><button class="btn" style="flex:1;background:#fff;color:#111" onclick="showTab('tasks')">✅ Tasks</button><button class="btn" style="flex:1;background:#00C853;color:#fff" onclick="showTab('budget')">💰 Budget</button><button class="btn" style="flex:1;background:#7B2FFF;color:#fff" onclick="showTab('guests')">👥 Guests</button></div>
-<div id="tab-events"><div class="card" style="background:#1C1C24;border:1px solid #FF006E;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FF006E;margin:0">📅 Events</h3><table><tr><td><b>Kukyala</b><br>Fri 19 Nov 2027 • Kampala<br><span style="color:#FFBE0B" id="count1"></span></td><td>20 + 20 guests</td></tr><tr><td><b>Kwanjula</b><br>Sat 20 Nov 2027 • Kampala</td><td>20 + 20 guests</td></tr><tr><td><b>Wedding — Zanzibar</b><br>Fri 26 Nov 2027 • Zuri Zanzibar, Kendwa<br><span style="color:#FFBE0B" id="count2"></span></td><td>20 guests<br>10 Micheal + 10 Anita</td></tr></table><p style="font-size:10pt;line-height:1.6">Venue: Still Searching — Top Pick: <b>Zuri Zanzibar (Kendwa)</b><br>Backup: Baraza Resort (Bwejuu) • RIU Palace (Nungwi)<br>✈️ EBB → ZNZ Direct Uganda Airlines / Air Tanzania ~1h 56m • ~$370-$450 return • 20 guests = $7,400-$9,000</p></div></div>
-<div id="tab-tasks" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">✅ Committee To-Do</h3><p style="font-size:10pt;color:#C8C8CE">Sandra Dotti, Wilson Sekatte, Anita, Micheal</p><input id="taskText" placeholder="New task e.g. Book Zuri venue"><select id="taskWho"><option>Micheal Mawadri</option><option>Anita Juliet Asherura</option><option>Sandra Dotti</option><option>Wilson Sekatte</option></select><select id="taskEvent"><option>Kukyala</option><option>Kwanjula</option><option>Wedding Zanzibar</option><option>General</option></select><input id="taskDue" type="date"><button class="btn" onclick="addTask()">+ Add Task</button><div id="taskList"></div></div></div>
-<div id="tab-budget" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">💰 Budget — Kukyala + Kwanjula + Zanzibar</h3><div class="stat"><b id="budgetTotal">$0</b><br><span>Total Spent / Budget</span></div><input id="bCat" placeholder="Category e.g. Venue Zuri"><input id="bEst" type="number" placeholder="Estimated USD"><input id="bPaid" type="number" placeholder="Paid USD"><button class="btn" onclick="addBudget()">+ Add Budget Item</button><div id="budgetList"></div></div></div>
-<div id="tab-guests" style="display:none"><div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">👥 Guests</h3><p style="font-size:10pt;color:#C8C8CE">Zanzibar: 10+10=20 • Kukyala/Kwanjula: 20+20=40</p><input id="gName" placeholder="Guest name"><select id="gSide"><option>Micheal Side - Zanzibar</option><option>Anita Side - Zanzibar</option><option>Micheal Side - Kukyala</option><option>Anita Side - Kukyala</option></select><select id="gRSVP"><option>Pending</option><option>Confirmed Yes</option><option>No</option><option>Paid Flight</option></select><button class="btn" onclick="addGuest()">+ Add Guest</button><div id="guestList"></div></div></div>
-<div class="card" style="background:#1C1C24;border-radius:14px;padding:14px;margin-top:10px"><h3 style="color:#FFBE0B">📥 Daily Downloads — Share to Committee</h3><button class="btn" onclick="downloadCSV('tasks')">⬇ Download Tasks Excel (CSV)</button><button class="btn" style="background:#fff;color:#111" onclick="downloadCSV('budget')">⬇ Download Budget Excel (CSV)</button><button class="btn" style="background:#00C853;color:#fff" onclick="downloadCSV('guests')">⬇ Download Guests Excel (CSV)</button><button class="btn" style="background:#7B2FFF;color:#fff" onclick="window.print()">🖨️ Print / Save Daily Update as PDF</button><p id="dailySummary" style="font-size:10pt;line-height:1.6"></p></div>
+<div class="lessonWrap">
+<div class="lessonHead" id="lesson2Head" onclick="toggleLesson('lesson2',this);trackClick('lesson2')"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div>
+<div class="lessonBody" id="lesson2"><div class="wrap" style="padding-top:16px"><div class="prayerBox"><h3>Coming Soon</h3><p>You have life. Now go and give life. Lesson 2 teaches you how to share Jesus with one person, simply.</p></div></div></div>
 </div>
 
-<!-- LESSON 1 -->
-<div class="lessonWrap"><div class="lessonHead active" id="lesson1Head" onclick="toggleLesson('lesson1',this);trackClick('lesson1')"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
-<div class="lessonBody open" id="lesson1">
-<div class="partHead" id="head-p6" onclick="togglePart('p6',this);trackClick('part6')"><div><b>Part 6: Let's Check What We Learned</b><small>Review • A - E • Finale</small></div><span>▸</span></div>
-<div class="partBody" id="p6"><div class="wrap"><div class="hero" style="padding:14px 0 0"><h1>Eternal Life <span>— Part 6</span></h1><p><b>Let's Check What We Learned</b> — We finish Lesson 1 together.</p><div class="pillRow"><span class="pill gold">Lesson 1 • Part 6 of 6 • FINALE</span><span class="pill">Review</span></div></div><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch <small>• Host</small></p><p class="text">Welcome to Part 6 — finale. Christian, in one sentence, what is eternal life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Eternal life is God's life in me now — because I have Jesus. I don't earn it, I received Him. I have life now, and forever.</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Check: A — Life. B — Now. C — Receive. D — Confess. E — Abundant.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">You have life. Go tell ONE person. Matthew 28:19 — Go Ye. That is Lesson 2.</p></div></div></div><div class="prayerBox"><h3>🙏 Say This Today</h3><p>"Jesus, thank You for Lesson 1. I have life. Help me share it with one person this week. Amen."</p></div><div class="verse"><p>"Go ye therefore, and teach all nations..."</p><small>MATTHEW 28:19 • KJV</small></div><div class="factOne"><small>LESSON 1 REVIEW • A - E</small><h3>You finished Eternal Life</h3><p><b>A.</b> Purpose is eternal life — John 3:16<br><b>B.</b> God's life in you now — John 17:3<br><b>C.</b> Receive by believing — John 1:12<br><b>D.</b> Confess + believe — Romans 10:9<br><b>E.</b> Abundant now — John 10:10</p></div><div class="cta"><h3>🎓 You Finished Lesson 1!</h3><div class="reactions"><button class="react" onclick="doReact(this,6,'I finished Lesson 1')">🎓 I finished!</button><button class="react" onclick="doReact(this,6,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(6)">➡️ Share it</button></div><div class="feedback" id="feedback6"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(6);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">Follow @mitch5771</a></div></div></div>
-<div class="partHead" id="head-p5" onclick="togglePart('p5',this);trackClick('part5')"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
-<div class="partBody" id="p5"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Yesterday we prayed and received Him. What changed?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I felt quiet. Peaceful. Did anything really change?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">1 John 5:12 — He that hath the Son hath life. You have life even when you don't feel it.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 10:10 — abundant life now. Walk with Him every day.</p></div></div></div><div class="verse"><p>"Whoever has the Son has life..."</p><small>1 JOHN 5:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,5,'I have life now')">❤️ I have life now</button><button class="react" onclick="doReact(this,5,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(5)">➡️ Share it</button></div><div class="feedback" id="feedback5"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(5);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p4" onclick="togglePart('p4',this);trackClick('part4')"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
-<div class="partBody" id="p4"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Today we don't just talk. We receive Him.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">How do I pray?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Romans 10:9 — confess with your mouth, believe in your heart.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Revelation 3:20 — Jesus is knocking. Open the door.</p></div></div></div><div class="prayerBox"><h3>🙏 Pray This</h3><p>"Jesus, I believe You died for me. I open my heart. Come and live in me. I receive eternal life. Amen."</p></div><div class="verse"><p>"If you declare... you will be saved."</p><small>ROMANS 10:9</small></div><div class="cta"><h3>Did You Pray?</h3><div class="reactions"><button class="react" onclick="doReact(this,4,'I received Him')">❤️ I received Him</button><button class="react" onclick="doReact(this,4,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(4)">➡️ Share it</button></div><div class="feedback" id="feedback4"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(4);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p3" onclick="togglePart('p3',this);trackClick('part3')"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
-<div class="partBody" id="p3"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">How do I receive it? Do I have to earn it?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I try to be good. Is that how?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 — as many as received Him.</p></div></div></div><div class="verse"><p>"Yet to all who did receive him..."</p><small>JOHN 1:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,3,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,3,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(3)">➡️ Share it</button></div><div class="feedback" id="feedback3"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(3);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p2" onclick="togglePart('p2',this);trackClick('part2')"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
-<div class="partBody" id="p2"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">What is that life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Just living forever in heaven?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 17:3 — eternal life is knowing God. God's life in you now.</p></div></div></div><div class="verse"><p>"Now this is eternal life: that they know you..."</p><small>JOHN 17:3</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,2,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,2,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(2)">➡️ Share it</button></div><div class="feedback" id="feedback2"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(2);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-<div class="partHead" id="head-p1" onclick="togglePart('p1',this);trackClick('part1')"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
-<div class="partBody" id="p1"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">John 3:16 has been misunderstood.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">For God so loved the world...</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">This verse is saying something more.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">The real purpose was everlasting life.</p></div></div></div><div class="verse"><p>"For God so loved the world..."</p><small>JOHN 3:16</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button class="react" onclick="doReact(this,1,'I needed this')">❤️ I needed this</button><button class="react" onclick="doReact(this,1,'Pray for me')">🙏 Pray for me</button><button class="react" onclick="doShare(1)">➡️ Share it</button></div><div class="feedback" id="feedback"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="copyYes(1);trackClick('yes_click')">💬 Say YES →</a></div></div></div>
-</div></div>
+<div class="bibleWrap" style="margin-top:16px" id="bibleSection">
+<div class="bibleCard">
+<div class="bibleHead"><h2>✦ HOLY BIBLE</h2></div>
+<div class="dailyVerse"><small>✦ DAILY VERSE • <span id="dailyDate"></span></small><p id="dailyVerseText">Loading today's verse...</p><b id="dailyVerseRef"></b></div>
+<button type="button" class="openBtn" id="openBibleBtn" onclick="toggleBible();trackClick('bible')">📖 Open Bible — Book, Chapter &amp; Verse ↓</button>
+<div class="bibleBody" id="bibleBody">
+<div class="bibleControls"><select id="bibleBook"></select><select id="bibleChapter"></select><select id="bibleVerse"><option value="1">Verse 1</option></select></div>
+<div class="bibleControls"><button type="button" style="flex:1" onclick="loadBible();trackClick('verse_read')">READ →</button><button type="button" style="flex:1;background:#fff" onclick="readDailyVerse();trackClick('verse_read')">Read Daily Verse →</button></div>
+<div class="bibleSearch"><input id="bibleSearchInput" placeholder="Search e.g. John 3:16"><button type="button" onclick="searchBible();trackClick('verse_read')">Search</button></div>
+<div class="bibleRef" id="bibleRef">John 1:1</div>
+<div class="singleVerse"><p id="bibleText">Tap READ to open your Bible.</p></div>
+<div class="bibleNav"><button type="button" class="prevB" onclick="moveVerse(-1);trackClick('verse_read')">← Previous Verse</button><button type="button" class="nextB" onclick="moveVerse(1);trackClick('verse_read')">Next Verse →</button></div>
+<div class="bibleNav2"><button type="button" onclick="moveBible(-1);trackClick('verse_read')">← Previous Chapter</button><button type="button" onclick="moveBible(1);trackClick('verse_read')">Next Chapter →</button></div>
+<div class="bibleNote">One verse at a time • Next arrow goes to next verse, then next chapter automatically<br>World English Bible • Free &amp; Legal • Same meaning as NIV</div>
+</div>
+</div>
+</div>
 
-<div class="lessonWrap"><div class="lessonHead" id="lesson2Head" onclick="toggleLesson('lesson2',this);trackClick('lesson2')"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div><div class="lessonBody" id="lesson2"><div class="wrap" style="padding-top:16px"><div class="prayerBox"><h3>Coming Soon</h3><p>You have life. Now go and give life. Lesson 2 teaches you how to share Jesus with one person, simply.</p></div></div></div></div>
-
-<div class="bibleWrap" style="margin-top:16px" id="bibleSection"><div class="bibleCard"><div class="bibleHead"><h2>✦ HOLY BIBLE</h2></div><div class="dailyVerse"><small>✦ DAILY VERSE • <span id="dailyDate"></span></small><p id="dailyVerseText">Loading today's verse...</p><b id="dailyVerseRef"></b></div><button class="openBtn" id="openBibleBtn" onclick="toggleBible();trackClick('bible')">📖 Open Bible — Book, Chapter &amp; Verse ↓</button><div class="bibleBody" id="bibleBody"><div class="bibleControls"><select id="bibleBook"></select><select id="bibleChapter"></select><select id="bibleVerse"><option value="1">Verse 1</option></select></div><div class="bibleControls"><button style="flex:1" onclick="loadBible();trackClick('verse_read')">READ →</button><button style="flex:1;background:#fff" onclick="readDailyVerse();trackClick('verse_read')">Read Daily Verse →</button></div><div class="bibleSearch"><input id="bibleSearchInput" placeholder="Search e.g. John 3:16"><button onclick="searchBible();trackClick('verse_read')">Search</button></div><div class="bibleRef" id="bibleRef">John 1:1</div><div class="singleVerse"><p id="bibleText">Tap READ to open your Bible.</p></div><div class="bibleNav"><button class="prevB" onclick="moveVerse(-1);trackClick('verse_read')">← Previous Verse</button><button class="nextB" onclick="moveVerse(1);trackClick('verse_read')">Next Verse →</button></div><div class="bibleNav2"><button onclick="moveBible(-1);trackClick('verse_read')">← Previous Chapter</button><button onclick="moveBible(1);trackClick('verse_read')">Next Chapter →</button></div><div class="bibleNote">One verse at a time • World English Bible • Free &amp; Legal</div></div></div></div>
-
-<div class="footer"><p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p><p>Kampala, Uganda</p><p>TikTok: <a href="https://www.tiktok.com/@mitch5771" target="_blank" onclick="trackClick('follow_tiktok')">@mitch5771</a> • Email: <a href="mailto:michealmawadri01@gmail.com" onclick="trackClick('email_click')">michealmawadri01@gmail.com</a></p><p>Scripture Inspiration - Go Ye</p></div>
+<div class="footer">
+<p><b>Micheal Mawadri</b> • GO YE — Matthew 28:19 • Bible Study</p>
+<p>Kampala, Uganda</p>
+<p>TikTok: <a href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">@mitch5771</a> • Email: <a href="mailto:michealmawadri01@gmail.com?subject=GO YE - Lesson 1&body=Hi Mitch,%0D%0A%0D%0AI finished Lesson 1.%0D%0A%0D%0APlease pray for me.%0D%0A%0D%0AMy name is: " onclick="trackClick('email_click')">michealmawadri01@gmail.com</a></p>
+<p>Scripture Inspiration - Go Ye</p>
+</div>
 
 <script>
-// GO YE ADMIN + TIME + IMPACT + WEDDING
-var ADMIN_KEY="go-ye-2026"; var COUNTER_NS="goye-mawadri-2026"; var pageStart=Date.now(); var currentSection=null, sectionStart=0; var maxScroll=0; var viewedSet={};
-function goyeGet(k,def){try{var v=localStorage.getItem('goye_'+k);return v===null?def:JSON.parse(v)}catch(e){return def}}
-function goyeSet(k,v){try{localStorage.setItem('goye_'+k,JSON.stringify(v))}catch(e){}}
-function getDevice(){var ua=navigator.userAgent||"";var d="Computer";if(/iPhone/i.test(ua))d="iPhone";else if(/Android/i.test(ua))d="Android Phone";else if(/iPad/i.test(ua))d="iPad";var b="Safari";if(/Chrome/i.test(ua))b="Chrome";else if(/Firefox/i.test(ua))b="Firefox";return d+" • "+b+" • "+screen.width+"x"+screen.height}
-function fmtTime(s){s=Math.round(s);if(s<60)return s+"s";return Math.floor(s/60)+"m "+(s%60)+"s"}
-function getImpact(t,c,s){if(t<10&&c<=1)return{label:"👀 Glanced — Low Impact",color:"#FF8FB0"};if(t<60)return{label:"📖 Reading — Medium Impact",color:"#FFB35C"};if(t<180||c>=3)return{label:"🔥 Engaged — High Impact",color:"#4DDB8A"};return{label:"❤️ Deeply Moved — Very High Impact",color:"#00C853"}}
-var myProfile={country:"Uganda",city:""};
-async function loadLocation(){try{var r=await fetch("https://ipapi.co/json/");var d=await r.json();if(d&&d.country_name){myProfile.country=d.country_name;myProfile.city=d.city||""}}catch(e){}}
-function startSection(n){if(currentSection)endSection();currentSection=n;sectionStart=Date.now()}
-function endSection(){if(!currentSection)return;var dur=(Date.now()-sectionStart)/1000;if(dur<1){currentSection=null;return}var st=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});st.timeData=st.timeData||{};st.timeData[currentSection]=st.timeData[currentSection]||{total:0,visits:0};st.timeData[currentSection].total+=dur;st.timeData[currentSection].visits+=1;if(st.visitors&&st.visitors.length>0){var v=st.visitors[0];v.timeSpent=(v.timeSpent||0)+dur;v.sections=v.sections||{};v.sections[currentSection]=(v.sections[currentSection]||0)+dur;v.impact=getImpact(v.timeSpent,v.clickCount||0,maxScroll).label}goyeSet('stats',st);currentSection=null}
-function trackView(a){if(viewedSet[a])return;viewedSet[a]=true;try{var st=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});st.clicks[a]=(st.clicks[a]||0)+1;st.log.unshift({action:a+" (Viewed)",time:new Date().toLocaleString(),device:getDevice(),timeOnPage:fmtTime((Date.now()-pageStart)/1000)});st.log=st.log.slice(0,100);if(st.visitors&&st.visitors.length>0){st.visitors[0].clicks=st.visitors[0].clicks||[];st.visitors[0].clicks.push(a+" Viewed")}goyeSet('stats',st);fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+a).catch(function(){});if(a.indexOf('lesson')===0||a.indexOf('part')===0||a==='bible')startSection(a)}catch(e){}}
-function trackClick(a){try{var st=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});var now=new Date();var ts=now.toDateString();if(st.today!==ts){st.today=ts;st.todayCount=0}var isView=(a.indexOf('lesson')===0||a.indexOf('part')===0||a==='bible');if(!isView)st.clicks[a]=(st.clicks[a]||0)+1;var el=(Date.now()-pageStart)/1000;st.log.unshift({action:a+" (Tapped)",time:now.toLocaleString(),device:getDevice(),timeOnPage:fmtTime(el)});st.log=st.log.slice(0,100);if(st.visitors&&st.visitors.length>0){st.visitors[0].clickCount=(st.visitors[0].clickCount||0)+1;st.visitors[0].clicks=st.visitors[0].clicks||[];st.visitors[0].clicks.push(a+" Tapped ("+fmtTime(el)+")")}goyeSet('stats',st);if(!isView)fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+a).catch(function(){});fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_clicks").catch(function(){});if(isView)startSection(a);if(document.getElementById('adminPanel')&&document.getElementById('adminPanel').style.display==='block')renderAdmin()}catch(e){}}
-function trackVisit(){try{var st=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});var now=new Date();var ts=now.toDateString();if(st.today!==ts){st.today=ts;st.todayCount=0}st.todayCount=(st.todayCount||0)+1;st.total=(st.total||0)+1;var v={id:"Visitor-"+st.total,device:getDevice(),time:now.toLocaleString(),country:myProfile.country||"Uganda",city:myProfile.city||"",clicks:[],clickCount:0,timeSpent:0,sections:{},scroll:0,impact:"👀 Just Arrived"};st.visitors=st.visitors||[];st.visitors.unshift(v);st.visitors=st.visitors.slice(0,20);st.log.unshift({action:"visit",time:now.toLocaleString(),device:getDevice(),timeOnPage:"0s"});st.log=st.log.slice(0,100);goyeSet('stats',st);fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_visits").catch(function(){});fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/visit").catch(function(){})}catch(e){}}
-function saveTimeOnExit(){try{var total=(Date.now()-pageStart)/1000;if(total<3)return;endSection();var st=goyeGet('stats',{total:0,totalTime:0,totalSessions:0,visitors:[]});st.totalTime=(st.totalTime||0)+total;st.totalSessions=(st.totalSessions||0)+1;if(st.visitors&&st.visitors.length>0){st.visitors[0].timeSpent=total;st.visitors[0].scroll=maxScroll;st.visitors[0].impact=getImpact(total,st.visitors[0].clickCount||0,maxScroll).label}goyeSet('stats',st)}catch(e){}}
-window.addEventListener('scroll',function(){var h=document.documentElement;var p=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100);if(p>maxScroll)maxScroll=p});
-window.addEventListener('beforeunload',saveTimeOnExit);document.addEventListener('visibilitychange',function(){if(document.hidden)saveTimeOnExit();else pageStart=Date.now()});
-setInterval(function(){try{var st=goyeGet('stats',{visitors:[]});if(st.visitors&&st.visitors.length>0){st.visitors[0].timeSpent=(Date.now()-pageStart)/1000;st.visitors[0].scroll=maxScroll;goyeSet('stats',st)}}catch(e){}},10000);
-function setupViewTracking(){setTimeout(function(){trackView('lesson1')},3000);var map={'head-p1':'part1','head-p2':'part2','head-p3':'part3','head-p4':'part4','head-p5':'part5','head-p6':'part6','lesson2Head':'lesson2','bibleSection':'bible'};if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var k=map[en.target.id];if(k)setTimeout(function(){trackView(k)},3000)}})},{threshold:0.3});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)obs.observe(el)})}}
-async function getGlobal(k){try{var r=await fetch("https://abacus.jasoncameron.dev/info/"+COUNTER_NS+"/"+k);var d=await r.json();return(d&&typeof d.value==="number")?d.value:0}catch(e){return 0}}
-async function renderAdmin(){saveTimeOnExit();pageStart=Date.now();var st=goyeGet('stats',{total:0,clicks:{},log:[],todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});document.getElementById('adminToday').textContent=st.todayCount||0;var avg=st.totalSessions>0?st.totalTime/st.totalSessions:0;document.getElementById('adminAvgTime').textContent=fmtTime(avg);var tc=Object.values(st.clicks||{}).reduce(function(a,b){return a+b},0);var imp=getImpact(avg,tc,maxScroll);document.getElementById('adminImpact').textContent=imp.label;document.getElementById('adminImpact').style.color=imp.color;document.getElementById('adminImpactDetail').textContent="Avg "+fmtTime(avg)+" • Total "+fmtTime(st.totalTime||0)+" • "+(st.totalSessions||0)+" sessions • Scroll "+maxScroll+"%";document.getElementById('adminTimeDetail').textContent="Under 30s = needs hook faster. Over 2 min = deeply edifying.";var names={lesson1:"Lesson 1: Eternal Life",lesson2:"Lesson 2: Go Ye",part1:"Part 1: Purpose",part2:"Part 2: What Is Life?",part3:"Part 3: How Receive?",part4:"Part 4: Receive Him",part5:"Part 5: What Changed?",part6:"Part 6: Finale",bible:"Holy Bible",verse_read:"Bible Verse Read",pray:"Pray For Me",share:"Share",yes_click:"Say YES",follow_tiktok:"Follow TikTok"};var entries=Object.entries(st.clicks||{}).map(function(e){return{key:e[0],name:names[e[0]]||e[0],count:e[1]}}).sort(function(a,b){return b.count-a.count});var rankEl=document.getElementById('rankList');if(entries.length===0)rankEl.innerHTML="<p style='color:#888'>No views yet.</p>";else{var mx=entries[0].count||1;rankEl.innerHTML=entries.slice(0,8).map(function(it,i){var p=Math.round(it.count/mx*100);return "<div class='rankRow'><div style='flex:1'><b>#"+(i+1)+" "+it.name+"</b><div class='bar'><i style='width:"+p+"%'></i></div></div><b style='margin-left:10px'>"+it.count+"</b></div>"}).join("")}var timeEl=document.getElementById('timeList');var tE=Object.entries(st.timeData||{}).map(function(e){return{key:e[0],name:names[e[0]]||e[0],total:e[1].total,visits:e[1].visits,avg:e[1].total/e[1].visits}}).sort(function(a,b){return b.total-a.total});if(tE.length===0)timeEl.innerHTML="<p style='color:#888'>No time yet.</p>";else timeEl.innerHTML=tE.map(function(it){return "<div class='rankRow'><div><b>"+it.name+"</b><br><span style='color:#C8C8CE;font-size:9.5pt'>Total "+fmtTime(it.total)+" • Avg "+fmtTime(it.avg)+" • "+it.visits+" views</span></div></div>"}).join("");var vList=document.getElementById('visitorList');if(!st.visitors||st.visitors.length===0)vList.innerHTML="<p style='color:#888'>No visitors yet.</p>";else vList.innerHTML=st.visitors.map(function(v){var secs=v.sections?Object.entries(v.sections).map(function(e){return(names[e[0]]||e[0])+": "+fmtTime(e[1])}).join("<br>"):"";return "<div class='visitorCard'><b>"+v.id+"</b> • "+v.time+"<br>📱 "+v.device+"<br>🌍 "+(v.city?v.city+", ":"")+v.country+"<br>⏱️ Time: "+fmtTime(v.timeSpent||0)+" • Scroll: "+(v.scroll||0)+"% • Taps: "+(v.clickCount||0)+"<br>🎯 Impact: "+(v.impact||"—")+"<br>📖 Sections:<br>"+(secs||"Header")+"<br>Actions: "+(v.clicks?v.clicks.join(", "):"—")+"</div>"}).join("");var logEl=document.getElementById('adminLog');if(logEl){if(!st.log||st.log.length===0)logEl.textContent="No actions yet.";else logEl.innerHTML=st.log.slice(0,20).map(function(x){return x.time+" — "+x.action+" — "+(x.timeOnPage||"")+" — "+x.device}).join("<br>")}var total=await getGlobal("total_visits");document.getElementById('adminTotal').textContent=total+" (Global)";var map2={lesson1:"c_lesson1",lesson2:"c_lesson2",part1:"c_part1",part2:"c_part2",part3:"c_part3",part4:"c_part4",part5:"c_part5",part6:"c_part6",bible:"c_bible",verse_read:"c_verse",react:"c_react",pray:"c_pray",share:"c_share",yes_click:"c_yes",follow_tiktok:"c_follow",email_click:"c_email"};for(var k in map2){var val=await getGlobal(k);var e=document.getElementById(map2[k]);if(e)e.textContent=val;if(val===0&&st.clicks&&st.clicks[k])e.textContent=st.clicks[k]+" (This phone)"}}
-function exportStats(){var st=goyeGet('stats',{total:0,clicks:{},todayCount:0,totalTime:0,totalSessions:0});var avg=st.totalSessions>0?st.totalTime/st.totalSessions:0;var txt="GO YE REPORT - "+new Date().toDateString()+"\nTotal Visits: "+document.getElementById('adminTotal').textContent+"\nAvg Time: "+fmtTime(avg)+"\nTotal Time: "+fmtTime(st.totalTime||0)+"\nImpact: "+document.getElementById('adminImpact').textContent+"\nLesson 1: "+document.getElementById('c_lesson1').textContent+"\nBible: "+document.getElementById('c_bible').textContent+"\nPray: "+document.getElementById('c_pray').textContent+"\nShares: "+document.getElementById('c_share').textContent+"\n— GO YE @mitch5771 — Anonymous";if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(txt).then(function(){document.getElementById('exportMsg').textContent="Copied!"});else document.getElementById('exportMsg').textContent=txt}
-function copyYes(p){var t="YES - I finished Lesson 1 Part "+p+" ❤️ GO YE - @mitch5771";if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).catch(function(){})}
-function doReact(btn,part,label){var cta=btn.closest('.cta');if(cta)cta.querySelectorAll('.react').forEach(function(b){b.classList.remove('selected')});btn.classList.add('selected');var fb=document.getElementById(part===1?'feedback':'feedback'+part);if(fb)fb.textContent="Thanks — you tapped: "+label+" ❤️";try{localStorage.setItem('goye_part'+part,label)}catch(e){}if(label.indexOf('Pray')>=0)trackClick('pray');else trackClick('react')}
-async function doShare(part){trackClick('share');var text="Watch GO YE - Lesson 1 Part "+part+" - Eternal Life ❤️ https://www.tiktok.com/@mitch5771";var fb=document.getElementById(part===1?'feedback':'feedback'+part);try{if(navigator.share){await navigator.share({title:"GO YE - Eternal Life",text:text,url:"https://www.tiktok.com/@mitch5771"});if(fb)fb.textContent="Shared ❤️ Thank you!";return}if(navigator.clipboard&&navigator.clipboard.writeText){await navigator.clipboard.writeText(text);if(fb)fb.textContent="Link copied ❤️ Paste to a friend!";return}}catch(e){}window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank");if(fb)fb.textContent="Opening WhatsApp ❤️"}
-function toggleLesson(id,head){var b=document.getElementById(id);var a=document.getElementById('arrow-'+id);if(b.classList.contains('open')){b.classList.remove('open');head.classList.remove('active');if(a)a.textContent='▸'}else{b.classList.add('open');head.classList.add('active');if(a)a.textContent='▾'}}
-function togglePart(id,head){var b=document.getElementById(id);var arrow=head.querySelector('span');if(b.classList.contains('open')){b.classList.remove('open');if(arrow)arrow.textContent='▸'}else{document.querySelectorAll('.partBody').forEach(function(x){x.classList.remove('open')});document.querySelectorAll('.partHead span').forEach(function(s){s.textContent='▸'});b.classList.add('open');if(arrow)arrow.textContent='▾';b.scrollIntoView({behavior:'smooth',block:'start'})}}
-// WEDDING LOGIC
-function getW(k,d){try{var v=localStorage.getItem('wed_'+k);return v===null?d:JSON.parse(v)}catch(e){return d}}
-function setW(k,v){try{localStorage.setItem('wed_'+k,JSON.stringify(v))}catch(e){}}
-var tasks=getW('tasks',[{txt:"Confirm Zanzibar venue - Zuri Zanzibar",who:"Micheal Mawadri",event:"Wedding Zanzibar",due:"2027-08-01",done:false},{txt:"Get group flight quote EBB-ZNZ for 20",who:"Sandra Dotti",event:"Wedding Zanzibar",due:"2027-07-15",done:false},{txt:"Book Kukyala venue in Kampala",who:"Wilson Sekatte",event:"Kukyala",due:"2027-09-01",done:false},{txt:"Final guest list 10+10 Zanzibar",who:"Anita Juliet Asherura",event:"Wedding Zanzibar",due:"2027-08-15",done:false},{txt:"Set total budget + contributions",who:"Micheal Mawadri",event:"General",due:"2027-06-30",done:false},{txt:"Choose photographer Zanzibar",who:"Sandra Dotti",event:"Wedding Zanzibar",due:"2027-09-01",done:false},{txt:"Kwanjula prep - gomesi, gifts, food",who:"Anita Juliet Asherura",event:"Kwanjula",due:"2027-10-01",done:false}]);
-var budget=getW('budget',[{cat:"Kukyala + Kwanjula (Kampala)",est:2000,paid:0},{cat:"Zanzibar Venue + Decor (Zuri)",est:5000,paid:0},{cat:"Flights 20 guests EBB-ZNZ",est:8200,paid:0},{cat:"Accommodation 20 x 3 nights",est:5000,paid:0},{cat:"Food, Cake, Photo, MC",est:2800,paid:0}]);
-var guests=getW('guests',[]);
-function showTab(t){['events','tasks','budget','guests'].forEach(function(x){document.getElementById('tab-'+x).style.display=(x===t?'block':'none')})}
-function renderTasks(){document.getElementById('taskList').innerHTML=tasks.map(function(t,i){return "<div class='wedTask "+(t.done?'done':'')+"'><input type='checkbox' "+(t.done?'checked':'')+" onclick='toggleTask("+i+")' style='width:auto'><b>"+t.txt+"<br><span style='font-size:9pt;color:#FFBE0B'>"+t.who+" • "+t.event+" • Due "+t.due+"</span></b><button onclick='delTask("+i+")' style='background:#FF006E;color:#fff;border:0;border-radius:8px;padding:6px 10px;cursor:pointer'>X</button></div>"}).join("")||"<p>No tasks</p>";updateSummary()}
-function addTask(){var txt=document.getElementById('taskText').value.trim();if(!txt)return;tasks.push({txt:txt,who:document.getElementById('taskWho').value,event:document.getElementById('taskEvent').value,due:document.getElementById('taskDue').value||"2027-11-01",done:false});setW('tasks',tasks);document.getElementById('taskText').value="";renderTasks()}
-function toggleTask(i){tasks[i].done=!tasks[i].done;setW('tasks',tasks);renderTasks()}
-function delTask(i){tasks.splice(i,1);setW('tasks',tasks);renderTasks()}
-function renderBudget(){var tot=0,paid=0;budget.forEach(function(b){tot+=+b.est;paid+=+b.paid});document.getElementById('budgetTotal').textContent="$"+paid.toLocaleString()+" paid / $"+tot.toLocaleString()+" budget • Remaining $"+(tot-paid).toLocaleString();document.getElementById('budgetList').innerHTML=budget.map(function(b,i){return "<div class='wedTask'><b>"+b.cat+"<br><span style='font-size:9pt;color:#FFBE0B'>Est $"+b.est+" • Paid $"+b.paid+" • Left $"+(b.est-b.paid)+"</span></b><button onclick='delBudget("+i+")' style='background:#FF006E;color:#fff;border:0;border-radius:8px;padding:6px 10px;cursor:pointer'>X</button></div>"}).join("");updateSummary()}
-function addBudget(){var c=document.getElementById('bCat').value.trim();if(!c)return;budget.push({cat:c,est:+document.getElementById('bEst').value||0,paid:+document.getElementById('bPaid').value||0});setW('budget',budget);renderBudget()}
-function delBudget(i){budget.splice(i,1);setW('budget',budget);renderBudget()}
-function renderGuests(){document.getElementById('guestList').innerHTML=guests.map(function(g,i){return "<div class='wedTask'><b>"+g.name+"<br><span style='font-size:9pt;color:#FFBE0B'>"+g.side+" • "+g.rsvp+"</span></b><button onclick='delGuest("+i+")' style='background:#FF006E;color:#fff;border:0;border-radius:8px;padding:6px 10px;cursor:pointer'>X</button></div>"}).join("")||"<p>No guests yet. Add 20 for Zanzibar.</p>";updateSummary()}
-function addGuest(){var n=document.getElementById('gName').value.trim();if(!n)return;guests.push({name:n,side:document.getElementById('gSide').value,rsvp:document.getElementById('gRSVP').value});setW('guests',guests);document.getElementById('gName').value="";renderGuests()}
-function delGuest(i){guests.splice(i,1);setW('guests',guests);renderGuests()}
-function updateSummary(){var done=tasks.filter(function(t){return t.done}).length;var tot=budget.reduce(function(a,b){return a+ +b.est},0);var paid=budget.reduce(function(a,b){return a+ +b.paid},0);var conf=guests.filter(function(g){return g.rsvp.indexOf('Confirmed')>=0||g.rsvp.indexOf('Paid')>=0}).length;var el=document.getElementById('dailySummary');if(el)el.innerHTML="<b>Daily Update — "+new Date().toDateString()+"</b><br>💍 Micheal weds Anita • Wedding 26 Nov 2027 Zanzibar<br>✅ Tasks: "+done+"/"+tasks.length+" done • ⏳ "+(tasks.length-done)+" pending<br>💰 Budget: $"+paid.toLocaleString()+" paid / $"+tot.toLocaleString()+" • Remaining $"+(tot-paid).toLocaleString()+"<br>👥 Guests: "+guests.length+" added • "+conf+" confirmed<br>📅 Next: Kukyala 19 Nov 2027, Kwanjula 20 Nov 2027, Wedding 26 Nov 2027"}
-function downloadCSV(type){var rows=[];if(type==='tasks'){rows=[["Task","Who","Event","Due","Done"]];tasks.forEach(function(t){rows.push([t.txt,t.who,t.event,t.due,t.done?"Yes":"No"])})}if(type==='budget'){rows=[["Category","Estimated USD","Paid USD","Remaining"]];budget.forEach(function(b){rows.push([b.cat,b.est,b.paid,b.est-b.paid])})}if(type==='guests'){rows=[["Name","Side","RSVP"]];guests.forEach(function(g){rows.push([g.name,g.side,g.rsvp])})}var csv=rows.map(function(r){return r.map(function(c){return '"'+String(c).replace(/"/g,'""')+'"'}).join(",")}).join("\n");var blob=new Blob([csv],{type:'text/csv'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download="GOYE-Wedding-"+type+"-"+new Date().toISOString().slice(0,10)+".csv";a.click()}
-(function(){loadLocation();var p=new URLSearchParams(location.search);var isAdmin=p.get('admin')==="go-ye-2026";var isWed=p.get('wedding')==="micheal-anita-2027";if(isAdmin){var ap=document.getElementById('adminPanel');if(ap)ap.style.display='block';trackVisit();setupViewTracking();renderAdmin();setTimeout(renderAdmin,2000);setTimeout(renderAdmin,4000)}else if(isWed){var wp=document.getElementById('weddingPanel');if(wp)wp.style.display='block';renderTasks();renderBudget();renderGuests();updateSummary();var c1=document.getElementById('count1');var c2=document.getElementById('count2');var now=new Date();if(c1)c1.textContent=Math.ceil((new Date('2027-11-19')-now)/86400000)+" days to go";if(c2)c2.textContent=Math.ceil((new Date('2027Continue from where it stopped — paste this tail to finish the file you already pasted above. Don't paste the whole thing again, just add this at the very end to replace the broken cut-off:
-
-```html
--2027-11-26')-now)/86400000)+" days to go";} else { trackVisit(); setupViewTracking(); } })();
+// ===== GO YE - VIEWED + TAPPED + TIME - FIXED =====
+var ADMIN_KEY="go-ye-2026";
+var COUNTER_NS="goye-mawadri-2026";
+var pageStart=Date.now();
+var currentSection=null, sectionStart=0;
+var maxScroll=0;
+var viewedSet={};
+function goyeGet(k,def){ try{ var v=localStorage.getItem('goye_'+k); return v===null?def:JSON.parse(v); }catch(e){ return def; } }
+function goyeSet(k,v){ try{ localStorage.setItem('goye_'+k,JSON.stringify(v)); }catch(e){} }
+function getDevice(){ var ua=navigator.userAgent||""; var device="Computer"; if(/iPhone/i.test(ua)) device="iPhone"; else if(/Android/i.test(ua)) device="Android Phone"; else if(/iPad/i.test(ua)) device="iPad"; else if(/Mobile/i.test(ua)) device="Mobile"; var browser="Safari"; if(/Chrome/i.test(ua)) browser="Chrome"; else if(/Firefox/i.test(ua)) browser="Firefox"; else if(/Edg/i.test(ua)) browser="Edge"; return device+" • "+browser+" • "+screen.width+"x"+screen.height; }
+function fmtTime(sec){ sec=Math.round(sec); if(sec<60) return sec+"s"; var m=Math.floor(sec/60); var s=sec%60; return m+"m "+s+"s"; }
+function getImpact(timeSec, clicks, scroll){ if(timeSec<10 && clicks<=1) return {label:"👀 Glanced — Low Impact", color:"#FF8FB0"}; if(timeSec<60) return {label:"📖 Reading — Medium Impact", color:"#FFB35C"}; if(timeSec<180 || clicks>=3) return {label:"🔥 Engaged — High Impact", color:"#4DDB8A"}; return {label:"❤️ Deeply Moved — Very High Impact", color:"#00C853"}; }
+var myProfile={device:getDevice(),time:new Date().toLocaleString(),country:"Loading...",city:""};
+async function loadLocation(){ try{ var r=await fetch("https://ipapi.co/json/"); var d=await r.json(); if(d && d.country_name){ myProfile.country=d.country_name; myProfile.city=d.city||""; } }catch(e){ myProfile.country="Uganda"; } }
+function startSection(name){ if(currentSection){ endSection(); } currentSection=name; sectionStart=Date.now(); }
+function endSection(){ if(!currentSection) return; var dur=(Date.now()-sectionStart)/1000; if(dur<1){ currentSection=null; return; } var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0}); stats.timeData=stats.timeData||{}; stats.timeData[currentSection]=stats.timeData[currentSection]||{total:0,visits:0}; stats.timeData[currentSection].total+=dur; stats.timeData[currentSection].visits+=1; if(stats.visitors && stats.visitors.length>0){ var v=stats.visitors[0]; v.timeSpent=v.timeSpent||0; v.timeSpent+=dur; v.sections=v.sections||{}; v.sections[currentSection]=(v.sections[currentSection]||0)+dur; v.impact=getImpact(v.timeSpent,(v.clickCount||0),maxScroll).label; } goyeSet('stats',stats); currentSection=null; }
+// VIEWED = saw + stayed 3 sec. This is the FIX. It counts even if they don't tap.
+function trackView(action){
+  if(viewedSet[action]) return; viewedSet[action]=true;
+  try{
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});
+    stats.clicks[action]=(stats.clicks[action]||0)+1;
+    stats.log.unshift({action:action+" (Viewed)",time:new Date().toLocaleString(),device:getDevice(),timeOnPage:fmtTime((Date.now()-pageStart)/1000)});
+    stats.log=stats.log.slice(0,100);
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" Viewed"); }
+    goyeSet('stats',stats);
+    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){});
+    if(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible'){ startSection(action); }
+  }catch(e){}
+}
+function trackClick(action){
+  try{
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});
+    var now=new Date(); var todayStr=now.toDateString();
+    if(stats.today!==todayStr){ stats.today=todayStr; stats.todayCount=0; }
+    // For tap-only actions (pray, share, react, follow...), count as click. For lesson/part/bible, already counted as Viewed, so don't double-count on tap — just log it
+    var isViewAction=(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible');
+    if(!isViewAction){ stats.clicks[action]=(stats.clicks[action]||0)+1; }
+    var elapsed=(Date.now()-pageStart)/1000;
+    stats.log.unshift({action:action+(isViewAction?" (Tapped)":" (Tapped)"),time:now.toLocaleString(),device:getDevice(),timeOnPage:fmtTime(elapsed)});
+    stats.log=stats.log.slice(0,100);
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clickCount=(stats.visitors[0].clickCount||0)+1; stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" Tapped ("+fmtTime(elapsed)+")"); }
+    goyeSet('stats',stats);
+    if(!isViewAction){ fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){}); }
+    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_clicks").catch(function(){});
+    if(isViewAction){ startSection(action); }
+    if(document.getElementById('adminPanel') && document.getElementById('adminPanel').style.display==='block'){ renderAdmin(); }
+  }catch(e){}
+}
+function trackVisit(){
+  try{
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
+    var now=new Date(); var todayStr=now.toDateString();
+    if(stats.today!==todayStr){ stats.today=todayStr; stats.todayCount=0; }
+    stats.todayCount=(stats.todayCount||0)+1; stats.total=(stats.total||0)+1;
+    var visitor={id:"Visitor-"+(stats.total),device:getDevice(),time:now.toLocaleString(),country:myProfile.country||"Uganda",city:myProfile.city||"",clicks:[],clickCount:0,timeSpent:0,sections:{},scroll:0,impact:"👀 Just Arrived"};
+    stats.visitors=stats.visitors||[]; stats.visitors.unshift(visitor); stats.visitors=stats.visitors.slice(0,20);
+    stats.log.unshift({action:"visit",time:now.toLocaleString(),device:getDevice(),timeOnPage:"0s"});
+    stats.log=stats.log.slice(0,100);
+    goyeSet('stats',stats);
+    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_visits").catch(function(){});
+    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/visit").catch(function(){});
+  }catch(e){}
+}
+function saveTimeOnExit(){
+  try{
+    var total=(Date.now()-pageStart)/1000; if(total<3) return; endSection();
+    var stats=goyeGet('stats',{total:0,totalTime:0,totalSessions:0,visitors:[]});
+    stats.totalTime=(stats.totalTime||0)+total; stats.totalSessions=(stats.totalSessions||0)+1;
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].timeSpent=total; stats.visitors[0].scroll=maxScroll; stats.visitors[0].impact=getImpact(total, stats.visitors[0].clickCount||0, maxScroll).label; }
+    goyeSet('stats',stats);
+  }catch(e){}
+}
+window.addEventListener('scroll',function(){ var h=document.documentElement; var pct=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100); if(pct>maxScroll) maxScroll=pct; });
+window.addEventListener('beforeunload',saveTimeOnExit);
+document.addEventListener('visibilitychange',function(){ if(document.hidden) saveTimeOnExit(); else { pageStart=Date.now(); } });
+setInterval(function(){ try{ var stats=goyeGet('stats',{visitors:[]}); if(stats.visitors && stats.visitors.length>0){ var t=(Date.now()-pageStart)/1000; stats.visitors[0].timeSpent=t; stats.visitors[0].scroll=maxScroll; goyeSet('stats',stats); } }catch(e){} },10000);
+// AUTO-VIEW TRACKING - counts when they SEE it for 3 seconds, not only when they tap
+function setupViewTracking(){
+  // Lesson 1 is already open -> count as Viewed after 3 sec on page
+  setTimeout(function(){ trackView('lesson1'); },3000);
+  // Observe parts + bible + lesson2 as they scroll into view
+  var map={ 'head-p1':'part1','head-p2':'part2','head-p3':'part3','head-p4':'part4','head-p5':'part5','head-p6':'part6','lesson2Head':'lesson2','bibleSection':'bible' };
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var key=map[en.target.id]; if(key){ setTimeout(function(){ trackView(key); },3000); }
+        }
+      });
+    },{threshold:0.3});
+    Object.keys(map).forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
+  } else {
+    setTimeout(function(){ ['part1','part2','part3','part4','part5','part6','lesson2','bible'].forEach(function(k){ trackView(k); }); },8000);
+  }
+}
+async function getGlobal(key){ try{ var r=await fetch("https://abacus.jasoncameron.dev/info/"+COUNTER_NS+"/"+key); var d=await r.json(); return (d && typeof d.value==="number")?d.value:0; }catch(e){ return 0; } }
+async function renderAdmin(){
+  saveTimeOnExit(); pageStart=Date.now();
+  var stats=goyeGet('stats',{total:0,clicks:{},log:[],todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
+  document.getElementById('adminToday').textContent=stats.todayCount||0;
+  var avg=stats.totalSessions>0 ? stats.totalTime/stats.totalSessions : 0;
+  document.getElementById('adminAvgTime').textContent=fmtTime(avg);
+  var totalClicks=Object.values(stats.clicks||{}).reduce(function(a,b){return a+b},0);
+  var imp=getImpact(avg, totalClicks, maxScroll);
+  document.getElementById('adminImpact').textContent=imp.label; document.getElementById('adminImpact').style.color=imp.color;
+  document.getElementById('adminImpactDetail').textContent="Avg "+fmtTime(avg)+" per visitor • Total time "+fmtTime(stats.totalTime||0)+" • "+(stats.totalSessions||0)+" sessions • Max scroll "+maxScroll+"%";
+  document.getElementById('adminTimeDetail').textContent="If avg is under 30s, content needs to hook faster. If over 2 min, content is deeply edifying — keep doing it.";
+  var names={lesson1:"Lesson 1: Eternal Life",lesson2:"Lesson 2: Go Ye",part1:"Part 1: Purpose of Gospel",part2:"Part 2: What Is That Life?",part3:"Part 3: How Do I Receive?",part4:"Part 4: Receive Him Together",part5:"Part 5: What Changed?",part6:"Part 6: Finale Review",bible:"Holy Bible",verse_read:"Bible Verse Read",pray:"Pray For Me",share:"Share",yes_click:"Say YES",follow_tiktok:"Follow TikTok"};
+  var entries=Object.entries(stats.clicks||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],count:e[1]}; }).sort(function(a,b){return b.count-a.count});
+  var rankEl=document.getElementById('rankList');
+  if(entries.length===0){ rankEl.innerHTML="<p style='color:#888;font-size:10pt'>No views yet. Open Lesson 1, stay 3 sec, then refresh.</p>"; }
+  else { var maxC=entries[0].count||1; rankEl.innerHTML=entries.slice(0,8).map(function(it,i){ var pct=Math.round(it.count/maxC*100); return "<div class='rankRow'><div style='flex:1'><b>#"+(i+1)+" "+it.name+"</b><div class='bar'><i style='width:"+pct+"%'></i></div></div><b style='margin-left:10px'>"+it.count+"</b></div>"; }).join(""); }
+  var timeEl=document.getElementById('timeList');
+  var tEntries=Object.entries(stats.timeData||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],total:e[1].total,visits:e[1].visits,avg:e[1].total/e[1].visits}; }).sort(function(a,b){return b.total-a.total});
+  if(tEntries.length===0){ timeEl.innerHTML="<p style='color:#888;font-size:10pt'>No time data yet. Open a Part, stay 20 sec, then refresh admin.</p>"; }
+  else { timeEl.innerHTML=tEntries.map(function(it){ return "<div class='rankRow'><div><b>"+it.name+"</b><br><span style='color:#C8C8CE;font-size:9.5pt'>Total "+fmtTime(it.total)+" • Avg "+fmtTime(it.avg)+" • "+it.visits+" views</span></div></div>"; }).join(""); }
+  var vList=document.getElementById('visitorList');
+  if(!stats.visitors||stats.visitors.length===0){ vList.innerHTML="<p style='color:#888;font-size:10pt'>No visitors yet on this phone. Global visits are above.</p>"; }
+  else { vList.innerHTML=stats.visitors.map(function(v){ var secs=v.sections?Object.entries(v.sections).map(function(e){ return (names[e[0]]||e[0])+": "+fmtTime(e[1]); }).join("<br>"):""; return "<div class='visitorCard'><b>"+v.id+"</b> • "+v.time+"<br>📱 "+v.device+"<br>🌍 "+(v.city? v.city+", ":"")+v.country+"<br>⏱️ Time: "+fmtTime(v.timeSpent||0)+" • Scroll: "+(v.scroll||0)+"% • Taps: "+(v.clickCount||0)+"<br>🎯 Impact: "+(v.impact||"—")+"<br>📖 Sections:<br>"+(secs||"Just visited header")+"<br>Actions: "+(v.clicks?v.clicks.join(", "):"—")+"</div>"; }).join(""); }
+  var logEl=document.getElementById('adminLog');
+  if(logEl){ if(!stats.log||stats.log.length===0){ logEl.textContent="No actions yet."; } else { logEl.innerHTML=stats.log.slice(0,20).map(function(x){ return x.time+" — "+x.action+" — "+(x.timeOnPage||"")+" — "+x.device; }).join("<br>"); } }
+  var total=await getGlobal("total_visits");
+  document.getElementById('adminTotal').textContent=total+" (Global)";
+  var map2={lesson1:"c_lesson1",lesson2:"c_lesson2",part1:"c_part1",part2:"c_part2",part3:"c_part3",part4:"c_part4",part5:"c_part5",part6:"c_part6",bible:"c_bible",verse_read:"c_verse",react:"c_react",pray:"c_pray",share:"c_share",yes_click:"c_yes",follow_tiktok:"c_follow",email_click:"c_email"};
+  for(var k in map2){ var val=await getGlobal(k); var e=document.getElementById(map2[k]); if(e) e.textContent=val; if(val===0 && stats.clicks && stats.clicks[k]) e.textContent=stats.clicks[k]+" (This phone)"; }
+}
+function exportStats(){
+  var stats=goyeGet('stats',{total:0,clicks:{},todayCount:0,totalTime:0,totalSessions:0});
+  var avg=stats.totalSessions>0?stats.totalTime/stats.totalSessions:0;
+  var txt="GO YE PERFORMANCE REPORT - "+new Date().toDateString()+"\nTotal Visits (Global): "+document.getElementById('adminTotal').textContent+"\nAvg Time On Site: "+fmtTime(avg)+"\nTotal Time Spent: "+fmtTime(stats.totalTime||0)+"\nImpact: "+document.getElementById('adminImpact').textContent+"\nLesson 1 Viewed: "+document.getElementById('c_lesson1').textContent+"\nLesson 2 Viewed: "+document.getElementById('c_lesson2').textContent+"\nBible Viewed: "+document.getElementById('c_bible').textContent+"\nBible Verses Tapped: "+document.getElementById('c_verse').textContent+"\nPray Tapped: "+document.getElementById('c_pray').textContent+"\nShares Tapped: "+document.getElementById('c_share').textContent+"\nSay YES Tapped: "+document.getElementById('c_yes').textContent+"\n— GO YE @mitch5771 — Matthew 28:19 — Anonymous, no names collected";
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ document.getElementById('exportMsg').textContent="Copied! Paste it to advertiser / testimonial."; }); } else { document.getElementById('exportMsg').textContent=txt; }
+}
+(function(){
+  loadLocation();
+  var params=new URLSearchParams(location.search);
+  var isAdmin=params.get('admin')===ADMIN_KEY;
+  if(isAdmin){ var p=document.getElementById('adminPanel'); if(p) p.style.display='block'; trackVisit(); setupViewTracking(); renderAdmin(); setTimeout(renderAdmin,2000); setTimeout(renderAdmin,4000); }
+  else { trackVisit(); setupViewTracking(); }
+})();
+function copyYes(part){ var txt="YES - I finished Lesson 1 Part "+part+" ❤️ GO YE - @mitch5771"; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).catch(function(){}); } }
+function doReact(btn, part, label){ var cta=btn.closest('.cta'); if(cta){ cta.querySelectorAll('.react').forEach(function(b){ b.classList.remove('selected'); }); } btn.classList.add('selected'); var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); if(fb) fb.textContent="Thanks — you tapped: "+label+" ❤️ Your tap counts!"; try{ localStorage.setItem('goye_part'+part, label); }catch(e){} if(label.indexOf('Pray')>=0){ trackClick('pray'); } else { trackClick('react'); } }
+async function doShare(part){ trackClick('share'); var text="Watch GO YE - Lesson 1 Part "+part+" - Eternal Life ❤️ https://www.tiktok.com/@mitch5771"; var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); try{ if(navigator.share){ await navigator.share({title:"GO YE - Eternal Life", text:text, url:"https://www.tiktok.com/@mitch5771"}); if(fb) fb.textContent="Shared ❤️ Thank you!"; return; } if(navigator.clipboard && navigator.clipboard.writeText){ await navigator.clipboard.writeText(text); if(fb) fb.textContent="Link copied ❤️ Now paste it to a friend!"; return; } }catch(e){} window.open("https://wa.me/?text="+encodeURIComponent(text),"_blank"); if(fb) fb.textContent="Opening WhatsApp to share ❤️"; }
+function toggleLesson(id,head){ var b=document.getElementById(id); var a=document.getElementById('arrow-'+id); if(b.classList.contains('open')){ b.classList.remove('open'); head.classList.remove('active'); if(a) a.textContent='▸'; } else { b.classList.add('open'); head.classList.add('active'); if(a) a.textContent='▾'; } }
+function togglePart(id,head){ var b=document.getElementById(id); var arrow=head.querySelector('span'); if(b.classList.contains('open')){ b.classList.remove('open'); if(arrow) arrow.textContent='▸'; } else { document.querySelectorAll('.partBody').forEach(function(x){x.classList.remove('open')}); document.querySelectorAll('.partHead span').forEach(function(s){s.textContent='▸'}); b.classList.add('open'); if(arrow) arrow.textContent='▾'; b.scrollIntoView({behavior:'smooth',block:'start'}); } }
 </script>
 <script>
 var BIBLE_BOOKS={"Genesis":50,"Exodus":40,"Leviticus":27,"Numbers":36,"Deuteronomy":34,"Joshua":24,"Judges":21,"Ruth":4,"1 Samuel":31,"2 Samuel":24,"1 Kings":22,"2 Kings":25,"1 Chronicles":29,"2 Chronicles":36,"Ezra":10,"Nehemiah":13,"Esther":10,"Job":42,"Psalms":150,"Proverbs":31,"Ecclesiastes":12,"Song of Solomon":8,"Isaiah":66,"Jeremiah":52,"Lamentations":5,"Ezekiel":48,"Daniel":12,"Hosea":14,"Joel":3,"Amos":9,"Obadiah":1,"Jonah":4,"Micah":7,"Nahum":3,"Habakkuk":3,"Zephaniah":3,"Haggai":2,"Zechariah":14,"Malachi":4,"Matthew":28,"Mark":16,"Luke":24,"John":21,"Acts":28,"Romans":16,"1 Corinthians":16,"2 Corinthians":13,"Galatians":6,"Ephesians":6,"Philippians":4,"Colossians":4,"1 Thessalonians":5,"2 Thessalonians":3,"1 Timothy":6,"2 Timothy":4,"Titus":3,"Philemon":1,"Hebrews":13,"James":5,"1 Peter":5,"2 Peter":3,"1 John":5,"2 John":1,"3 John":1,"Jude":1,"Revelation":22};
