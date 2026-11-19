@@ -142,6 +142,12 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 .adminPanel td{padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.1)}
 .adminPanel td:last-child{text-align:right;font-weight:800;color:#FFBE0B}
 .adminPanel button{padding:10px 14px;border-radius:10px;border:0;background:#FFBE0B;font-weight:900;font-family:Georgia,serif;cursor:pointer;margin-top:10px}
+.visitorCard{background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px;font-size:10pt;line-height:1.5}
+.visitorCard b{color:#FFBE0B}
+.rankRow{display:flex;justify-content:space-between;align-items:center;background:#1C1C24;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:10px;margin-top:8px}
+.rankRow b{color:#FFBE0B}
+.bar{height:8px;background:#26262E;border-radius:10px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:#FFBE0B}
 </style>
 </head>
 <body>
@@ -180,28 +186,47 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 
 <div id="adminPanel" class="adminPanel">
   <h2>🔐 GO YE — PRIVATE ADMIN ONLY</h2>
-  <p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br>Use this for performance review &amp; advertising proof. Screenshot it.</p>
-  <div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — All devices</span></div>
-  <div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY</span></div>
+  <p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br>Use this for performance review &amp; advertising proof.<br><span style="color:#888">Anonymous only — no names / phones collected. We measure behaviour + time, not identity.</span></p>
+  <div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — All devices (Global)</span></div>
+  <div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY (Your Phone)</span></div>
+  <div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact Measure</span><div style="font-size:10pt;color:#E8E8EC;margin-top:4px" id="adminTimeDetail">No time data yet. Stay 30 sec on site, then refresh admin.</div></div>
+  <div class="stat"><b id="adminImpact">—</b><br><span>OVERALL IMPACT SCORE</span><div id="adminImpactDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">🏆 MOST VISITED — Ranking</h3>
+  <p style="color:#888;font-size:10pt;margin:0">This tells you what to make more of. If Part 4 is #1, make more prayer content.</p>
+  <div id="rankList"></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">⏱️ TIME PER LESSON / PART</h3>
+  <div id="timeList"></div>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">📊 GLOBAL CLICKS — All Visitors</h3>
   <table>
     <tr><td>📖 Lesson 1 Opened</td><td id="c_lesson1">0</td></tr>
     <tr><td>📖 Lesson 2 Opened</td><td id="c_lesson2">0</td></tr>
+    <tr><td>📖 Part 1 Clicked</td><td id="c_part1">0</td></tr>
+    <tr><td>📖 Part 2 Clicked</td><td id="c_part2">0</td></tr>
+    <tr><td>📖 Part 3 Clicked</td><td id="c_part3">0</td></tr>
+    <tr><td>📖 Part 4 Clicked</td><td id="c_part4">0</td></tr>
+    <tr><td>📖 Part 5 Clicked</td><td id="c_part5">0</td></tr>
+    <tr><td>📖 Part 6 Clicked</td><td id="c_part6">0</td></tr>
     <tr><td>📖 Bible Opened</td><td id="c_bible">0</td></tr>
+    <tr><td>📖 Bible Verse Read</td><td id="c_verse">0</td></tr>
     <tr><td>❤️ I Finished / I Needed This</td><td id="c_react">0</td></tr>
     <tr><td>🙏 Pray For Me</td><td id="c_pray">0</td></tr>
     <tr><td>➡️ Share Clicks</td><td id="c_share">0</td></tr>
     <tr><td>💬 Say YES on TikTok</td><td id="c_yes">0</td></tr>
     <tr><td>➕ Follow TikTok</td><td id="c_follow">0</td></tr>
     <tr><td>✉️ Email Clicks</td><td id="c_email">0</td></tr>
-    <tr><td>📖 Bible Verse Read</td><td id="c_verse">0</td></tr>
   </table>
+
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">👥 VISITOR PROFILES — With Time &amp; Impact</h3>
+  <div id="visitorList"><p style="color:#888;font-size:10pt">No visitors yet on this phone.</p></div>
   <div style="background:#1C1C24;border-radius:12px;padding:12px;margin-top:12px">
-    <b style="color:#FFBE0B">Last 20 Clicks:</b>
+    <b style="color:#FFBE0B">Last 20 Clicks (This Phone):</b>
     <div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px">No clicks yet.</div>
   </div>
   <button type="button" onclick="exportStats()">📋 Copy Stats For Advertiser</button>
   <p id="exportMsg" style="font-size:10pt;color:#00C853;font-weight:800"></p>
-  <p style="font-size:9pt;color:#888">If total shows 0, it means no one has visited since you installed this counter. Your first visit will make it 1.</p>
 </div>
 
 <div class="lessonWrap">
@@ -266,73 +291,143 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 </div>
 
 <script>
-// ===== GO YE PRIVATE ADMIN COUNTER =====
+// ===== GO YE PRIVATE ADMIN + TIME + IMPACT =====
 var ADMIN_KEY="go-ye-2026";
 var COUNTER_NS="goye-mawadri-2026";
+var pageStart=Date.now();
+var currentSection=null, sectionStart=0;
+var maxScroll=0;
 function goyeGet(k,def){ try{ var v=localStorage.getItem('goye_'+k); return v===null?def:JSON.parse(v); }catch(e){ return def; } }
 function goyeSet(k,v){ try{ localStorage.setItem('goye_'+k,JSON.stringify(v)); }catch(e){} }
+function getDevice(){ var ua=navigator.userAgent||""; var device="Computer"; if(/iPhone/i.test(ua)) device="iPhone"; else if(/Android/i.test(ua)) device="Android Phone"; else if(/iPad/i.test(ua)) device="iPad"; else if(/Mobile/i.test(ua)) device="Mobile"; var browser="Safari"; if(/Chrome/i.test(ua)) browser="Chrome"; else if(/Firefox/i.test(ua)) browser="Firefox"; else if(/Edg/i.test(ua)) browser="Edge"; return device+" • "+browser+" • "+screen.width+"x"+screen.height; }
+function fmtTime(sec){ sec=Math.round(sec); if(sec<60) return sec+"s"; var m=Math.floor(sec/60); var s=sec%60; return m+"m "+s+"s"; }
+function getImpact(timeSec, clicks, scroll){
+  if(timeSec<10 && clicks<=1) return {label:"👀 Glanced — Low Impact", color:"#FF8FB0"};
+  if(timeSec<60) return {label:"📖 Reading — Medium Impact", color:"#FFB35C"};
+  if(timeSec<180 || clicks>=3) return {label:"🔥 Engaged — High Impact", color:"#4DDB8A"};
+  return {label:"❤️ Deeply Moved — Very High Impact", color:"#00C853"};
+}
+var myProfile={device:getDevice(),time:new Date().toLocaleString(),country:"Loading...",city:""};
+async function loadLocation(){ try{ var r=await fetch("https://ipapi.co/json/"); var d=await r.json(); if(d && d.country_name){ myProfile.country=d.country_name; myProfile.city=d.city||""; } }catch(e){ myProfile.country="Uganda"; } }
+function startSection(name){ if(currentSection){ endSection(); } currentSection=name; sectionStart=Date.now(); }
+function endSection(){
+  if(!currentSection) return;
+  var dur=(Date.now()-sectionStart)/1000;
+  if(dur<1) { currentSection=null; return; }
+  var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
+  stats.timeData=stats.timeData||{};
+  stats.timeData[currentSection]=stats.timeData[currentSection]||{total:0,visits:0};
+  stats.timeData[currentSection].total+=dur;
+  stats.timeData[currentSection].visits+=1;
+  // Update current visitor
+  if(stats.visitors && stats.visitors.length>0){
+    var v=stats.visitors[0];
+    v.timeSpent=v.timeSpent||0; v.timeSpent+=dur;
+    v.sections=v.sections||{}; v.sections[currentSection]=(v.sections[currentSection]||0)+dur;
+    v.impact=getImpact(v.timeSpent, (v.clickCount||0), maxScroll).label;
+  }
+  goyeSet('stats',stats);
+  currentSection=null;
+}
 function trackClick(action){
   try{
-    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0});
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});
     var now=new Date(); var todayStr=now.toDateString();
     if(stats.today!==todayStr){ stats.today=todayStr; stats.todayCount=0; }
-    stats.total=(stats.total||0)+0; // total visits counted separately
     stats.clicks[action]=(stats.clicks[action]||0)+1;
-    stats.log.unshift({action:action,time:now.toLocaleString(),page:location.pathname});
+    var elapsed=(Date.now()-pageStart)/1000;
+    stats.log.unshift({action:action,time:now.toLocaleString(),device:getDevice(),timeOnPage:fmtTime(elapsed)});
     stats.log=stats.log.slice(0,100);
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clickCount=(stats.visitors[0].clickCount||0)+1; stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" ("+fmtTime(elapsed)+")"); }
     goyeSet('stats',stats);
-    // Global counter via Abacus (free, no login) - counts real visitors from all phones
     fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){});
     fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_clicks").catch(function(){});
+    // Time tracking: if opening a lesson/part, start timing it
+    if(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible'){ startSection(action); }
     if(document.getElementById('adminPanel') && document.getElementById('adminPanel').style.display==='block'){ renderAdmin(); }
   }catch(e){}
 }
 function trackVisit(){
   try{
-    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0});
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
     var now=new Date(); var todayStr=now.toDateString();
     if(stats.today!==todayStr){ stats.today=todayStr; stats.todayCount=0; }
-    stats.todayCount=(stats.todayCount||0)+1;
-    stats.total=(stats.total||0)+1;
-    stats.log.unshift({action:"visit",time:now.toLocaleString(),page:location.pathname});
+    stats.todayCount=(stats.todayCount||0)+1; stats.total=(stats.total||0)+1;
+    var visitor={id:"Visitor-"+(stats.total),device:getDevice(),time:now.toLocaleString(),country:myProfile.country||"Uganda",city:myProfile.city||"",clicks:[],clickCount:0,timeSpent:0,sections:{},scroll:0,impact:"👀 Just Arrived"};
+    stats.visitors=stats.visitors||[]; stats.visitors.unshift(visitor); stats.visitors=stats.visitors.slice(0,20);
+    stats.log.unshift({action:"visit",time:now.toLocaleString(),device:getDevice(),timeOnPage:"0s"});
     stats.log=stats.log.slice(0,100);
     goyeSet('stats',stats);
     fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_visits").catch(function(){});
     fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/visit").catch(function(){});
   }catch(e){}
 }
-async function renderAdmin(){
-  var stats=goyeGet('stats',{total:0,clicks:{},log:[],todayCount:0});
-  document.getElementById('adminTotal').textContent=stats.total||0;
-  document.getElementById('adminToday').textContent=stats.todayCount||0;
-  var c=stats.clicks||{};
-  function set(id,key){ var el=document.getElementById(id); if(el) el.textContent=c[key]||0; }
-  set('c_lesson1','lesson1'); set('c_lesson2','lesson2'); set('c_bible','bible');
-  set('c_react','react'); set('c_pray','pray'); set('c_share','share'); set('c_yes','yes_click'); set('c_follow','follow_tiktok'); set('c_email','email_click'); set('c_verse','verse_read');
-  var logEl=document.getElementById('adminLog');
-  if(logEl){ if(!stats.log||stats.log.length===0){ logEl.textContent="No clicks yet."; } else { logEl.innerHTML=stats.log.slice(0,20).map(function(x){ return x.time+" — "+x.action; }).join("<br>"); } }
-  // Try to get GLOBAL total from Abacus (all phones)
+function saveTimeOnExit(){
   try{
-    var r=await fetch("https://abacus.jasoncameron.dev/info/"+COUNTER_NS+"/total_visits");
-    var d=await r.json();
-    if(d && typeof d.value==="number"){ document.getElementById('adminTotal').textContent=d.value+" (Global)"; }
+    var total=(Date.now()-pageStart)/1000;
+    if(total<3) return;
+    endSection();
+    var stats=goyeGet('stats',{total:0,totalTime:0,totalSessions:0,visitors:[]});
+    stats.totalTime=(stats.totalTime||0)+total; stats.totalSessions=(stats.totalSessions||0)+1;
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].timeSpent=total; stats.visitors[0].scroll=maxScroll; stats.visitors[0].impact=getImpact(total, stats.visitors[0].clickCount||0, maxScroll).label; }
+    goyeSet('stats',stats);
   }catch(e){}
 }
+window.addEventListener('scroll',function(){ var h=document.documentElement; var pct=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100); if(pct>maxScroll) maxScroll=pct; });
+window.addEventListener('beforeunload',saveTimeOnExit);
+document.addEventListener('visibilitychange',function(){ if(document.hidden) saveTimeOnExit(); else { pageStart=Date.now(); } });
+setInterval(function(){ try{ var stats=goyeGet('stats',{visitors:[]}); if(stats.visitors && stats.visitors.length>0){ var t=(Date.now()-pageStart)/1000; stats.visitors[0].timeSpent=t; stats.visitors[0].scroll=maxScroll; goyeSet('stats',stats); } }catch(e){} },10000);
+async function getGlobal(key){ try{ var r=await fetch("https://abacus.jasoncameron.dev/info/"+COUNTER_NS+"/"+key); var d=await r.json(); return (d && typeof d.value==="number")?d.value:0; }catch(e){ return 0; } }
+async function renderAdmin(){
+  saveTimeOnExit(); pageStart=Date.now();
+  var stats=goyeGet('stats',{total:0,clicks:{},log:[],todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
+  document.getElementById('adminToday').textContent=stats.todayCount||0;
+  // Time + Impact
+  var avg=stats.totalSessions>0 ? stats.totalTime/stats.totalSessions : 0;
+  document.getElementById('adminAvgTime').textContent=fmtTime(avg);
+  var totalClicks=Object.values(stats.clicks||{}).reduce(function(a,b){return a+b},0);
+  var imp=getImpact(avg, totalClicks, maxScroll);
+  document.getElementById('adminImpact').textContent=imp.label;
+  document.getElementById('adminImpact').style.color=imp.color;
+  document.getElementById('adminImpactDetail').textContent="Avg "+fmtTime(avg)+" per visitor • Total time "+fmtTime(stats.totalTime||0)+" • "+(stats.totalSessions||0)+" sessions • Max scroll "+maxScroll+"%";
+  document.getElementById('adminTimeDetail').textContent="If avg is under 30s, content needs to hook faster. If over 2 min, content is deeply edifying — keep doing it.";
+  // Ranking - Most Visited
+  var names={lesson1:"Lesson 1: Eternal Life",lesson2:"Lesson 2: Go Ye",part1:"Part 1: Purpose of Gospel",part2:"Part 2: What Is That Life?",part3:"Part 3: How Do I Receive?",part4:"Part 4: Receive Him Together",part5:"Part 5: What Changed?",part6:"Part 6: Finale Review",bible:"Holy Bible",verse_read:"Bible Verse Read",pray:"Pray For Me",share:"Share",yes_click:"Say YES",follow_tiktok:"Follow TikTok"};
+  var entries=Object.entries(stats.clicks||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],count:e[1]}; }).sort(function(a,b){return b.count-a.count});
+  var rankEl=document.getElementById('rankList');
+  if(entries.length===0){ rankEl.innerHTML="<p style='color:#888;font-size:10pt'>No clicks yet. Open Lesson 1, then refresh.</p>"; }
+  else {
+    var maxC=entries[0].count||1;
+    rankEl.innerHTML=entries.slice(0,8).map(function(it,i){ var pct=Math.round(it.count/maxC*100); return "<div class='rankRow'><div style='flex:1'><b>#"+(i+1)+" "+it.name+"</b><div class='bar'><i style='width:"+pct+"%'></i></div></div><b style='margin-left:10px'>"+it.count+"</b></div>"; }).join("");
+  }
+  // Time per lesson
+  var timeEl=document.getElementById('timeList');
+  var tEntries=Object.entries(stats.timeData||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],total:e[1].total,visits:e[1].visits,avg:e[1].total/e[1].visits}; }).sort(function(a,b){return b.total-a.total});
+  if(tEntries.length===0){ timeEl.innerHTML="<p style='color:#888;font-size:10pt'>No time data yet. Open a Part, stay 20 sec, then refresh admin.</p>"; }
+  else { timeEl.innerHTML=tEntries.map(function(it){ return "<div class='rankRow'><div><b>"+it.name+"</b><br><span style='color:#C8C8CE;font-size:9.5pt'>Total "+fmtTime(it.total)+" • Avg "+fmtTime(it.avg)+" • "+it.visits+" visits</span></div></div>"; }).join(""); }
+  // Visitors
+  var vList=document.getElementById('visitorList');
+  if(!stats.visitors||stats.visitors.length===0){ vList.innerHTML="<p style='color:#888;font-size:10pt'>No visitors yet on this phone. Global visits are above.</p>"; }
+  else { vList.innerHTML=stats.visitors.map(function(v){ var secs=v.sections?Object.entries(v.sections).map(function(e){ return (names[e[0]]||e[0])+": "+fmtTime(e[1]); }).join("<br>"):""; return "<div class='visitorCard'><b>"+v.id+"</b> • "+v.time+"<br>📱 "+v.device+"<br>🌍 "+(v.city? v.city+", ":"")+v.country+"<br>⏱️ Time: "+fmtTime(v.timeSpent||0)+" • Scroll: "+(v.scroll||0)+"% • Clicks: "+(v.clickCount||0)+"<br>🎯 Impact: "+(v.impact||"—")+"<br>📖 Sections:<br>"+(secs||"Just visited header")+"<br>Clicks: "+(v.clicks?v.clicks.join(", "):"—")+"</div>"; }).join(""); }
+  var logEl=document.getElementById('adminLog');
+  if(logEl){ if(!stats.log||stats.log.length===0){ logEl.textContent="No clicks yet."; } else { logEl.innerHTML=stats.log.slice(0,20).map(function(x){ return x.time+" — "+x.action+" — "+(x.timeOnPage||"")+" — "+x.device; }).join("<br>"); } }
+  var total=await getGlobal("total_visits");
+  document.getElementById('adminTotal').textContent=total+" (Global)";
+  var map={lesson1:"c_lesson1",lesson2:"c_lesson2",part1:"c_part1",part2:"c_part2",part3:"c_part3",part4:"c_part4",part5:"c_part5",part6:"c_part6",bible:"c_bible",verse_read:"c_verse",react:"c_react",pray:"c_pray",share:"c_share",yes_click:"c_yes",follow_tiktok:"c_follow",email_click:"c_email"};
+  for(var k in map){ var val=await getGlobal(k); var e=document.getElementById(map[k]); if(e) e.textContent=val; if(val===0 && stats.clicks && stats.clicks[k]) e.textContent=stats.clicks[k]+" (This phone)"; }
+}
 function exportStats(){
-  var stats=goyeGet('stats',{total:0,clicks:{},todayCount:0});
-  var txt="GO YE PERFORMANCE REPORT - "+new Date().toDateString()+"\nTotal Visits: "+(stats.total||0)+"\nVisits Today: "+(stats.todayCount||0)+"\nLesson 1 Clicks: "+(stats.clicks.lesson1||0)+"\nLesson 2 Clicks: "+(stats.clicks.lesson2||0)+"\nBible Opens: "+(stats.clicks.bible||0)+"\nPray For Me: "+(stats.clicks.pray||0)+"\nShares: "+(stats.clicks.share||0)+"\nSay YES: "+(stats.clicks.yes_click||0)+"\nFollow: "+(stats.clicks.follow_tiktok||0)+"\n— GO YE @mitch5771 — Matthew 28:19";
+  var stats=goyeGet('stats',{total:0,clicks:{},todayCount:0,totalTime:0,totalSessions:0});
+  var avg=stats.totalSessions>0?stats.totalTime/stats.totalSessions:0;
+  var txt="GO YE PERFORMANCE REPORT - "+new Date().toDateString()+"\nTotal Visits (Global): "+document.getElementById('adminTotal').textContent+"\nAvg Time On Site: "+fmtTime(avg)+"\nTotal Time Spent: "+fmtTime(stats.totalTime||0)+"\nImpact: "+document.getElementById('adminImpact').textContent+"\nLesson 1: "+document.getElementById('c_lesson1').textContent+"\nLesson 2: "+document.getElementById('c_lesson2').textContent+"\nBible Opens: "+document.getElementById('c_bible').textContent+"\nBible Verses: "+document.getElementById('c_verse').textContent+"\nPray: "+document.getElementById('c_pray').textContent+"\nShares: "+document.getElementById('c_share').textContent+"\nSay YES: "+document.getElementById('c_yes').textContent+"\n— GO YE @mitch5771 — Matthew 28:19 — Anonymous, no names collected";
   if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ document.getElementById('exportMsg').textContent="Copied! Paste it to advertiser / testimonial."; }); } else { document.getElementById('exportMsg').textContent=txt; }
 }
 (function(){
+  loadLocation();
   var params=new URLSearchParams(location.search);
   var isAdmin=params.get('admin')===ADMIN_KEY;
-  if(isAdmin){
-    var p=document.getElementById('adminPanel'); if(p) p.style.display='block';
-    // Don't count admin's own visit as a view? We count it once so you see 1, then you can see it works
-    trackVisit(); renderAdmin(); setTimeout(renderAdmin,1500);
-  } else {
-    trackVisit();
-  }
+  if(isAdmin){ var p=document.getElementById('adminPanel'); if(p) p.style.display='block'; trackVisit(); renderAdmin(); setTimeout(renderAdmin,2000); setTimeout(renderAdmin,4000); }
+  else { trackVisit(); }
 })();
 function copyYes(part){ var txt="YES - I finished Lesson 1 Part "+part+" ❤️ GO YE - @mitch5771"; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).catch(function(){}); } }
 function doReact(btn, part, label){ var cta=btn.closest('.cta'); if(cta){ cta.querySelectorAll('.react').forEach(function(b){ b.classList.remove('selected'); }); } btn.classList.add('selected'); var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); if(fb) fb.textContent="Thanks — you tapped: "+label+" ❤️ Your tap counts!"; try{ localStorage.setItem('goye_part'+part, label); }catch(e){} if(label.indexOf('Pray')>=0){ trackClick('pray'); } else { trackClick('react'); } }
