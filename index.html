@@ -22,18 +22,18 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 @keyframes flyLTR{0%{left:-10%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:110%;transform:translateY(-4px)}}
 @keyframes flyRTL{0%{left:110%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:-10%;transform:translateY(-5px)}}
 @keyframes flap{from{transform:rotate(-12deg) scaleY(1)}to{transform:rotate(12deg) scaleY(.75)}}
-.butterfly{position:absolute;z-index:1;opacity:0;filter:blur(.3px)}
+.butterfly{position:absolute;z-index:1;opacity:0;filter:blur(.4px)}
 .butterfly.ltr{animation:flyButterflyLTR ease-in-out infinite}
 .butterfly.rtl{animation:flyButterflyRTL ease-in-out infinite}
-.butterfly span{display:inline-block;animation:butterflyFlap .8s ease-in-out infinite alternate;transform-origin:center}
-.butterfly.orange span{filter:hue-rotate(0deg) saturate(1.5) brightness(1.05) opacity(.65)}
-.butterfly.pink span{filter:hue-rotate(300deg) saturate(1.5) brightness(1.1) opacity(.65)}
-.butterfly.purple span{filter:hue-rotate(260deg) saturate(1.4) brightness(1.05) opacity(.6)}
-.butterfly.yellow span{filter:hue-rotate(45deg) saturate(1.7) brightness(1.1) opacity(.65)}
-.butterfly.blue span{filter:hue-rotate(190deg) saturate(1.4) brightness(1.05) opacity(.6)}
-.butterfly.green span{filter:hue-rotate(90deg) saturate(1.5) brightness(1) opacity(.6)}
-@keyframes flyButterflyLTR{0%{left:-5%;opacity:0;transform:translateY(0)}5%{opacity:.6}15%{transform:translateY(-14px)}30%{transform:translateY(8px)}45%{transform:translateY(-12px)}60%{transform:translateY(8px)}75%{transform:translateY(-10px)}90%{opacity:.6}100%{left:105%;opacity:0;transform:translateY(-6px)}}
-@keyframes flyButterflyRTL{0%{left:105%;opacity:0;transform:translateY(0)}5%{opacity:.6}15%{transform:translateY(-12px)}30%{transform:translateY(7px)}45%{transform:translateY(-11px)}60%{transform:translateY(7px)}75%{transform:translateY(-9px)}90%{opacity:.6}100%{left:-5%;opacity:0;transform:translateY(-5px)}}
+.butterfly span{display:inline-block;animation:butterflyFlap 1s ease-in-out infinite alternate;transform-origin:center}
+.butterfly.orange span{filter:hue-rotate(0deg) saturate(1.3) brightness(1.05) opacity(.4)}
+.butterfly.pink span{filter:hue-rotate(300deg) saturate(1.3) brightness(1.1) opacity(.4)}
+.butterfly.purple span{filter:hue-rotate(260deg) saturate(1.2) brightness(1.05) opacity(.38)}
+.butterfly.yellow span{filter:hue-rotate(45deg) saturate(1.5) brightness(1.1) opacity(.4)}
+.butterfly.blue span{filter:hue-rotate(190deg) saturate(1.2) brightness(1.05) opacity(.38)}
+.butterfly.green span{filter:hue-rotate(90deg) saturate(1.3) brightness(1) opacity(.38)}
+@keyframes flyButterflyLTR{0%{left:-5%;opacity:0;transform:translateY(0)}5%{opacity:.4}15%{transform:translateY(-8px)}30%{transform:translateY(5px)}45%{transform:translateY(-7px)}60%{transform:translateY(5px)}75%{transform:translateY(-6px)}90%{opacity:.4}100%{left:105%;opacity:0;transform:translateY(-4px)}}
+@keyframes flyButterflyRTL{0%{left:105%;opacity:0;transform:translateY(0)}5%{opacity:.4}15%{transform:translateY(-7px)}30%{transform:translateY(4px)}45%{transform:translateY(-6px)}60%{transform:translateY(4px)}75%{transform:translateY(-5px)}90%{opacity:.4}100%{left:-5%;opacity:0;transform:translateY(-3px)}}
 @keyframes butterflyFlap{from{transform:scaleX(1) rotate(-8deg)}to{transform:scaleX(.45) rotate(8deg)}}
 @keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}
 @keyframes glowBreathe{from{opacity:.85}to{opacity:1}}
@@ -150,12 +150,12 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
   <div class="bird black ltr" style="top:28%;animation-duration:58s;animation-delay:4s;opacity:.38"><span class="flip"><span class="flap" style="font-size:6px">🕊️</span></span></div>
   <div class="bird white ltr" style="top:36%;animation-duration:45s;animation-delay:28s;opacity:.5"><span class="flip"><span class="flap" style="font-size:8px">🕊️</span></span></div>
   <div class="bird black rtl" style="top:38%;animation-duration:50s;animation-delay:14s;opacity:.35"><span class="flap" style="font-size:7px">🕊️</span></div>
-  <div class="butterfly orange ltr" style="bottom:8%;animation-duration:28s;animation-delay:0s"><span style="font-size:9px">🦋</span></div>
-  <div class="butterfly pink rtl" style="bottom:12%;animation-duration:32s;animation-delay:6s"><span style="font-size:8px">🦋</span></div>
-  <div class="butterfly purple ltr" style="bottom:6%;animation-duration:30s;animation-delay:12s"><span style="font-size:9px">🦋</span></div>
-  <div class="butterfly yellow rtl" style="bottom:10%;animation-duration:34s;animation-delay:3s"><span style="font-size:8px">🦋</span></div>
-  <div class="butterfly blue ltr" style="bottom:14%;animation-duration:29s;animation-delay:18s"><span style="font-size:7px">🦋</span></div>
-  <div class="butterfly green rtl" style="bottom:7%;animation-duration:36s;animation-delay:9s"><span style="font-size:8px">🦋</span></div>
+  <div class="butterfly orange ltr" style="bottom:8%;animation-duration:48s;animation-delay:0s"><span style="font-size:6px">🦋</span></div>
+  <div class="butterfly pink rtl" style="bottom:12%;animation-duration:52s;animation-delay:8s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly purple ltr" style="bottom:6%;animation-duration:50s;animation-delay:16s"><span style="font-size:6px">🦋</span></div>
+  <div class="butterfly yellow rtl" style="bottom:10%;animation-duration:55s;animation-delay:4s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly blue ltr" style="bottom:14%;animation-duration:46s;animation-delay:22s"><span style="font-size:5px">🦋</span></div>
+  <div class="butterfly green rtl" style="bottom:7%;animation-duration:54s;animation-delay:12s"><span style="font-size:6px">🦋</span></div>
   <div class="newHeaderInner">
     <h1>Micheal Mawadri</h1>
     <div class="goYe">GO YE</div>
