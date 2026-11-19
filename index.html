@@ -12,6 +12,14 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 .newHeaderBg{position:absolute;inset:0;background-image:url('eden.jpg');background-size:cover;background-position:center center;animation:breathe 18s ease-in-out infinite alternate}
 .newHeader::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 60%, rgba(11,11,14,.95) 100%);animation:glowBreathe 4s ease-in-out infinite alternate}
 .particle{position:absolute;bottom:-10px;border-radius:50%;background:#FFE9A8;opacity:0.85;animation:rise linear infinite;z-index:1}
+.bird{position:absolute;z-index:1;opacity:.7;filter:blur(.3px)}
+.bird.ltr{animation:flyLTR linear infinite}
+.bird.rtl{animation:flyRTL linear infinite}
+.bird .flip{display:inline-block;transform:scaleX(-1)}
+.bird .flap{display:inline-block;animation:flap .55s ease-in-out infinite alternate;transform-origin:center bottom}
+@keyframes flyLTR{0%{left:-10%;transform:translateY(0)}50%{transform:translateY(-18px)}100%{left:110%;transform:translateY(-6px)}}
+@keyframes flyRTL{0%{left:110%;transform:translateY(0)}50%{transform:translateY(-16px)}100%{left:-10%;transform:translateY(-8px)}}
+@keyframes flap{from{transform:rotate(-12deg) scaleY(1)}to{transform:rotate(12deg) scaleY(.75)}}
 @keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}
 @keyframes glowBreathe{from{opacity:.85}to{opacity:1}}
 @keyframes rise{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-100vh) translateX(20px);opacity:0}}
@@ -128,6 +136,10 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
   <div class="particle" style="left:55%;width:7px;height:7px;animation-duration:8s;animation-delay:1s"></div>
   <div class="particle" style="left:78%;width:5px;height:5px;animation-duration:12s;animation-delay:3s"></div>
   <div class="particle" style="left:88%;width:4px;height:4px;animation-duration:10s;animation-delay:.5s"></div>
+  <div class="bird ltr" style="top:16%;animation-duration:38s;animation-delay:0s"><span class="flip"><span class="flap" style="font-size:13px">🕊️</span></span></div>
+  <div class="bird rtl" style="top:23%;animation-duration:46s;animation-delay:6s;opacity:.55"><span class="flap" style="font-size:10px">🕊️</span></div>
+  <div class="bird ltr" style="top:12%;animation-duration:52s;animation-delay:16s;opacity:.45"><span class="flip"><span class="flap" style="font-size:9px">🕊️</span></span></div>
+  <div class="bird rtl" style="top:29%;animation-duration:42s;animation-delay:2s;opacity:.6"><span class="flap" style="font-size:11px">🕊️</span></div>
   <div class="newHeaderInner">
     <h1>Micheal Mawadri</h1>
     <div class="goYe">GO YE</div>
