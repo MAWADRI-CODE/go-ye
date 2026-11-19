@@ -12,13 +12,15 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 .newHeaderBg{position:absolute;inset:0;background-image:url('eden.jpg');background-size:cover;background-position:center center;animation:breathe 18s ease-in-out infinite alternate}
 .newHeader::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,.10) 0%, rgba(0,0,0,.45) 60%, rgba(11,11,14,.95) 100%);animation:glowBreathe 4s ease-in-out infinite alternate}
 .particle{position:absolute;bottom:-10px;border-radius:50%;background:#FFE9A8;opacity:0.85;animation:rise linear infinite;z-index:1}
-.bird{position:absolute;z-index:1;opacity:.7;filter:blur(.3px)}
+.bird{position:absolute;z-index:1;opacity:.7;filter:blur(.4px)}
 .bird.ltr{animation:flyLTR linear infinite}
 .bird.rtl{animation:flyRTL linear infinite}
 .bird .flip{display:inline-block;transform:scaleX(-1)}
-.bird .flap{display:inline-block;animation:flap .55s ease-in-out infinite alternate;transform-origin:center bottom}
-@keyframes flyLTR{0%{left:-10%;transform:translateY(0)}50%{transform:translateY(-18px)}100%{left:110%;transform:translateY(-6px)}}
-@keyframes flyRTL{0%{left:110%;transform:translateY(0)}50%{transform:translateY(-16px)}100%{left:-10%;transform:translateY(-8px)}}
+.bird .flap{display:inline-block;animation:flap .9s ease-in-out infinite alternate;transform-origin:center bottom}
+.bird.black .flap{filter:brightness(0) contrast(1.2)}
+.bird.white .flap{filter:brightness(1.2) drop-shadow(0 0 3px rgba(255,240,180,.9))}
+@keyframes flyLTR{0%{left:-10%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:110%;transform:translateY(-4px)}}
+@keyframes flyRTL{0%{left:110%;transform:translateY(0)}50%{transform:translateY(-10px)}100%{left:-10%;transform:translateY(-5px)}}
 @keyframes flap{from{transform:rotate(-12deg) scaleY(1)}to{transform:rotate(12deg) scaleY(.75)}}
 @keyframes breathe{from{transform:scale(1)}to{transform:scale(1.08)}}
 @keyframes glowBreathe{from{opacity:.85}to{opacity:1}}
@@ -131,15 +133,17 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 
 <div class="newHeader">
   <div class="newHeaderBg"></div>
-  <div class="particle" style="left:12%;width:6px;height:6px;animation-duration:9s"></div>
-  <div class="particle" style="left:35%;width:4px;height:4px;animation-duration:11s;animation-delay:2s"></div>
-  <div class="particle" style="left:55%;width:7px;height:7px;animation-duration:8s;animation-delay:1s"></div>
-  <div class="particle" style="left:78%;width:5px;height:5px;animation-duration:12s;animation-delay:3s"></div>
-  <div class="particle" style="left:88%;width:4px;height:4px;animation-duration:10s;animation-delay:.5s"></div>
-  <div class="bird ltr" style="top:16%;animation-duration:38s;animation-delay:0s"><span class="flip"><span class="flap" style="font-size:13px">🕊️</span></span></div>
-  <div class="bird rtl" style="top:23%;animation-duration:46s;animation-delay:6s;opacity:.55"><span class="flap" style="font-size:10px">🕊️</span></div>
-  <div class="bird ltr" style="top:12%;animation-duration:52s;animation-delay:16s;opacity:.45"><span class="flip"><span class="flap" style="font-size:9px">🕊️</span></span></div>
-  <div class="bird rtl" style="top:29%;animation-duration:42s;animation-delay:2s;opacity:.6"><span class="flap" style="font-size:11px">🕊️</span></div>
+  <div class="particle" style="left:12%;width:6px;height:6px;animation-duration:22s"></div>
+  <div class="particle" style="left:35%;width:4px;height:4px;animation-duration:24s;animation-delay:3s"></div>
+  <div class="particle" style="left:55%;width:7px;height:7px;animation-duration:20s;animation-delay:1s"></div>
+  <div class="particle" style="left:78%;width:5px;height:5px;animation-duration:23s;animation-delay:5s"></div>
+  <div class="particle" style="left:88%;width:4px;height:4px;animation-duration:21s;animation-delay:2s"></div>
+  <div class="bird white ltr" style="top:26%;animation-duration:48s;animation-delay:0s;opacity:.5"><span class="flip"><span class="flap" style="font-size:9px">🕊️</span></span></div>
+  <div class="bird black rtl" style="top:30%;animation-duration:55s;animation-delay:8s;opacity:.4"><span class="flap" style="font-size:7px">🕊️</span></div>
+  <div class="bird white rtl" style="top:33%;animation-duration:52s;animation-delay:18s;opacity:.45"><span class="flap" style="font-size:8px">🕊️</span></div>
+  <div class="bird black ltr" style="top:28%;animation-duration:58s;animation-delay:4s;opacity:.38"><span class="flip"><span class="flap" style="font-size:6px">🕊️</span></span></div>
+  <div class="bird white ltr" style="top:36%;animation-duration:45s;animation-delay:28s;opacity:.5"><span class="flip"><span class="flap" style="font-size:8px">🕊️</span></span></div>
+  <div class="bird black rtl" style="top:38%;animation-duration:50s;animation-delay:14s;opacity:.35"><span class="flap" style="font-size:7px">🕊️</span></div>
   <div class="newHeaderInner">
     <h1>Micheal Mawadri</h1>
     <div class="goYe">GO YE</div>
