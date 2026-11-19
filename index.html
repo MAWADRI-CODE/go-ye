@@ -186,53 +186,54 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 
 <div id="adminPanel" class="adminPanel">
   <h2>🔐 GO YE — PRIVATE ADMIN ONLY</h2>
-  <p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br>Use this for performance review &amp; advertising proof.<br><span style="color:#888">Anonymous only — no names / phones collected. We measure behaviour + time, not identity.</span></p>
+  <p style="color:#C8C8CE;font-size:10pt;line-height:1.5;margin:0">Only you see this. Link: ?admin=go-ye-2026<br><b style="color:#fff">How to read this:</b><br>• <b style="color:#FFBE0B">Viewed</b> = they SAW it + stayed 3 sec (even without tapping)<br>• <b style="color:#FFBE0B">Tapped</b> = they CLICKED it<br>• <b style="color:#FFBE0B">Time</b> = how long they stayed on it</p>
   <div class="stat"><b id="adminTotal">0</b><br><span>TOTAL SITE VISITS — All devices (Global)</span></div>
   <div class="stat"><b id="adminToday">0</b><br><span>VISITS TODAY (Your Phone)</span></div>
-  <div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact Measure</span><div style="font-size:10pt;color:#E8E8EC;margin-top:4px" id="adminTimeDetail">No time data yet. Stay 30 sec on site, then refresh admin.</div></div>
+  <div class="stat"><b id="adminAvgTime">0s</b><br><span>AVERAGE TIME ON SITE — Impact Measure</span><div style="font-size:10pt;color:#E8E8EC;margin-top:4px" id="adminTimeDetail">No time data yet.</div></div>
   <div class="stat"><b id="adminImpact">—</b><br><span>OVERALL IMPACT SCORE</span><div id="adminImpactDetail" style="font-size:10pt;color:#E8E8EC;margin-top:4px"></div></div>
 
-  <h3 style="margin:16px 0 4px;color:#FFBE0B">🏆 MOST VISITED — Ranking</h3>
-  <p style="color:#888;font-size:10pt;margin:0">This tells you what to make more of. If Part 4 is #1, make more prayer content.</p>
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">🏆 MOST VIEWED — Ranking</h3>
+  <p style="color:#888;font-size:10pt;margin:0">Sorted by Views. If Part 4 is #1, make more prayer content.</p>
   <div id="rankList"></div>
 
   <h3 style="margin:16px 0 4px;color:#FFBE0B">⏱️ TIME PER LESSON / PART</h3>
   <div id="timeList"></div>
 
-  <h3 style="margin:16px 0 4px;color:#FFBE0B">📊 GLOBAL CLICKS — All Visitors</h3>
+  <h3 style="margin:16px 0 4px;color:#FFBE0B">📊 VIEWS + TAPS — All Visitors (Global)</h3>
   <table>
-    <tr><td>📖 Lesson 1 Opened</td><td id="c_lesson1">0</td></tr>
-    <tr><td>📖 Lesson 2 Opened</td><td id="c_lesson2">0</td></tr>
-    <tr><td>📖 Part 1 Clicked</td><td id="c_part1">0</td></tr>
-    <tr><td>📖 Part 2 Clicked</td><td id="c_part2">0</td></tr>
-    <tr><td>📖 Part 3 Clicked</td><td id="c_part3">0</td></tr>
-    <tr><td>📖 Part 4 Clicked</td><td id="c_part4">0</td></tr>
-    <tr><td>📖 Part 5 Clicked</td><td id="c_part5">0</td></tr>
-    <tr><td>📖 Part 6 Clicked</td><td id="c_part6">0</td></tr>
-    <tr><td>📖 Bible Opened</td><td id="c_bible">0</td></tr>
-    <tr><td>📖 Bible Verse Read</td><td id="c_verse">0</td></tr>
-    <tr><td>❤️ I Finished / I Needed This</td><td id="c_react">0</td></tr>
-    <tr><td>🙏 Pray For Me</td><td id="c_pray">0</td></tr>
-    <tr><td>➡️ Share Clicks</td><td id="c_share">0</td></tr>
-    <tr><td>💬 Say YES on TikTok</td><td id="c_yes">0</td></tr>
-    <tr><td>➕ Follow TikTok</td><td id="c_follow">0</td></tr>
-    <tr><td>✉️ Email Clicks</td><td id="c_email">0</td></tr>
+    <tr><td>📖 Lesson 1 Viewed</td><td id="c_lesson1">0</td></tr>
+    <tr><td>📖 Lesson 2 Viewed</td><td id="c_lesson2">0</td></tr>
+    <tr><td>📖 Part 1 Viewed</td><td id="c_part1">0</td></tr>
+    <tr><td>📖 Part 2 Viewed</td><td id="c_part2">0</td></tr>
+    <tr><td>📖 Part 3 Viewed</td><td id="c_part3">0</td></tr>
+    <tr><td>📖 Part 4 Viewed</td><td id="c_part4">0</td></tr>
+    <tr><td>📖 Part 5 Viewed</td><td id="c_part5">0</td></tr>
+    <tr><td>📖 Part 6 Viewed</td><td id="c_part6">0</td></tr>
+    <tr><td>📖 Bible Viewed</td><td id="c_bible">0</td></tr>
+    <tr><td>📖 Bible Verse Read (Tapped READ)</td><td id="c_verse">0</td></tr>
+    <tr><td>❤️ I Finished / I Needed This (Tapped)</td><td id="c_react">0</td></tr>
+    <tr><td>🙏 Pray For Me (Tapped)</td><td id="c_pray">0</td></tr>
+    <tr><td>➡️ Share (Tapped)</td><td id="c_share">0</td></tr>
+    <tr><td>💬 Say YES (Tapped)</td><td id="c_yes">0</td></tr>
+    <tr><td>➕ Follow TikTok (Tapped)</td><td id="c_follow">0</td></tr>
+    <tr><td>✉️ Email (Tapped)</td><td id="c_email">0</td></tr>
   </table>
+  <p style="color:#888;font-size:9pt;line-height:1.5">Example: If Lesson 1 Viewed = 5, Part 4 Viewed = 4, Pray Tapped = 2 — it means 5 people saw Lesson 1, 4 saw Part 4, 2 actually tapped Pray. That is real impact.</p>
 
   <h3 style="margin:16px 0 4px;color:#FFBE0B">👥 VISITOR PROFILES — With Time &amp; Impact</h3>
   <div id="visitorList"><p style="color:#888;font-size:10pt">No visitors yet on this phone.</p></div>
   <div style="background:#1C1C24;border-radius:12px;padding:12px;margin-top:12px">
-    <b style="color:#FFBE0B">Last 20 Clicks (This Phone):</b>
-    <div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px">No clicks yet.</div>
+    <b style="color:#FFBE0B">Last 20 Actions (This Phone):</b>
+    <div id="adminLog" style="font-size:9.5pt;color:#E8E8EC;line-height:1.6;margin-top:6px">No actions yet.</div>
   </div>
   <button type="button" onclick="exportStats()">📋 Copy Stats For Advertiser</button>
   <p id="exportMsg" style="font-size:10pt;color:#00C853;font-weight:800"></p>
 </div>
 
 <div class="lessonWrap">
-<div class="lessonHead active" onclick="toggleLesson('lesson1',this);trackClick('lesson1')"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
+<div class="lessonHead active" id="lesson1Head" onclick="toggleLesson('lesson1',this);trackClick('lesson1')"><div><b>Lesson 1: Eternal Life</b><small>6 PARTS • JOHN 3:16 • COMPLETED</small></div><span id="arrow-lesson1">▾</span></div>
 <div class="lessonBody open" id="lesson1">
-<div class="partHead" onclick="togglePart('p6',this);trackClick('part6')"><div><b>Part 6: Let's Check What We Learned</b><small>Review • A - E • Finale</small></div><span>▸</span></div>
+<div class="partHead" id="head-p6" onclick="togglePart('p6',this);trackClick('part6')"><div><b>Part 6: Let's Check What We Learned</b><small>Review • A - E • Finale</small></div><span>▸</span></div>
 <div class="partBody" id="p6"><div class="wrap">
 <div class="hero" style="padding:14px 0 0"><h1>Eternal Life <span>— Part 6</span></h1><p><b>Let's Check What We Learned</b> — We finish Lesson 1 together.</p><div class="pillRow"><span class="pill gold">Lesson 1 • Part 6 of 6 • FINALE</span><span class="pill">Review</span></div></div>
 <div class="transcript">
@@ -247,25 +248,25 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 <div class="factOne"><small>LESSON 1 REVIEW • A - E</small><h3>You finished Eternal Life</h3><p><b>A.</b> Purpose is eternal life — John 3:16<br><b>B.</b> God's life in you now — John 17:3<br><b>C.</b> Receive by believing — John 1:12<br><b>D.</b> Confess + believe — Romans 10:9<br><b>E.</b> Abundant now — John 10:10</p></div>
 <div class="cta"><h3>🎓 You Finished Lesson 1!</h3><p>Tap to celebrate. Lesson 2 starts soon.</p><div class="reactions"><button type="button" class="react" onclick="doReact(this,6,'I finished Lesson 1')">🎓 I finished!</button><button type="button" class="react" onclick="doReact(this,6,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(6)">➡️ Share it</button></div><div class="feedback" id="feedback6"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(6);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div>
 </div></div>
-<div class="partHead" onclick="togglePart('p5',this);trackClick('part5')"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
+<div class="partHead" id="head-p5" onclick="togglePart('p5',this);trackClick('part5')"><div><b>Part 5: Now What? What Changed?</b><small>1 John 5:12 • You have life now</small></div><span>▸</span></div>
 <div class="partBody" id="p5"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Yesterday we prayed and received Him. What changed?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I felt quiet. Peaceful. Did anything really change?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">1 John 5:12 — He that hath the Son hath life. You have life even when you don't feel it.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 10:10 — abundant life now. Walk with Him every day.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">You have God living in you. Eternal life now.</p></div></div></div><div class="verse"><p>"Whoever has the Son has life..."</p><small>1 JOHN 5:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,5,'I have life now')">❤️ I have life now</button><button type="button" class="react" onclick="doReact(this,5,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(5)">➡️ Share it</button></div><div class="feedback" id="feedback5"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(5);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
-<div class="partHead" onclick="togglePart('p4',this);trackClick('part4')"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
+<div class="partHead" id="head-p4" onclick="togglePart('p4',this);trackClick('part4')"><div><b>Part 4: Let's Receive Him Together</b><small>Romans 10:9 • Pray to receive Him</small></div><span>▸</span></div>
 <div class="partBody" id="p4"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Today we don't just talk. We receive Him.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">How do I pray?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">Romans 10:9 — confess with your mouth, believe in your heart.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Revelation 3:20 — Jesus is knocking. Open the door.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Pray: Jesus, come and live in me. I receive You.</p></div></div></div><div class="prayerBox"><h3>🙏 Pray This</h3><p>"Jesus, I believe You died for me. I open my heart. Come and live in me. I receive eternal life. Amen."</p></div><div class="verse"><p>"If you declare... you will be saved."</p><small>ROMANS 10:9</small></div><div class="cta"><h3>Your Turn — Did You Pray?</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,4,'I received Him')">❤️ I received Him</button><button type="button" class="react" onclick="doReact(this,4,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(4)">➡️ Share it</button></div><div class="feedback" id="feedback4"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(4);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
-<div class="partHead" onclick="togglePart('p3',this);trackClick('part3')"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
+<div class="partHead" id="head-p3" onclick="togglePart('p3',this);trackClick('part3')"><div><b>Part 3: How Do I Receive It?</b><small>John 1:12 • Believe + Receive</small></div><span>▸</span></div>
 <div class="partBody" id="p3"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">How do I receive it? Do I have to earn it?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">I try to be good. Is that how?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">Is it by works?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">You don't earn it, you receive it. John 1:12 — as many as received Him.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">Tomorrow we pray together.</p></div></div></div><div class="verse"><p>"Yet to all who did receive him..."</p><small>JOHN 1:12</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,3,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,3,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(3)">➡️ Share it</button></div><div class="feedback" id="feedback3"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(3);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
-<div class="partHead" onclick="togglePart('p2',this);trackClick('part2')"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
+<div class="partHead" id="head-p2" onclick="togglePart('p2',this);trackClick('part2')"><div><b>Part 2: But What Is That Life?</b><small>John 17:3 • God's life in you</small></div><span>▸</span></div>
 <div class="partBody" id="p2"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">What is that life?</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">Just living forever in heaven?</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">What does Jesus say?</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">John 17:3 — eternal life is knowing God. God's life in you now.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">He came to give us His life now.</p></div></div></div><div class="verse"><p>"Now this is eternal life: that they know you..."</p><small>JOHN 17:3</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,2,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,2,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(2)">➡️ Share it</button></div><div class="feedback" id="feedback2"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(2);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
-<div class="partHead" onclick="togglePart('p1',this);trackClick('part1')"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
+<div class="partHead" id="head-p1" onclick="togglePart('p1',this);trackClick('part1')"><div><b>Part 1: The Purpose of the Gospel</b><small>John 3:16 • Eternal life</small></div><span>▸</span></div>
 <div class="partBody" id="p1"><div class="wrap"><div class="transcript"><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">John 3:16 has been misunderstood.</p></div></div><div class="line"><div class="face christian">👦🏾</div><div><p class="who christian">Christian</p><p class="text">For God so loved the world...</p></div></div><div class="line"><div class="face anita">👩🏾</div><div><p class="who anita">Anita</p><p class="text">This verse is saying something more.</p></div></div><div class="line"><div class="face david">🧔🏾</div><div><p class="who david">David</p><p class="text">The real purpose was everlasting life.</p></div></div><div class="line"><div class="face mitch">🧑🏾‍🦱</div><div><p class="who mitch">Mitch</p><p class="text">God wants to give you everlasting life.</p></div></div></div><div class="verse"><p>"For God so loved the world..."</p><small>JOHN 3:16</small></div><div class="cta"><h3>Your Turn</h3><div class="reactions"><button type="button" class="react" onclick="doReact(this,1,'I needed this')">❤️ I needed this</button><button type="button" class="react" onclick="doReact(this,1,'Pray for me')">🙏 Pray for me</button><button type="button" class="react" onclick="doShare(1)">➡️ Share it</button></div><div class="feedback" id="feedback"></div><a class="btn btn-yes" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="copyYes(1);trackClick('yes_click')">💬 Say YES on TikTok →</a><a class="btn btn-follow" href="https://www.tiktok.com/@mitch5771" target="_blank" rel="noopener" onclick="trackClick('follow_tiktok')">Follow on TikTok @mitch5771</a></div></div></div>
 </div>
 </div>
 
 <div class="lessonWrap">
-<div class="lessonHead" onclick="toggleLesson('lesson2',this);trackClick('lesson2')"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div>
+<div class="lessonHead" id="lesson2Head" onclick="toggleLesson('lesson2',this);trackClick('lesson2')"><div><b>Lesson 2: Go Ye — Share It</b><small>COMING SOON • MATTHEW 28:19</small></div><span id="arrow-lesson2">▸</span></div>
 <div class="lessonBody" id="lesson2"><div class="wrap" style="padding-top:16px"><div class="prayerBox"><h3>Coming Soon</h3><p>You have life. Now go and give life. Lesson 2 teaches you how to share Jesus with one person, simply.</p></div></div></div>
 </div>
 
-<div class="bibleWrap" style="margin-top:16px">
+<div class="bibleWrap" style="margin-top:16px" id="bibleSection">
 <div class="bibleCard">
 <div class="bibleHead"><h2>✦ HOLY BIBLE</h2></div>
 <div class="dailyVerse"><small>✦ DAILY VERSE • <span id="dailyDate"></span></small><p id="dailyVerseText">Loading today's verse...</p><b id="dailyVerseRef"></b></div>
@@ -291,59 +292,52 @@ body::before{content:"";position:fixed;inset:0;background:linear-gradient(to bot
 </div>
 
 <script>
-// ===== GO YE PRIVATE ADMIN + TIME + IMPACT =====
+// ===== GO YE - VIEWED + TAPPED + TIME - FIXED =====
 var ADMIN_KEY="go-ye-2026";
 var COUNTER_NS="goye-mawadri-2026";
 var pageStart=Date.now();
 var currentSection=null, sectionStart=0;
 var maxScroll=0;
+var viewedSet={};
 function goyeGet(k,def){ try{ var v=localStorage.getItem('goye_'+k); return v===null?def:JSON.parse(v); }catch(e){ return def; } }
 function goyeSet(k,v){ try{ localStorage.setItem('goye_'+k,JSON.stringify(v)); }catch(e){} }
 function getDevice(){ var ua=navigator.userAgent||""; var device="Computer"; if(/iPhone/i.test(ua)) device="iPhone"; else if(/Android/i.test(ua)) device="Android Phone"; else if(/iPad/i.test(ua)) device="iPad"; else if(/Mobile/i.test(ua)) device="Mobile"; var browser="Safari"; if(/Chrome/i.test(ua)) browser="Chrome"; else if(/Firefox/i.test(ua)) browser="Firefox"; else if(/Edg/i.test(ua)) browser="Edge"; return device+" • "+browser+" • "+screen.width+"x"+screen.height; }
 function fmtTime(sec){ sec=Math.round(sec); if(sec<60) return sec+"s"; var m=Math.floor(sec/60); var s=sec%60; return m+"m "+s+"s"; }
-function getImpact(timeSec, clicks, scroll){
-  if(timeSec<10 && clicks<=1) return {label:"👀 Glanced — Low Impact", color:"#FF8FB0"};
-  if(timeSec<60) return {label:"📖 Reading — Medium Impact", color:"#FFB35C"};
-  if(timeSec<180 || clicks>=3) return {label:"🔥 Engaged — High Impact", color:"#4DDB8A"};
-  return {label:"❤️ Deeply Moved — Very High Impact", color:"#00C853"};
-}
+function getImpact(timeSec, clicks, scroll){ if(timeSec<10 && clicks<=1) return {label:"👀 Glanced — Low Impact", color:"#FF8FB0"}; if(timeSec<60) return {label:"📖 Reading — Medium Impact", color:"#FFB35C"}; if(timeSec<180 || clicks>=3) return {label:"🔥 Engaged — High Impact", color:"#4DDB8A"}; return {label:"❤️ Deeply Moved — Very High Impact", color:"#00C853"}; }
 var myProfile={device:getDevice(),time:new Date().toLocaleString(),country:"Loading...",city:""};
 async function loadLocation(){ try{ var r=await fetch("https://ipapi.co/json/"); var d=await r.json(); if(d && d.country_name){ myProfile.country=d.country_name; myProfile.city=d.city||""; } }catch(e){ myProfile.country="Uganda"; } }
 function startSection(name){ if(currentSection){ endSection(); } currentSection=name; sectionStart=Date.now(); }
-function endSection(){
-  if(!currentSection) return;
-  var dur=(Date.now()-sectionStart)/1000;
-  if(dur<1) { currentSection=null; return; }
-  var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
-  stats.timeData=stats.timeData||{};
-  stats.timeData[currentSection]=stats.timeData[currentSection]||{total:0,visits:0};
-  stats.timeData[currentSection].total+=dur;
-  stats.timeData[currentSection].visits+=1;
-  // Update current visitor
-  if(stats.visitors && stats.visitors.length>0){
-    var v=stats.visitors[0];
-    v.timeSpent=v.timeSpent||0; v.timeSpent+=dur;
-    v.sections=v.sections||{}; v.sections[currentSection]=(v.sections[currentSection]||0)+dur;
-    v.impact=getImpact(v.timeSpent, (v.clickCount||0), maxScroll).label;
-  }
-  goyeSet('stats',stats);
-  currentSection=null;
+function endSection(){ if(!currentSection) return; var dur=(Date.now()-sectionStart)/1000; if(dur<1){ currentSection=null; return; } var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0}); stats.timeData=stats.timeData||{}; stats.timeData[currentSection]=stats.timeData[currentSection]||{total:0,visits:0}; stats.timeData[currentSection].total+=dur; stats.timeData[currentSection].visits+=1; if(stats.visitors && stats.visitors.length>0){ var v=stats.visitors[0]; v.timeSpent=v.timeSpent||0; v.timeSpent+=dur; v.sections=v.sections||{}; v.sections[currentSection]=(v.sections[currentSection]||0)+dur; v.impact=getImpact(v.timeSpent,(v.clickCount||0),maxScroll).label; } goyeSet('stats',stats); currentSection=null; }
+// VIEWED = saw + stayed 3 sec. This is the FIX. It counts even if they don't tap.
+function trackView(action){
+  if(viewedSet[action]) return; viewedSet[action]=true;
+  try{
+    var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});
+    stats.clicks[action]=(stats.clicks[action]||0)+1;
+    stats.log.unshift({action:action+" (Viewed)",time:new Date().toLocaleString(),device:getDevice(),timeOnPage:fmtTime((Date.now()-pageStart)/1000)});
+    stats.log=stats.log.slice(0,100);
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" Viewed"); }
+    goyeSet('stats',stats);
+    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){});
+    if(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible'){ startSection(action); }
+  }catch(e){}
 }
 function trackClick(action){
   try{
     var stats=goyeGet('stats',{total:0,clicks:{},log:[],today:"",todayCount:0,visitors:[],timeData:{}});
     var now=new Date(); var todayStr=now.toDateString();
     if(stats.today!==todayStr){ stats.today=todayStr; stats.todayCount=0; }
-    stats.clicks[action]=(stats.clicks[action]||0)+1;
+    // For tap-only actions (pray, share, react, follow...), count as click. For lesson/part/bible, already counted as Viewed, so don't double-count on tap — just log it
+    var isViewAction=(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible');
+    if(!isViewAction){ stats.clicks[action]=(stats.clicks[action]||0)+1; }
     var elapsed=(Date.now()-pageStart)/1000;
-    stats.log.unshift({action:action,time:now.toLocaleString(),device:getDevice(),timeOnPage:fmtTime(elapsed)});
+    stats.log.unshift({action:action+(isViewAction?" (Tapped)":" (Tapped)"),time:now.toLocaleString(),device:getDevice(),timeOnPage:fmtTime(elapsed)});
     stats.log=stats.log.slice(0,100);
-    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clickCount=(stats.visitors[0].clickCount||0)+1; stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" ("+fmtTime(elapsed)+")"); }
+    if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].clickCount=(stats.visitors[0].clickCount||0)+1; stats.visitors[0].clicks=stats.visitors[0].clicks||[]; stats.visitors[0].clicks.push(action+" Tapped ("+fmtTime(elapsed)+")"); }
     goyeSet('stats',stats);
-    fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){});
+    if(!isViewAction){ fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/"+action).catch(function(){}); }
     fetch("https://abacus.jasoncameron.dev/hit/"+COUNTER_NS+"/total_clicks").catch(function(){});
-    // Time tracking: if opening a lesson/part, start timing it
-    if(action.indexOf('lesson')===0 || action.indexOf('part')===0 || action==='bible'){ startSection(action); }
+    if(isViewAction){ startSection(action); }
     if(document.getElementById('adminPanel') && document.getElementById('adminPanel').style.display==='block'){ renderAdmin(); }
   }catch(e){}
 }
@@ -364,9 +358,7 @@ function trackVisit(){
 }
 function saveTimeOnExit(){
   try{
-    var total=(Date.now()-pageStart)/1000;
-    if(total<3) return;
-    endSection();
+    var total=(Date.now()-pageStart)/1000; if(total<3) return; endSection();
     var stats=goyeGet('stats',{total:0,totalTime:0,totalSessions:0,visitors:[]});
     stats.totalTime=(stats.totalTime||0)+total; stats.totalSessions=(stats.totalSessions||0)+1;
     if(stats.visitors && stats.visitors.length>0){ stats.visitors[0].timeSpent=total; stats.visitors[0].scroll=maxScroll; stats.visitors[0].impact=getImpact(total, stats.visitors[0].clickCount||0, maxScroll).label; }
@@ -377,57 +369,68 @@ window.addEventListener('scroll',function(){ var h=document.documentElement; var
 window.addEventListener('beforeunload',saveTimeOnExit);
 document.addEventListener('visibilitychange',function(){ if(document.hidden) saveTimeOnExit(); else { pageStart=Date.now(); } });
 setInterval(function(){ try{ var stats=goyeGet('stats',{visitors:[]}); if(stats.visitors && stats.visitors.length>0){ var t=(Date.now()-pageStart)/1000; stats.visitors[0].timeSpent=t; stats.visitors[0].scroll=maxScroll; goyeSet('stats',stats); } }catch(e){} },10000);
+// AUTO-VIEW TRACKING - counts when they SEE it for 3 seconds, not only when they tap
+function setupViewTracking(){
+  // Lesson 1 is already open -> count as Viewed after 3 sec on page
+  setTimeout(function(){ trackView('lesson1'); },3000);
+  // Observe parts + bible + lesson2 as they scroll into view
+  var map={ 'head-p1':'part1','head-p2':'part2','head-p3':'part3','head-p4':'part4','head-p5':'part5','head-p6':'part6','lesson2Head':'lesson2','bibleSection':'bible' };
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var key=map[en.target.id]; if(key){ setTimeout(function(){ trackView(key); },3000); }
+        }
+      });
+    },{threshold:0.3});
+    Object.keys(map).forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
+  } else {
+    setTimeout(function(){ ['part1','part2','part3','part4','part5','part6','lesson2','bible'].forEach(function(k){ trackView(k); }); },8000);
+  }
+}
 async function getGlobal(key){ try{ var r=await fetch("https://abacus.jasoncameron.dev/info/"+COUNTER_NS+"/"+key); var d=await r.json(); return (d && typeof d.value==="number")?d.value:0; }catch(e){ return 0; } }
 async function renderAdmin(){
   saveTimeOnExit(); pageStart=Date.now();
   var stats=goyeGet('stats',{total:0,clicks:{},log:[],todayCount:0,visitors:[],timeData:{},totalTime:0,totalSessions:0});
   document.getElementById('adminToday').textContent=stats.todayCount||0;
-  // Time + Impact
   var avg=stats.totalSessions>0 ? stats.totalTime/stats.totalSessions : 0;
   document.getElementById('adminAvgTime').textContent=fmtTime(avg);
   var totalClicks=Object.values(stats.clicks||{}).reduce(function(a,b){return a+b},0);
   var imp=getImpact(avg, totalClicks, maxScroll);
-  document.getElementById('adminImpact').textContent=imp.label;
-  document.getElementById('adminImpact').style.color=imp.color;
+  document.getElementById('adminImpact').textContent=imp.label; document.getElementById('adminImpact').style.color=imp.color;
   document.getElementById('adminImpactDetail').textContent="Avg "+fmtTime(avg)+" per visitor • Total time "+fmtTime(stats.totalTime||0)+" • "+(stats.totalSessions||0)+" sessions • Max scroll "+maxScroll+"%";
   document.getElementById('adminTimeDetail').textContent="If avg is under 30s, content needs to hook faster. If over 2 min, content is deeply edifying — keep doing it.";
-  // Ranking - Most Visited
   var names={lesson1:"Lesson 1: Eternal Life",lesson2:"Lesson 2: Go Ye",part1:"Part 1: Purpose of Gospel",part2:"Part 2: What Is That Life?",part3:"Part 3: How Do I Receive?",part4:"Part 4: Receive Him Together",part5:"Part 5: What Changed?",part6:"Part 6: Finale Review",bible:"Holy Bible",verse_read:"Bible Verse Read",pray:"Pray For Me",share:"Share",yes_click:"Say YES",follow_tiktok:"Follow TikTok"};
   var entries=Object.entries(stats.clicks||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],count:e[1]}; }).sort(function(a,b){return b.count-a.count});
   var rankEl=document.getElementById('rankList');
-  if(entries.length===0){ rankEl.innerHTML="<p style='color:#888;font-size:10pt'>No clicks yet. Open Lesson 1, then refresh.</p>"; }
-  else {
-    var maxC=entries[0].count||1;
-    rankEl.innerHTML=entries.slice(0,8).map(function(it,i){ var pct=Math.round(it.count/maxC*100); return "<div class='rankRow'><div style='flex:1'><b>#"+(i+1)+" "+it.name+"</b><div class='bar'><i style='width:"+pct+"%'></i></div></div><b style='margin-left:10px'>"+it.count+"</b></div>"; }).join("");
-  }
-  // Time per lesson
+  if(entries.length===0){ rankEl.innerHTML="<p style='color:#888;font-size:10pt'>No views yet. Open Lesson 1, stay 3 sec, then refresh.</p>"; }
+  else { var maxC=entries[0].count||1; rankEl.innerHTML=entries.slice(0,8).map(function(it,i){ var pct=Math.round(it.count/maxC*100); return "<div class='rankRow'><div style='flex:1'><b>#"+(i+1)+" "+it.name+"</b><div class='bar'><i style='width:"+pct+"%'></i></div></div><b style='margin-left:10px'>"+it.count+"</b></div>"; }).join(""); }
   var timeEl=document.getElementById('timeList');
   var tEntries=Object.entries(stats.timeData||{}).map(function(e){ return {key:e[0],name:names[e[0]]||e[0],total:e[1].total,visits:e[1].visits,avg:e[1].total/e[1].visits}; }).sort(function(a,b){return b.total-a.total});
   if(tEntries.length===0){ timeEl.innerHTML="<p style='color:#888;font-size:10pt'>No time data yet. Open a Part, stay 20 sec, then refresh admin.</p>"; }
-  else { timeEl.innerHTML=tEntries.map(function(it){ return "<div class='rankRow'><div><b>"+it.name+"</b><br><span style='color:#C8C8CE;font-size:9.5pt'>Total "+fmtTime(it.total)+" • Avg "+fmtTime(it.avg)+" • "+it.visits+" visits</span></div></div>"; }).join(""); }
-  // Visitors
+  else { timeEl.innerHTML=tEntries.map(function(it){ return "<div class='rankRow'><div><b>"+it.name+"</b><br><span style='color:#C8C8CE;font-size:9.5pt'>Total "+fmtTime(it.total)+" • Avg "+fmtTime(it.avg)+" • "+it.visits+" views</span></div></div>"; }).join(""); }
   var vList=document.getElementById('visitorList');
   if(!stats.visitors||stats.visitors.length===0){ vList.innerHTML="<p style='color:#888;font-size:10pt'>No visitors yet on this phone. Global visits are above.</p>"; }
-  else { vList.innerHTML=stats.visitors.map(function(v){ var secs=v.sections?Object.entries(v.sections).map(function(e){ return (names[e[0]]||e[0])+": "+fmtTime(e[1]); }).join("<br>"):""; return "<div class='visitorCard'><b>"+v.id+"</b> • "+v.time+"<br>📱 "+v.device+"<br>🌍 "+(v.city? v.city+", ":"")+v.country+"<br>⏱️ Time: "+fmtTime(v.timeSpent||0)+" • Scroll: "+(v.scroll||0)+"% • Clicks: "+(v.clickCount||0)+"<br>🎯 Impact: "+(v.impact||"—")+"<br>📖 Sections:<br>"+(secs||"Just visited header")+"<br>Clicks: "+(v.clicks?v.clicks.join(", "):"—")+"</div>"; }).join(""); }
+  else { vList.innerHTML=stats.visitors.map(function(v){ var secs=v.sections?Object.entries(v.sections).map(function(e){ return (names[e[0]]||e[0])+": "+fmtTime(e[1]); }).join("<br>"):""; return "<div class='visitorCard'><b>"+v.id+"</b> • "+v.time+"<br>📱 "+v.device+"<br>🌍 "+(v.city? v.city+", ":"")+v.country+"<br>⏱️ Time: "+fmtTime(v.timeSpent||0)+" • Scroll: "+(v.scroll||0)+"% • Taps: "+(v.clickCount||0)+"<br>🎯 Impact: "+(v.impact||"—")+"<br>📖 Sections:<br>"+(secs||"Just visited header")+"<br>Actions: "+(v.clicks?v.clicks.join(", "):"—")+"</div>"; }).join(""); }
   var logEl=document.getElementById('adminLog');
-  if(logEl){ if(!stats.log||stats.log.length===0){ logEl.textContent="No clicks yet."; } else { logEl.innerHTML=stats.log.slice(0,20).map(function(x){ return x.time+" — "+x.action+" — "+(x.timeOnPage||"")+" — "+x.device; }).join("<br>"); } }
+  if(logEl){ if(!stats.log||stats.log.length===0){ logEl.textContent="No actions yet."; } else { logEl.innerHTML=stats.log.slice(0,20).map(function(x){ return x.time+" — "+x.action+" — "+(x.timeOnPage||"")+" — "+x.device; }).join("<br>"); } }
   var total=await getGlobal("total_visits");
   document.getElementById('adminTotal').textContent=total+" (Global)";
-  var map={lesson1:"c_lesson1",lesson2:"c_lesson2",part1:"c_part1",part2:"c_part2",part3:"c_part3",part4:"c_part4",part5:"c_part5",part6:"c_part6",bible:"c_bible",verse_read:"c_verse",react:"c_react",pray:"c_pray",share:"c_share",yes_click:"c_yes",follow_tiktok:"c_follow",email_click:"c_email"};
-  for(var k in map){ var val=await getGlobal(k); var e=document.getElementById(map[k]); if(e) e.textContent=val; if(val===0 && stats.clicks && stats.clicks[k]) e.textContent=stats.clicks[k]+" (This phone)"; }
+  var map2={lesson1:"c_lesson1",lesson2:"c_lesson2",part1:"c_part1",part2:"c_part2",part3:"c_part3",part4:"c_part4",part5:"c_part5",part6:"c_part6",bible:"c_bible",verse_read:"c_verse",react:"c_react",pray:"c_pray",share:"c_share",yes_click:"c_yes",follow_tiktok:"c_follow",email_click:"c_email"};
+  for(var k in map2){ var val=await getGlobal(k); var e=document.getElementById(map2[k]); if(e) e.textContent=val; if(val===0 && stats.clicks && stats.clicks[k]) e.textContent=stats.clicks[k]+" (This phone)"; }
 }
 function exportStats(){
   var stats=goyeGet('stats',{total:0,clicks:{},todayCount:0,totalTime:0,totalSessions:0});
   var avg=stats.totalSessions>0?stats.totalTime/stats.totalSessions:0;
-  var txt="GO YE PERFORMANCE REPORT - "+new Date().toDateString()+"\nTotal Visits (Global): "+document.getElementById('adminTotal').textContent+"\nAvg Time On Site: "+fmtTime(avg)+"\nTotal Time Spent: "+fmtTime(stats.totalTime||0)+"\nImpact: "+document.getElementById('adminImpact').textContent+"\nLesson 1: "+document.getElementById('c_lesson1').textContent+"\nLesson 2: "+document.getElementById('c_lesson2').textContent+"\nBible Opens: "+document.getElementById('c_bible').textContent+"\nBible Verses: "+document.getElementById('c_verse').textContent+"\nPray: "+document.getElementById('c_pray').textContent+"\nShares: "+document.getElementById('c_share').textContent+"\nSay YES: "+document.getElementById('c_yes').textContent+"\n— GO YE @mitch5771 — Matthew 28:19 — Anonymous, no names collected";
+  var txt="GO YE PERFORMANCE REPORT - "+new Date().toDateString()+"\nTotal Visits (Global): "+document.getElementById('adminTotal').textContent+"\nAvg Time On Site: "+fmtTime(avg)+"\nTotal Time Spent: "+fmtTime(stats.totalTime||0)+"\nImpact: "+document.getElementById('adminImpact').textContent+"\nLesson 1 Viewed: "+document.getElementById('c_lesson1').textContent+"\nLesson 2 Viewed: "+document.getElementById('c_lesson2').textContent+"\nBible Viewed: "+document.getElementById('c_bible').textContent+"\nBible Verses Tapped: "+document.getElementById('c_verse').textContent+"\nPray Tapped: "+document.getElementById('c_pray').textContent+"\nShares Tapped: "+document.getElementById('c_share').textContent+"\nSay YES Tapped: "+document.getElementById('c_yes').textContent+"\n— GO YE @mitch5771 — Matthew 28:19 — Anonymous, no names collected";
   if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ document.getElementById('exportMsg').textContent="Copied! Paste it to advertiser / testimonial."; }); } else { document.getElementById('exportMsg').textContent=txt; }
 }
 (function(){
   loadLocation();
   var params=new URLSearchParams(location.search);
   var isAdmin=params.get('admin')===ADMIN_KEY;
-  if(isAdmin){ var p=document.getElementById('adminPanel'); if(p) p.style.display='block'; trackVisit(); renderAdmin(); setTimeout(renderAdmin,2000); setTimeout(renderAdmin,4000); }
-  else { trackVisit(); }
+  if(isAdmin){ var p=document.getElementById('adminPanel'); if(p) p.style.display='block'; trackVisit(); setupViewTracking(); renderAdmin(); setTimeout(renderAdmin,2000); setTimeout(renderAdmin,4000); }
+  else { trackVisit(); setupViewTracking(); }
 })();
 function copyYes(part){ var txt="YES - I finished Lesson 1 Part "+part+" ❤️ GO YE - @mitch5771"; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).catch(function(){}); } }
 function doReact(btn, part, label){ var cta=btn.closest('.cta'); if(cta){ cta.querySelectorAll('.react').forEach(function(b){ b.classList.remove('selected'); }); } btn.classList.add('selected'); var fb=document.getElementById(part===1 ? 'feedback' : 'feedback'+part); if(fb) fb.textContent="Thanks — you tapped: "+label+" ❤️ Your tap counts!"; try{ localStorage.setItem('goye_part'+part, label); }catch(e){} if(label.indexOf('Pray')>=0){ trackClick('pray'); } else { trackClick('react'); } }
